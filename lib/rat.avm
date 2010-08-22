@@ -1,0 +1,85 @@
+#
+# Here are some operations on rational numbers, represented as
+# (numerator,denominator) of types integer and natural,
+# respectively. The compiler recognizes rationals in this form as type
+# q, making them printable with %qP, among other things.
+#
+# Copyright (C) 2007-2009 Dennis Furey
+#
+# abs                                           (38)
+# difference                                  (3339)
+# inverse                                      (140)
+# negation                                      (54)
+# power                                       (6091)
+# product                                     (2520)
+# quotient                                    (2657)
+# rleq                                         (645)
+# simplified                                  (2081)
+# sum                                         (3276)
+# engineering                                (10353)
+# fixed                                       (2892)
+# scientific                                  (6756)
+#
+# compressed with granularity 67
+#
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; version 3.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+#
+{kwkZpgiwuKH{evdw{IwKD_EFRg[ptGgFoFsf]nXpajgKxyVKdkKjoO{D[nZf\v[hjr`sn{_dqJ{Ecv
+gfvgixl]Lwdih_DHSdWgyJrgZDF^jN<vNB[fjgG<xqXoZ\?OFEfH[hodnVvjGioZe>iv=]znKocEvyg
+wgGsgn_x\mZnkLvJkzwPEZyKngZhnkHDEJnKhyCioyVnLezjonng[vqGKjozgINg=ddvxn<dw\SgxKA
+LwGoZhF_SIgd[hopvVdkhnfmnB[eXonjoxjh{gfgAaF<^Oh_npklD{Tfh\NHAwqdfXzfdnQgz{gtdgU
+Faz_QBBxDkHpiZpJ[eqngWKN>xr>gSEivkNzp^`^ZeOHgDoFdab^f<=JnGeoxGqHnKoO_f^ivkPho`_
+D[FRVhvFgb<>v{hwxdPdo^fpjB`bYHfyvo^kMhNEAgoDE<gs\^ldSgOKuIG?Eh\lx_ITvxhsfHbf@\D
+uGmf^ZC@Jfcy\_oyDhhnf]RhYongOFsfoGFt>gh\j<<Itp@vEJkHom<^nonglWv`pvx{f>GDKF{Fdd@
+^{vooHgoE<nlJk?hgro_ojdiv\fhfKD>^<>]ZmJnkTfX^lv\CRnlVjgFprvkvf^^iNfFOdkERNGHnj^
+ggn?dfvkDFhhwSzgGGPfgKxOJE_R^Fx>klJcwGpk_PwWsFvkfnF\\fD][feELN^gf_n?dQoFzEiFevZ
+zGyJf{fo[f_cxpd<of{FqFJggLyvngQyJpwv_pr^EkvhfkGf<Ao>qFfKEiN\fC^fsqH_FinrzzoPoz@
+IF_GZqIHtgtche>fiNr>@aqiKz_FzqIVgqONfkphwxlhlsVgIIFHfvCM>FqGFxxriAqSdfXhgJxsGF]
+HlOTOOIO@jgGki?OHgH\ALf\\poGlYISQHhrnSISFt@h``FSPdF{QfokKiZpngFoFNgyDg>_nDtgOEN
+l<hpoh^njhoxdoTck[KpyWczphqKOEFhqNN<KHO\V<VWNGINP]ptAPhSPIvennkxjyI[KRppqFpnfdq
+NfHpOGGGP<\QG`yanOKjqHco`gsNAq_eyKkxoGN_FgJaFn>dX^eiLNinwQnvaQNqIdovhhYgaaItCt[
+s{wONpiHgHqNhpp?GQN[NxWaolUYF^_zoyN?syJyTyZEvU{c{osphfnhoOGIHoGfGPoqFoAKInwQmAw
+K{wHlH[quhpWiiuPbY<mZoAu[KkZhqPgFhoIFpfC^IPgcP_TjILkBuZOGNgpnXnX]LgNdfaAYOQRl?<
+>Sv>Se{]{ZyyOOPiH`nqNHopiQG{iFpILwHPxsecaXh@FPsHkFkx^UW^uU<Tc{sczM{hcz[skZgE>yF
+gHngGKQQHh{aRhZ?_VI^tqHoG@lJBH_n`sK{ZeXGWr{x@Shn>@S<d[y==ZpAz[S{[HqFiGOGNheJFiQ
+Dx{>ooIKAFi?PJx^nN[pmyA@oxnwHiPAPwQYZ_j[lbJZ<Aw\e[eawT[A{{ywPhoPfoIKf_EqOOJkHfH
+pVMOnZ?_WT<o=OiJ^DF?INc`hg\uh`WiYMt=AlR=]uxXR[{\cz]=jS[E{{sqQHiOOGHiGQHoQGPzoFi
+\qJFPPpxpaWHetPfLPd=Y<?Qqh_jAkZb^ewD@GAqdh[HqMcsnb>[SM]{yCyy[OGHpiOOQHh\_MHeKpf
+oaaGStb`PKGQPapP><XsSQqOCaUQQyf]^YF<a{<=Al`dLZoMZ`ZpTH[oJlSu[cyPqOQQMPqOQ<iQGoE
+NfLx]`oQJFP`vnXr<xCQWijp=NWzKO<L<`VN{_fLZDa>LoGKcv>CzvXEyn[p[{iOQOILpnlgPHmHd_N
+aoS<wGSt>q@xCLdyTiKINPaB{SRB?dxDPJ[q?]l\<Q?my=ZEncL[RHSG]z[yQGQNqOHqOQGFhdP@qNA
+HBOIFiLdt<x{bCMTseLANJQun<>d\Kg\x<iz`\cxlWHM[dU{\EzM[No?QQNQHiGPqPv\>mQiX?dYL<v
+G=VqRII{^S{ZXG`<>yRciaYsNmZKr\uYo=CSgCvcxXgPphaPhOGG>`pDBaNAKNd\qIucR>ABm{tgSOD
+XNmkFy=wRWlDEyZmz=qx<cAN<MZVCyfpqOI@PpqHo@@OARzA=KExxFPPPzA=[WQhyTKtmNmjU]Dh<mt
+ABoCfSr=W>at?AyLniHQQ??GI<FLbb{PXnq>eVvtQyScVaE={CcM\KiQCVT@V{>ENQr{@=uz>[jpEN^
+oPfhgDNoPqYdj<SOxYksJy[qQfKttP^xZZZiK[eel]vg[mqJ<hSUC{wQQQQMQIMFgxgFwkFrGFL<no{
+qfPyFvp`DPJkTtP`]rgJ{l\OEsXOEfH[V<c\`SnQMIHqQRhoL_IaN@GEhvsVEVjhxBRgfbiIt\fFYNZ
+kL@cMuHh]Jll<HpfysPHTuyDeQQMQQQQM@q?>DHiUQAuKKqQSOIIfrmgI<<J`vFXANAqGO`=cWFaUrz
+\><mZ?QNg@qlhakm`><W\@]FXV^UrrqPaP]LS]ufdJ]SI\=<Yugu[pcAYdEyNgQGNqOWAPrZq]<VPK>
+paDcIXzOYqe<Z<xC<{?nV<mfZZ_<B\YQOONpoOlUX=YKPagfa^tYlyoiASIxaq>_ch_?qiGxdlTC>hl
+oNiNoiSLB?jg=rAsK?h\wES?_lXmXr<KdocHSxqmg{yXhiKNpoKBuTFGO]<>qO?_R?REHs>_bK=nFdL
+XBHrzN^=[{lsqINhgOOHmOoTU]EfvLobjV?qT<{ldtL<{l_j\OKoIBn[_noFpnqF_TjINpAaP_b^b^c
+?P_l\?]{>AEpCkm>vOzA[PhoHiPQGLq?s\CTB^`FOjt?D_dh]G@WSQ\w`<SyqoGFHfhhZ?_Up{PFPPz
+?QJ>eKea<HWNKDo[YsqGPhqQOIKIG@Qk]M=P{e=<LVZgcNCoQYzs[uvnfiNhhVMLve^sP]xsQDCK?Dp
+_hrNffoozpqZaQQQNPQHtePLfJpVtXe^uHasEQOdbiQQcKFkkXyhPiEDhi[]^k=xyOiTXO_KE\=qcN^
+UmyINoPsI?VHpHqDUHqdO=PriY=QRL??rh@`@K>doR`_UUxE_HqNgS<wNHt@fpvw{=[_E\jfSek\amp
+pc<naGINAK^m`SmopktuxqEmrA{yvABJKN?ffOH@rou`]K?@B@DPKqT{?l<hkOJA^xIxpxQIP`VL@o<
+jnp>d`ksmUugG=?wQJjyvM[ONp@`B_mM\<?wGCcvI`?\YNNxBhmYcGmOLfno=pWD<DvZf<UvGMateDw
+lXyQPhFtrsKIpCxB]RtsntGnZNBiRo>@gPXwuZuAuNkEL=oqcVQOFh_L\CxJkIWHsJStdv=DVqsbNHM
+UNpotIp^Pe>S\EZDC`nfy{Qw\OHEl@kDHn<sqbuYHMVmwyIl=_ONLXnSADVF{xr\ONQKhJf@IFdu=nM
+l<]ZxCT]>oZeNO?<cCDQjSldxbVgxrLPdv_kDEZ<JBjRzwBdmxFQrNOdqWdoXzgKGq>^cI{]uZxfhgY
+@`IOcl_^FAxz=PuHf^hc<`Yp\H>`x=DztFzvuYjJPwKu<BWfBPF`ZnNN=l^AvBwhLN][Q@?^av=pt<N
+Sh<XvOdChVOrJ=KtJN@{k{K=z?wlSopyD==Z?\<cxyQFVcnS=zO^`PbmT<d[_EuL=`MAwHo\luz>INL
+?BtMH<{x>]{zDcwqnf[kPl<<So^kctnUL<[hoLalDnutZ>MYDwd\KlKDqIN\]nD

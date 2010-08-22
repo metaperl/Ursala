@@ -1,0 +1,43 @@
+#
+# This module contains some functions for counting with trees according
+# to one possible enumeration (the fastest I can think of). There is a
+# one to one correspondence between trees and natural numbers, but
+# sometimes smallish trees can have extremely large ordinals. I'm not
+# convinced dendriform always works (the inverse of the ordinal
+# function) but have never found a counterexample.
+#
+# Copyright (C) 2007 Dennis Furey
+#
+# dendriform                                  (4540)
+# ordinal                                      (676)
+# tpred                                        (118)
+# tsuc                                         (118)
+#
+# compressed with granularity 159
+#
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; version 3.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+#
+{kzoZhxssnsIxeXvoYIExwHnohaxjokHzNcxjhjyJyvtAwOeG{lkksYLU{D{HKOX`yM[[YfHAyGzNyP
+fVv_crSss@J[`KkOO^pipvlt[r[u[[L<@yIOQPHcP{L{H==j_=YvSu{O{OppGHoLPeIX@^z=cqyc{B[
+xdSdrhkLDiNmyxDy<MtyDB[h<M[nf[qPTXf@^n[yX_QEbq<?Aof[hLp@vQOEhsAQRYYOT\OS<caBUZv
+G{recHoDgOIFteOnPj=N<UzZ\FA{moFnefgNe`vsFItI<m[QLeJOhfdQPr<FpmIp`YHk\aqJh{oxT=H
+_njBBo^O^Gs^SIPD][?nNQ?P`oHS]X<wIRWadu{INgE=PfeS_gyQDEnyD<SQN]Pd<A_pz?nUENGS>Z\
+]i@WPGpqKJ@>xvCWOHiLqQNxx^pl=HqMONi>>>aDrvhFBfGhzHLNZd^fCnGHb?S@QPn[bI?offToHnH
+YasQDE^MX{QQPMDVbQKpa=XI>aSQLvHJPqP{AQMQLxcOiQIOmjo>qFwwohdDKqRYkHjKDaVacQQGPwP
+iVaQ?PiW`gDyP<]\Y<PcOSSVVl^oeIhgq?RAODQPUF]QGsauF_=o[{PhaOqpqD?_qJ_GQo^kmPILnTx
+aLvoGPiQLDqGQu\>?OqZqXapgA{J>MhquECGqYAK?JJ_=Wqkpccqlx`Ctr__PoA{O`qF<cwyO<DUcy[
+]=\=AtzApj[qoQ>>MZyWe\uzY[KK<D[yxj=TwHSjyYhikl>[s<ypqIPKE\S_chuhA_iNBWkV[hx=gQN
+^Stsr`yNtBR><dSs{@xj]JiY^cx{?rd\{@vBSG\S^GJdD<x\{XjDB[c=hwPiXJPDHArcTOPeywLTu{V
+`p>={qlr\<N`ndYQUqpkWF\@gOIFtbeF<>fpfUKHfb<VpmD\=HjBBQEHnAPfv<=tyKQJFHboDD\

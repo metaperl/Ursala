@@ -1,0 +1,66 @@
+#!/bin/sh
+#
+# a script to bootstrap the fun compiler, assuming it already exists
+# allow about 11 hours for it to run on a 3 GHz machine
+#
+# * Invoke as bootstrap --switches=profile to get a compiler that
+#   generates compile-time profile listings in profile.txt. Profile
+#   information generated during the build will be saved to
+#   profiles.txt if the existing compiler has been built that way.
+#
+# * Invoke as bootstrap --switches=trace to get a compiler that
+#   displays a stack trace if it crashes
+#
+# * Invoke as bootstrap --switches=profile,trace to get a compiler
+#   that does both
+#
+# * Touch for.fun to get a compiler that displays the current build
+#   time with the version number.
+#
+cp /dev/null profile.txt
+avram fun cor.fun --archive --gpl "$@"
+cp profile.txt profiles.txt
+avram fun cor std.fun nat.fun --archive --gpl "$@"
+cat profile.txt >> profiles.txt
+avram fun std com.fun --archive --gpl "$@"
+cat profile.txt >> profiles.txt
+avram fun std nat ext.fun --archive --gpl "$@"
+cat profile.txt >> profiles.txt
+avram fun std nat pag.fun --archive --gpl "$@"
+cat profile.txt >> profiles.txt
+avram fun cor std nat com opt.fun --archive --gpl "$@"
+cat profile.txt >> profiles.txt
+avram fun std nat com opt sol.fun --archive --gpl "$@"
+cat profile.txt >> profiles.txt
+avram fun std nat ext opt sol tag.fun tco.fun --archive --gpl "$@"
+cat profile.txt >> profiles.txt
+avram fun std nat tag tco opt psp.fun --archive --gpl "$@"
+cat profile.txt >> profiles.txt
+avram fun std nat opt tag tco lag.fun --archive --gpl "$@"
+cat profile.txt >> profiles.txt
+avram fun std nat opt tag psp lag ogl.fun --archive --gpl "$@"
+cat profile.txt >> profiles.txt
+avram fun std nat ext opt tag tco psp lag ogl ops.fun --archive --gpl "$@"
+cat profile.txt >> profiles.txt
+avram fun std nat opt lag ogl lam.fun --gpl "$@" --archive
+cat profile.txt >> profiles.txt
+avram fun std nat lag ogl ops lam apt.fun --gpl --archive "$@"
+cat profile.txt >> profiles.txt
+avram fun std nat ext opt sol tag tco lag ogl lam apt eto.fun --archive --gpl "$@"
+cat profile.txt >> profiles.txt
+avram fun std nat lag sol apt xfm.fun --archive --gpl "$@"
+cat profile.txt >> profiles.txt
+avram fun std nat ext tag tco opt lag ogl ops lam apt eto xfm dir.fun --archive --gpl "$@"
+cat profile.txt >> profiles.txt
+avram fun std nat pag lag dir ogl apt fen.fun --archive --gpl "$@"
+cat profile.txt >> profiles.txt
+avram fun std nat pag lag ogl ops eto pru.fun --archive --gpl "$@"
+cat profile.txt >> profiles.txt
+avram fun std nat ext pag lag ogl ops apt eto dir fen pru for.fun mul.fun --archive --gpl "$@"
+cat profile.txt >> profiles.txt
+avram fun std nat opt tag tco psp lag ogl ops apt eto dir fen ext pru for mul def.fun --archive --gpl "$@"
+cat profile.txt >> profiles.txt
+avram fun std nat ext opt lag ogl ops apt eto xfm dir fen pru for mul def con.fun --archive --gpl "$@"
+cat profile.txt >> profiles.txt
+avram fun std nat fen pru for mul def con fun.fun --archive --gpl "$@"
+cat profile.txt >> profiles.txt

@@ -1,0 +1,82 @@
+#
+# This file contains compatible replacements for most of the core virtual
+# machine combinators defined in cor.fun, expressed only in terms of
+# constant, conditional, compose, couple, field, and recur. This
+# information may be useful for abstract interpretation. The source
+# is distributed with both the Ursala compiler and the avram virtual
+# machine emulator but the compiler is needed to compile it.
+#
+# Copyright (C) 2007-2010 Dennis Furey
+#
+# assign                                       (187)
+# cat                                           (33)
+# compare                                       (60)
+# distribute                                    (34)
+# fan                                           (91)
+# filter                                        (71)
+# guard                                          (3)
+# iterate                                      (123)
+# map                                           (56)
+# mapcur                                        (87)
+# member                                        (99)
+# note                                           (3)
+# profile                                        (3)
+# recur                                         (18)
+# reduce                                       (223)
+# refer                                         (32)
+# reverse                                       (42)
+# sort                                         (372)
+# transfer                                     (260)
+# transpose                                     (86)
+# weight                                       (235)
+# rewrite                                     (6490)
+#
+# compressed with granularity 60
+#
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; version 3.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+#
+{izivzixpjoZjOOHs_ftoHsgDvgXoznGFFjoWZxnFOwiOIvRxhkonvoKvZagGoFtqGfj{ezcgHt\iK^
+xozj{gAv[fdxiWI^tn]z{gkvBShAvnp>YjqgoFEZd[kvwz]cveZhaHqW_PiOfezdav]z{giv=CvZ[gF
+hggoJDfx]D[fezdav]z{hzfUz\=Cvow=OJmQFVzhEz]D[fezdav]zoOv==zdav_HjOHfjgF{V<mZhEz
+]D[fezdawjIZdcvF[fbWpNMANufzqdEz\HSg>[dNCvf[kIKwvGCnNAvhnjXbThn_wfptAv>[d?Avlcv
+@]zhJi[ykd<afEzgNgSNi>LhpiMF]aw\SdEz\HSg>[giWiP[crz^VWEnd<_JNjDHxoD^FOdUZtAv>[d
+?AvPvOYbLScuy{fN<=vfgO]NqXn`awdeJ]aw\SdEzrqGPSMavCuZ[SZf`VgTphFQVg^\cvSj^`vBSj=
+ZqybjQT>S`CnSAz[{v>bfpfoFgRAFFCv\cvSj^`vBSkPgqWWiN[DAvScyc{{[Zd>f?YFdONBhEZ^]zd
+EzawdeJyQGN^qWNfHRU]U\MYPm[Qa{SjzffHn^^cFFcvlavFCv\cvSjjxnU`_PT><b=d`ewdU{cR[q]
+{{[vfdEFsJdMbvFcvlavFCv\cv{VtsXoaFL<\MQD`SqR\M{XtSRScq{fj^gop^\Rn@Uj^ezhEZ^]z_n
+JxiQLqR>_r<uybPecop\aqUZ[Uy[VfgFnX^DeF\Rn@Uj^ezhEZiNvnFtvoi<<p<=YQ^==wNA`vJ[d[M
+[cqzf^nfo<_nFVdAh]BWdf[iNodLiQGqIBUmi^EbVCP\<SlC^[pSU{ZffJ]\dFJNFVdAh]BWdD?xIcf
+vu_DaPq^Qr?vezMLm[^[M{{qfffhef>_h^bf=WJktaOPGeX`>tiLqQ@rk]XT>SP<R^Saw[[fgdiFEf<
+dsDegDzyHW`iIP<RO\twiN<>[Octqf[u{U{[qfffdDdbd>_Q_IOQHuNo?eQQIQG_h@Rd`QZRNCt@Sab
+[u{yrfdgfFEfFeKOLgob^qGfgUvxiTylKdRppCocyDH[x]z[S{ffffdd]^IgGehQGY\p`ePqBlwLAL=
+YQD<=T]Aq<TSjMCtcu[{zffhfddqM]nnj^piZ<HWaFiWJq?\u_ctBSi>]x\RuZ[{SyQQQQPMQHc@YG=
+bWMJP`EaFqJi<@=]vJ[g@Euj_cxCuzcqzffhffvbXerDoXjKJTpojOQt\OD?Ctd@LiD<AxMz={cz[Sq
+oPQSSCHgFQnQ@RWAOFiENwOLh<Eyw`lcth[T[p]{U[cxgFffhghfdFuFBAPfd\rCbQeTFLSH\>zCt>C
+]]yh={QcyawqOQOQIKm\@IARTMniHqJQaBu`Y\@Ale<myE=xt=CqJ[sfdfhfn_nN`?SMlbBF_OOh\`O
+NEtTDR<EyVEw<@[_xvdfvggPfnqFeoDDf_XT^CTT_G=QDlPHAwwtgFfjhgPdFw`gID_UPV@d@Z_o<xR
+[?S[QOQQIOP>@KQ>E<NNvn\]L=l<\HSWxsnfFfhgFwHF\@GQ<BY<UqOxR{KqNoIQQHjB?`Pu>MNzvqZ
+vP^gGHgF^eyaJITfOx{@oqQTPfngoNPAKUnQlLzzkpyQaafwQPfnfjfQIVtgzrtzwA@aioIfoOHoFoX
+f^@wLKiqppiOQtyMOnFhdOOIIORFEHgOXwyRROtmweOgSYPIHhoNli`hDhyYWwanpKpgJhwPmJAfvoN
+fgMK@=uQikNqKKNTqZ?WOEOTNp[PmHiOO@f@nr[PC`zGwNQBYPaoCTIDh[poOPnhAMBHoWhpIRihUjQ
+Rtp^anT>hSnFHhgNFNOIMsJhq>xyrQbPppR[pzBSd?HpfFHfwgNq_jFjgQQiQ_eaE{QPnB[_GFhE\QK
+e\UUQXgNg_ipWUYdWAzE@T@[foNl[grjrqaNFnfqPqAOSPHnBSpMFUznoGOIgloHqNWHfjGUvjjGPvl
+\U{\D@CviPgBqEF_NJ>olaAFQILqA`tqF<M{D^[hqFntwVHXpNYQUPW`uQQOhVU{Lh[foLenq]nAzXu
+<V@uNPjfeRn==zL<avgFrlwQD[IAiWGocbp`jQb^[lbvhphfqhd[a]uSNBmPqK\GOOdh[^SvgFe>UNd
+mZP[vupfdfJp^fGD<avd[^OF_OK=azhSoiA`Vf`j>rL>W\^SffHfplU{XBSoFmup``ReDazf[ff^rB<
+M{P=cw>F[fRmQLf]z@]zfgIHecwd@[\ZmZeDB<<^ShEzfgTT\L[iNU{H]ataNez<mZffOD^[jL@CuBB
+[\dNCtEzfgN>mzPdcuD@[flcz=Zff<<E[bGCtecv\HS]atfdbyN<EZ<L[l>[^`vfe[fDbvEzTAuZvfF
+]zdazGCtUZ\cvD>E[Fd[\>S^`td[ff[h>EZEjSjlat=D[\f[e[dEzFcw>[]D[f]zFCtMbt?Aw>[\^Sh
+EZ\RlEz<mZf[^ezFO\S\ctNCtMbtxBStAw>[dAh^^`tUZ<mZFVJSjFO\ctu>DEzSk\SeDFCv>[]atW>
+S^]zFOdFcw>Saw\Mbtf[dEz\RlMbtd[^bdAhlaty>`^ez\Dx@UjVF\Rn=^b^?`DdV<

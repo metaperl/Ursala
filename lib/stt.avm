@@ -1,0 +1,113 @@
+#
+# This module contains two functions for converting between natural
+# numbers expressing times in seconds since midnight January 1, 1970 and
+# strings of the form 'Fri Mar 18 1:58:31 2005 +0100'. The time zone
+# abbreviation is ignored, but time zones can be specified as +0500,
+# etc.. Days of the week are output correctly but ignored in the input.
+# Fields can be written in any order but must be separated by spaces.
+# Commas are optional.
+#
+# Copyright (C) 2007-2009 Dennis Furey
+#
+# one_time                                     (217)
+# string_to_time                            (128327)
+# time_to_string                            (240056)
+#
+# compressed with granularity 89
+#
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; version 3.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+#
+{kwwzkowzkHgxz{fnfkHgxz{fffgFfxnkowzggvfkfnjkHgxz{fcebfvUfjdfnfkHgxz{fbVUFeebg^
+zfgvhggoF{G{ve``Fue`fZbVkebfvbgFvxnkGoZfL^e``FbVUF^VUfefVgjVhffwEVivdf`DfUE>jVU
+FujVfVEffzgoFnhsffdf`DfUE>ebbNjWbgvUfjtajnkwFff^fL^e``FbVUVbVUfkEgoGhz{dgFff^fL
+^e``FebbNfnb\vgggxzsgDgFff^fL^fUE>fk`{TGgvxvkwiz>nFnffd^e>VfbTnHfveZggrkInwKVdG
+DkFff^fgbOeFodezgrhbgfhgoKkgdGFFnfhnebDbfKo\Sfjbgbgnvvjjqns^f\gDgFDfUIxfyBB[fkU
+fbVgjbefykJqgivj^>nFf`D{F_wFHAvfnUgbNgrVWbfnVvbTNjwZ^ftGDdkHFoPf_cvffUFU^fnUeeb
+ffV{ICFxjgZfvf>gKjGKO^<=JfkbFUFfu``bNgueXniFgfxoiv^ffn_SIfKGNkzfbUFLffU^E>fU`yV
+JgFkFjhjwZffF^gAaFqM]f]ZhfU^bfu`dfbTcSGEpfjfkWGnwkvdff^i`jPoFf[fFbNgFbTffUH^vIN
+>fyvgejgfxjj{gvfKiDfabfI=KFe@fFbNhe?J{DPfgEbfxbzgngfxiGkvfffoJNFxn>G{fF?Fe@ddiH
+{^BffbNfobkNgjgrgffiIIvnffpW@omf\FAtffF>ftDx{FffubffUGqFkUfj^grffgWkvfFf]D?Gh\^
+`wDFnFEJkHfvfbNfjbHtffnEfkZfvVjgkFvwzhfffn{Fh{dh^gKHnjnhgbFfc`_EffzRfnUfkEfbfVI
+gNpj{fffdH_n<^DSf^o@wFy^fdfUOFbThoffU^ffbNfobfVekNfffpj{fFfgGPduz^d^xaUDfHf`FFb
+N>FfjUFfzUfgbNeFbofgfvfiGkvffgINf<An^`o^Tpf^\f`TGFbUFfE`fg^TfF`qlFbfVffgNwzffff
+>@Evff`a<df^^nFbNnjTffZOFd]lfVeffffgNwzfffoj]fiF<Fnfff`>FbPnebDhkFefbgfvffgO{Zf
+ffsF<NfGF^oD^^fLdfUF^fVeF`fVefvjfiXf{fffdd^rfFfFfddFe>FgVdfF`fVefbgjJgIKvfjfdFf
+NdfhfddtoxfnfF`fVef^bYOFdivfgFfhdf`dhfvdPdn^nfF`fVjoROHjvzffffdffffGFnpfFdhf^eF
+bms?hggjkzfngGFfn^dnFGF^thf^eFxBv\hgOwKwFjfgFffnddgl_^fGFdxJnveFfkoigvhgHFn^fhf
+^h_gDfGF<YVyFfjiJghOGxgfvgffgFfefnFG^jkFzG^efgrkDjnzdgntfFff^fgGDg^f{<vKZifbggE
+fvvwhkmFfffnffffdtggD_n?fsqFxfVefuf{kGNwhiffmFvvffff^fgDgPdh{vIflfNefbVgXWZfgNw
+hzLnffpnfffffgDgPdEYQvFoNfFbjUFfnW{NjfgNwgzf`FgNffffdf^f>?YPnoVdOFeFU^ggbz{NfVf
+fgNvy{_FhdnffffffgdtgOEOGdf^bNfVbNQKhJfVjfffpigx{f^gFfffffffn`tB\CSfffLfbubGIva
+FbfVffffyVifOz^hhfffffffdhOGEGQ_FbfVUfVgxrF`fVjgfv^jpyWHkvgQNfffffffLX^`zF^fn`b
+PjRzwBf^eFbfVdgOENFfoGoZfo@fffffffhp>oxgF^^LjvHsKfnffFafZjeGpxjwflwzfn?Fffnfffg
+hl@g\^fOZxfhgY@_Ffdf`fbdHfo[wolcjrsfeFffffffhC^`Rv^f=PuHf^hcDhffeF`gyI@{HkgvhoO
+HwZfiFffpfffkPfpmGDztFzvuVdh^ffFHqDFoPfkVkOFfkfwkvgFhfffhfhyPdfgF\UjdULfMzW^oFf
+<<]N\?G=hhVMGdyGNwozfiFnfphffo^^iN_DWjm=FAwjJdgFd<\vDKffb{bfgnzx{fhfoFffpflnV>g
+P\YJ<@axnnld^fcvZZpehw{ffhgOgwozfiFnfphffhno>>=wB`vgHfFf]SDP`jfWOIN[fzjfgRxvzx{
+fhfoFffpflDfH_`]KyDfn^fgfjOteDF{McvefgzjfnnpkJkkIvfpgFgNnff>^\zxAviLffdZFXJaDdo
+T\mZfYFpWFVfgvfhiGogwivgFhnffiFh\\t<EzlgFfap_gE>mYLB[f`ffbfbjNjVvjfvnqkJjwZfpfn
+fphfgFal[^lffxrc_jeHz_CwEHg`NbefiBefjffkffhiWN{ivgDhnfFiFhd<d[\ffglXsNT<vaP=]z^
+\fTnNcFfVbfqgfgbgFvffjpojsfhfnfnnfhe@S\fg>_kIik=a\mZdfXDeHf`effbe^gMffgvyGhfgNw
+ivg>gFdgNgFJ[ff\?glXsGiS<`v>bh\FteXg`effbkNiBefeffNjpjwZfn^fflfhd?BvffG>_fdkBuX
+{f`<fcDdfTeHf`effefXfUGfvfgR{kvgFFfeFhd?zff><JeHmOoWd[h^FTffX^Fte?FeFVNVencFjfo
+NjysqPdqHQHf]{PfdhDrG_P<^Ol^`pFTnenDf^`>QEfbngFfgOPzsSfhvffkFDcvjf>fpILvSvn>fN^
+bDgnD^MEnkFuGffiJgkzqPfqIPhff[qFfvZ?_UDclIN@eDe^>>ONWNVepkFi@qJkKfhffffhd<=Zffg
+?IKIH]xf^n>`^>ENEpbfbffffxgfKqQJqYPpj[qGjbZMLxEAlO?D@_EDbPcGgnfhfYs{FhgNgFfq<=z
+foOOOTeNJN^^^]EDbnVboxzoukz{YQOGQIPpdaqNnnniSt<ILmDNPEfXEdGbiocYM[{{vgHpfngIOcf
+ppplJOINdh\eNVcGMpJiB`jaxau[shfiNfnfpf>MFoGGKX?ffoD>P@^efzna<{E{BWuzB[nfgIFhfnp
+JgOOOINADqDvDG`l{Dtbru?t?W^m{rA{QQPiPqON\QGGGGaRniFPbNx{eqwD?AtEZ<]{RBSyfiONgFh
+qFhppmtb_PhDcPvxu]gPhacocxL{[_c{kqPniNqPnqNvgkp@nfhcDxggmBq_F^mw<@tm[{Q<HSgp[fi
+ANiFiIFiAQQSGFfoDQG{KFvAWlD<DTzuU[yny\cxhTcwOFhrpxfzoFgFqfmpdlDpu^{gzJkg@<bvFK]
+X@{[V?tKl=jfqPoPheQHsQQOOkI^fPngMgOcGxXWGq>qJACwGpayJ=Auuu{qMQOQPqNoGAQGYnj=Hpe
+Of`FkBGoun=GB>KjrAyOlIkXyUZAElD[ffnoJhfPoOQiGPoh^^]>Vtfh`ggobtKl>bt]axjCUGkWR^_
+vyVU{IQPgQGPffpqNplhqEIEnXfz>{ggmSCogZtJ[>Et?ku{?xAAvYKD<SffnqHkFppgQONp<\NHBE_
+fuf{^kFnGdQz^=Pt?AwQP_yvIwXZr[?k=bWoQIFoNiQNhjeQN]NNVXiCGowf{gxZGXb\ztEdwzGodyv
+kLB_>GCcc[>SvfhiOOPfgL`QG[Nl@@Fe^hkKBgobg^sNKFbCpz^={s@vye{{Nmyv<DYqwqTdSoQIFnn
+IQNnwPQN^>fNkgGRPgGMfqsI`nBl<Xt>vo[RKVnvegpo\{O{yAoVyAwTeZ^gGPppffgMOWE@G\gbjfj
+>kf`feglYDX<zuzhsWcGGnyn@NlLxZ[KGpo^xCNmkSmDawIIFnnqZ<FhOPfbgmfzjxfug`gaLduJeuj
+\zfg=K?^{l{uT\tC]NY\Xh@K`FJ?yAqqEUxhpiQONQQQQGqEnjbgMfVvFpV^FbL<tZ<=Sv^qHbfeo{E
+Wty>LZcGrylJ=p<JZ[kiQz\]taOFrfqQIqQQl`Fy`fefV{ffVvenIpF?wJebr]As_pU\xch]SRcSqxu
+vF^AEsEsx[Ye<PoFqpppo?HNrn^gt`g`ef{CFeFTelXrFG^m^D{^h?nZ<rZ\Lvxk?fkWSOlQ^>y[jAL
+jzRwLWQLIO<QQHqQIH>iK^d^`goE^jFNaK=oJtfFZhzvZlT<Mb<_icc_GCrCuRkFY[GsGa?xGOmdphg
+HHfoFFnnfgmfx^gFufcEDldthW`fMEAxZlN`bDZ=dqq\upX_X{Dv_kmxhBSHLhQUZVGPpoIPoQOONjh
+`FTfffE>bDl<tfO^@^<vI>\\ApSkI^Z_jzssC]tccZdlJ\xyCy{OogHIXNgHqPh^egdeFggteGD`zmv
+ZzBXr[xxCDQkK{{IVSdqpsSfyZcvzssXslcSPDIPmIQHn?qNef{DFevUn=\DSdOkzl\xCGpoldzkSd{
+jkOKMpsskIkIgqGC{lQnigO{kMKFP_gGOPIQHoONDefxTnebbLh<SmYoyY`FKG=?t<udvGpx{[NlLzI
+EIQ{xxCGlYGB?zkOJgfinPAQkYuJaOnfkFFpPfoDf`fvVFbNLn=n<JkH\C\?\tCND]uGCJkHlZ?\YGl
+d{Gpold{>_\{ccPh@KdZG_gdiN=K[glWNMXOQPQQMIP^grLfL\l>zoFjp^Z^]sLKt{gfz=CdgIoX[G=
+?t<u\?ccDPa\tCMYJUS[cFOqEQA{dDNhOQMQHpFfvDFIL{Tfhzt=RExrZXgxxyktDQnXxDZ_<tCNDd]
+NPjvZ`xr^Y\Km{ccy=kpuO\oMHhqHoFkZgJxoNqyPpgnWlXAELxoxGGg_rk?uQ^IvZ^\\j^Xx]SglYe
+[KHb{xOSSWsmqpL]qPpniN>fnUn`XnfEUdndN_fPFJj^vkEvkYSEtDwcK[Z{xAVvX_gRGsHFJVJCHDA
+x{j`yESzdrx_gFAPpoQ?Ffe`F\Fgb<>NLC^<?eoKWk=BJzZUvM]tNMzm{{GpoglbJetgnJzd<thK?E=
+{ozx@VbX{BPn[KFfaH`qEDfjTpkZ>GsN^JdhjkXDg{L=L=?ApWHyFHkOKG=?vJdc_YIZ]tkN^tQfTAE
+yo{HIudwoE_vQIEAm@qLOFfU=C]m<YoV=tf{qyc][LRw=o[JMvShh@K\tCLZKYKIkgqYNmdEom\lMu{
+ozISODIHDClUD\]Jp^QNjTT<<txCIp_k=u=x>M=x`<OlXvxGq{x?\YCdip_oVxCKqGCoTKwa<xt_<A=
+yozjjEg_ELS`>VI>^e`GXFKxsgsHAlP{=QpFJZGHh[gpocddQgoVk=o>_enTKolXZYt`JT<w=U{oz[E
+lTvdAlT?QNe<[<?bxC?[UvTF<\dd<?sN<?{HnlLzAVglk=nldv<KeCCcldtPauz_D>X<PC{Kxwv`\mf
+]qN^cPd_>_e=v@T=\\_oVZXuDJ=pk>_g>_v<KdcdtPc<?gwzDx>\IlPC{[unWAP@e=NlgcLD<zlX^>?
+lY]NQlCdfJtZD<ufE\KDnyvFYoo{od@>xA=tx{OeLNC=Pn{wFEF\E>_^j_DQbC]sR^F<gfvYYl?khvz
+s^KpTFlV[Xze`?GO?KuQj<<<?vX\GlsMxrDJetc?jtZZGqKh{f{Dx\<f^Mu{o][GeFKKlhtd^JfJ{I`
+xCF[sNJZXz_SPhYIwKKqkHoPd<m<a=YqlDMHOgoF_JBZDZ>xC@FJtbKIeyqvK{kI\{@gzhnzwCHgaN\
+OnRZfUQKhngTDcYIqldt<vFJxCDqoVyKK{{K=muwGwYPgKop^grLD<IV@VP>@{NgJRLxsxrT<vKjHFJ
+vK=phXvx{gpoldtPcPoxgEIxxoJAQ`bTFNH@kHaFe?bxC@xC>^=^_<?g`FJ?zKvvx{NlLz<JkVGKjrk
+PDhngKle`P\>mHd_Namldu>_tAFDiD<uunkuozjkJ\tCNFY[PoZyMrMGNgHoxpN>Tfn]LND<t<u]dU>
+DPa?ozTkugvjkEvF<vgsAFsO\^bQAOFNxo>EAJd<nFDba\j^vx{BkKln{FygJATc_GC>rgHxpPaFIPt
+fL>`p<@VNcXzggoE>vxo^xnfnVjVxsN?oa?FgHl\DpHkSo@<WLvDkzkvvfGzjgbgfkFdg^VJkIu{zgX
+pf`L]OFED<xCbkKln{BkVhklgne`GrfTff_^C^xC@ASEqP^dqxffh@[Y>GgoJGoEfnFtkHvhg^FnFeg
+kJGYXFJFxfFEOF^OQSl?{IvzgfufvjHggbgftnjdxgvu>FT^{I`<J`nCH`@lLFEFyK=mn{FxjD^xfZG
+bd^GnutfFd^ubd_ekbxC>EDXViAHNyPFJDkHvhvGFnjTfExvhfDbkxfbDnme=bXFJ=J^@EMHtd<zgfd
+nfVuFzbFFT^Xfgd^UbVDzZ?\bL<tZI?DnVE^yktjbd^dbbobe^geh^T^fUbJZL_YXqhn<fnVT^dtogd
+muBFbf_BabgU^FTb=oU`]\_NfVG_b^D_dU]x`GtF>XdDn^^xC>M\>zGeDcvee^U`FTjbQeQPFK]fUhZ
+RD^rJFTactd\J<<<u^E^]^Bn]uFF>U>w^^XctteM^QNEMML@L^ZG\J<Z<<B`G_^T_aAAAU\<<Ta<

@@ -1,0 +1,84 @@
+#
+# This module contains some functions for generating tables in LaTeX
+# format.
+#
+# Copyright (C) 2007-2010 Dennis Furey
+#
+# elongation                                  (1976)
+# label                                        (209)
+# scientific_notation                          (472)
+# sectioned_table                             (8339)
+# table                                       (8218)
+# vwrap                                       (3761)
+#
+# compressed with granularity 80
+#
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; version 3.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+#
+{iwkwoGz_h[ivHn_wIvwOC{Hseoo>Sgfoz_jf>SgwFxsevwIaxkohajsdpkNduZgo?ofo{KwdiLd>cx
+owdOvR]FnOZjEoEDSfIXrfAGo@vfsiKGfr[RhRPdf\nogfgZ`GKI\@Af^i`fWw^vxgHskInTfbOwNFt
+nGvvggjoKwFx_F^PoJNGwd_wJ^ZhkrogzpK@?FoMhN_vDmz_ykz`awokoszmJ\DP@\GCwHEzgpGX{R^
+cvvp_{oFKZvxFfhMZ^=CzKiLvxn=J=ZknOC{gaRrrkplp>^cvfCvoPfkhnfdUzaoDmAt{KviKJsKNHf
+ebkn?AyOpy?y^fq?=[YVNF[mzeOiRsWwZkQF`d<EZdF{DxiGKHpi[Du{cSFbU{@ShMvmwFxyVyYJGBs
+b[s^SiQBCHnfEUdh<=KH^vN<F[>cxkZOiN@GjqY{z_Epho>=zh=cxaHoLfjT<HkwOkn\MubSlfYOKkN
+O=W_U[{{voFXoDEznDCvabdgs\^fAwIH{_DB<EXvyiIPpgxuQoR[yU{y[p>IGQM=[P>[qoDMtXMNe{R
+>KKp]^SFKCFpf@qWQkqQvLSJqT[az[SX>hhncpm=ZsBg\<??LOpEJkHp@aLY]sEE@\FqBxtspRZAj<E
+{cycz[yLHf^=YFcyJn@I>{uHxoFxieMk@pjmfa=UV]Q\<ZQNmzDCqZCyc{{nhnvq>=XoxfH<dSpOhgr
+I>I{It^COP^KQNipWz<@S\aiL@[q`SqM[oQQ<Apvx_n=NFOdkERNFlSzllZOaUMAbPRRPVyfS^Vd^Si
+NazVcyXfqAH<NhqFoKvOJE_QmPQ@iPifGWqIwXa=QMuz`RJ[f\e[[N=ycqPaP\qPiL^Avf`a=I>^mwX
+[POzYX{wa^Rt<hSgP>mZRn[sJvEysNiLi>\\fJ[qF<HokjCxyNi=M=IpKyt?mgR<ctJ<E[PJ]zjaL\M
+QlG_IIOpd<SLhpsGY{ryocOHiqWMzeQTx_q_CyXcw\<=[=ZPgPaQNmIFlc^`nBpjfKfxfvkznnYlqOD
+[gwZImop<_{PuCyZ[ZQrJuyOQA?QdUOMTwm@SarDLiKuQiQrPIpOCtcVyOrSqTm[N\>T{q>mYwq{EAz
+hqPfF\@IGC=LR[^yOfKKlhvhJnOw<BSaQsp]rRSZRNS{L@Spd<aqMgQqEQ?uQEIQONA=lGCxB]vpvxn
+dnplcWYnB[Fh`zLKNN[qQJa{wyc{qKra>tu]bmZPmOGALZ\D[aAx_KhngTFiSpaQW==WADyrIphPS^\
+ActPNyD\[[{jA[^AOt][E{HoIKEQmBv\H@OyFhuUN`AZjINfVb_CcSyGZ{Sd\Sf]I<ETPSKTBxY?eQI
+Y>={PPqQPGDujEnxnPf`KNa`tSJNESf[XvZMXgsEsePB[ALlbfdOOLJ_qKhINDcqQHiPjD>WueHd_Na
+p_nxs[MFD>Bmtx?XylaatQPj>mZdeAG?W_Pu^[gJ<@SFFfgPtqyAFgFA=Hnvw<wSt=xksA{AocBx{Jb
+ST>N{GeDpzzDpN@sqfgANlpWdrJFpv\>hS_F][Qi]I=hZYKT]KhN_ErSI]QNM[\jY`AjsBoEEiL^pqQ
+Qw\=GHFOQD@]AayiAMEGymqqqLyKPRALRQggbKvM[rI<iEPn_DTaQQH\QK^Xm=O=w]R[genblmDvpsW
+vC\XvRiOQ<=AyE_zqn=Ma`@<QQQNKj=X=PqMgyGcyDhNwongKigQIsmXUPlzYaz<M[Nq?iSvqNq<BW\
+HsVPRjm{Gc]UFVWNMXZOhcxKEh<tEpYP\e{YazBlzw_{uQQPBwqGk>CgtfKmkaMfnn\]J@eo`kOFEJI
+XmZNPAyLF[sm?wqyCt{vgNlCOqBmJWDQK@[f{{\K@htKQJSOpbGUYmTSS^UxtPAyO@xozNwD[mzKqQL
+\ZpnWkxOxzOA{@?{{NTdf?bOvSZhnMIMyYcq@==WVUxtTkk[ynz@m{D[m{OGLuGFcMHpeG\[<EZtMz[
+cy^WfypILyoFhDHlouL=W^eaT@AihK{Vau[QeP\BS`m{@SoIH?xoe^MtwpmZasxmZ]x=z[CBdpCk^[u
+@R=gmlEOs^OpeaWqZADgcvSjz[DUx<UZF[qQP?`l?PcrYg<`=`l[<E[<S]zA?=lgsKo]wx=KrtljsPN
+yTEKMwopxLDCva{NAvt==TUxUayQIEPfqMVNNgdrHSeXU]=[T<Mqj@sHsOoDkMGGmMPt\BPkR@PFpoU
+<cwEzBGSKNb@A\>SGIX@mIfxlMT=F>LBNFb[jpsozehQOo><{\bcbJYiF<UP_qgQ]=XJ][MEOVl`e^S
+qOQNIpdv]IB_T<HSTNKmTyNELXS?GIPN{Y@yPtiG{IrvhfZ<U{\t@ffENOQIPpKMql^<=F>RvCQriUQ
+btRdVnXINVmPtPJF@nTqYFR^=>=yPUA\gXxnq?ZXBSaCaI=urNkR@`znXvk?DaEsreLlpri=]VtEZ`]
+D>FQOII=c=Id<>j{XR>?vPFCSHwgo<A_{SYNdmee[ID<EplDAIIPcZ?P]saZlySBbEKXB[GNRNASTkR
+AKV>azEFRNOOPir@Tf<@iSb_mDQhReXcE<UD^hppuLS_UP]EnrYPgFqqHT=mmISPXN=Hxf@OLGz<qv?
+xO@ofA[nQAQyS\{W>tayD^Nt??RXQMSQCx]r^gpKqGNoPpojKmuv{rF^z]aqjOPcD[]vlMq`[iPiQWy
+oPttWXM>YjXN?pXKcYRupOCtNk=aNCyOPqPaXO<zvKjmJAOw`Kdw[QyWiOQ\BSnBaVOCwQGRytwb=bt
+PEu{K\qK?QGx@zYRasvmidUyljQ<BSpoPxXOgmC=jv]AtNS@v?M{<x\yQW@Q?qpAJN@AvaRTUxlnhvw
+_ELj\YKX{P=Vzf^yGPlhUSG_qZZBde^qix@AoHnxK@NYK<ChYxxvx]CMkNYNaq[sIo^w{pw>M=QP@eh
+oHHA?qdP?`_]JirijmAKgH\\@wSjXiTnWIN[tyNrWfEQHnsMYKlKllT{CKzXZ_HfltPmLiJDqHngyB[
+nq@=[iDgH_OVCjov?aHcyj>[qO]DPMTO_t>IJt>H@r<HSlHyLPT=PpsOcuPEQeAQIJXV]F_ol`@_UYD
+uQLAq=ctkofqAQPjnE{\>n<eIaAhHGY\T>QMTKHwHz_CwnlpaaIFEPD=kO_r{Dht^={lwImNqJ=Q<T[
+xbu]qIIB<[zo^BcO`urV@siKP^rTya\m[DnQSsOQP>Azek]]wvY[yiQYtYaZOTwQlEJLITKcoN^jSff
+W]KN=VK=t{PElSiJr`nIOmjSKtOP[]QQNdmzhFOa[QRHqX[x[WXjIQQ<_hmOoWd[{XM[Hph]LWqFw`C
+El_zqLc{W_yQ`RXN\QDrG_P<^OyEte{yQPLSyMFWi[scZAlFCuW{?]y@MPuR>pILvSwd]MbSzxphFCy
+Mnozxd{<JK{UH[kLdN_{TbcmPZ?_UDckmD<ctOkQQ>M[P=?k{Td_=cm{uW\BSltS=DsxxnuuIKAH]xK
+Etm[>[pnnu{NVO_vk`Klq>[_wpDUy_dI@CJQHGkrZMOl`RqKzB[f]{CP]@AvlWkCtN{bqv<M{CxJ<LS
+vEdqi>\SkOAI^a<uQF@glTSw>SqNlU{PB`x]z`kHFjkFCxM[_fTN>[ki`WOsDgQz<DDLLtU{tfSnpl@
+[f?JuLStEv]LiD?Ate{vDa<v]RERHpFJH?`oQe>Fclz@avGLt[\J`te[TF`T@<gubk]LF{?haNiFy=s
+<vop<Mx[kcwD\T[>OJJ[\EVzEZ<>SfB]DiJg>xvoP]N?uDC>[\>m[P<mUWj^mzBaDB[b[bxm>NOCDNf
+uQdK\T\[\E{@>MABt<E[PPDCt\[yzfH^NU?c\VMz==[l[qE`wfStL>[\ctvAl{NXaKpO>[b[\`Wnt=J
+uEzJLS`AxH`^M]F=sGDDCthS>Yx\?Zvl[Cf[f[pk=p@iVhLS\ET>kP<QJF]WpDAt\S`DGdg{I]cxg`J
+LztNgqJkjg]klXnt@^mXtdLdBWbHtd=Gl=[dKEHjnD>R<A<Wj<Hb>ZFG_P^pqEF`=pwH\gA{Pd@\O^<
+ZtDe@\j>@<<JO\<s{\zyDGodJO\stjeXyDG?p=ztIfz<PWpbKZho\fiyLEwpO{dlbO\SQZ^^ZyqOGI^
+mJJFpnP\zuJ=d=fMK@nnGw]nFNMkI<QHvv@ZtZ@UJy@Zwq@mKJFCw_E]`OhnAw\^mAt?TZP?u<zDzDz
+dzFKh_trK`@K__t`K_?vlzQ_tM?ulzACw<[`Ez<cvUz<MZez>Ctez?AtEzdS^ctdShatV[]L[eEZ=ct
+TS]ctlS_ct`AuUZMEu>{>k<FvN\T<

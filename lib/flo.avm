@@ -1,0 +1,133 @@
+#
+# This module contains some floating point functions and constants.
+#
+# Copyright (C) 2007-2010 Dennis Furey
+#
+# N                                            (206)
+# Q                                            (207)
+# Z                                            (310)
+# abs                                           (62)
+# acos                                          (65)
+# ari                                         (1389)
+# asin                                          (65)
+# atan                                          (63)
+# atanh                                         (71)
+# bus                                           (58)
+# correlation                                 (2857)
+# cos                                           (59)
+# covariance                                  (1356)
+# cu_prod                                      (172)
+# cu_sum                                       (168)
+# derivative                                   (131)
+# div                                           (59)
+# eps                                           (61)
+# eudist                                       (372)
+# exp                                           (58)
+# fleq                                         (121)
+# float                                        (342)
+# floatz                                       (582)
+# geo                                         (1530)
+# inf                                           (58)
+# integral                                     (138)
+# iprod                                        (212)
+# levin_limit                                  (271)
+# levin_sum                                    (104)
+# ln                                            (58)
+# max                                          (129)
+# mean                                         (581)
+# min                                          (129)
+# minus                                         (58)
+# nan                                           (57)
+# negative                                     (122)
+# ninf                                          (58)
+# nth_deriv                                   (1082)
+# nth_diff                                     (950)
+# oprod                                        (564)
+# pi                                            (61)
+# plus                                          (57)
+# pow                                           (58)
+# printf                                        (93)
+# rand                                         (105)
+# root_finder                                 (1004)
+# sgn                                          (376)
+# sin                                           (59)
+# sqr                                           (65)
+# sqrt                                          (66)
+# stdev                                       (1372)
+# strtod                                        (82)
+# tan                                           (57)
+# tanh                                          (65)
+# times                                         (59)
+# variance                                    (1304)
+# vid                                           (59)
+# zeroid                                        (79)
+#
+# compressed with granularity 99
+#
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; version 3.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+#
+{kvWZtwzzxb{kzaJEIv[cvowhsfCxAww{kggzbAwav[Ez[ujvvWZ\clJ[JZFAx?vtjzkjHsfMT@AkyO
+Uzm{Kfzw^{Kfkzgbekzdn?=xLap{zgfjjgj[z_FGZ\`BF[cnf`mveUcuxBgrgfvggf[cvywkvDF]y]t
+z\TLNNd[<ZBgfvkfwfvjfCoCvxfvozz\lA]=_N]ko<RU]fpdVjBgdVkfxlA]]ZeXgGGKKYvbVH>^<Hb
+TBBfnBg]fvBg]fxbTEzgyEgGaHrxsfF\><^d=gFBg=gnBg=fx^fMzhY^pdeghiGzsf<d<VRBfBldVdV
+yD>t[g\q[bHztphbkJrfdVdV]z]fBl^<T[gh`jzg@jkHnuEgoKfdP]dA^B]z\Mzet`iCHg>vkMHzjNV
+wsfddT^B=ThcnuDgrPgfkfuPkzKw`bj{vgD><^==vzPrcgF{ftVjOEz[K{oztaSk{fhdd@kzNC[zNgj
+Bg]f{F]xUv[cmW{xztCs{k{fffFcuxj=z[Jfgg]ftVyoH=THN]xUwF[cmW{i`Zdz[Gz{zfnffCnCovC
+nCgnvjg]glWBmFU]h=THQF]xUwV[cwPlTIZmVjSGz{zfnfh=Y=O{lAp@gn]fzg]hD[op^fEbC\lA\mQ
+N]y]yj=aNZ>RgevjSgx{rffdebFez[BTjgf]ftVjCt@>PN<DfcEbCch=TNRiTLXkdVk\Rgexgcwz[vf
+ffF^fClC^d]fvdVhBg\R=Nd<Z^fXKEbBLqTDk<=ftDVkhSfxBjuyc{vgFf<o<RU\DVkFBfBg>OG_d<Z
+AdfBgPS^BkTVj<E=ftmMZ={csc{fhfeEb=\ViFBdVevkujVz\>btDJBm\BkVBg\BK^[z=U{cc{ffff^
+d=fn]dVyDkzBKcer_ITlCfBm\=gnJJT[azTCsczZ[zfnfn<BpdTVvFcuy{{ez?RwQ>=@CLBmoBlD[Ex
+?>S{\[Z[uu{vgFgD[F<WxF]x]{zez[XoH^iBt>A=x?Eh=T=tFUz[t[{\SZ[uuyvfffdFf<x^lAp@[cq
+D[DZYFLnu{TLA<_BTbRD[<[<mCu{c{tA{cr[{VgFgDFiNebF]y]vlApA\<>iSEQmO^e^@=Ta\d[<[>=
+Cu{cszE{czz[vgFgHiNfF_<R@C=bGvfqPkM<d<=bex=ZC^]x=XDAcuzL[zEZX[U{Zfnfnf>>\Eb_>d{
+xhjEQT<Fa\BTHS<Sc^VClAw]z[FSu^Su{{sfhfhnv\f<<cuxfE[rP<\F\\U^=VlAux<]xEuU[{f[zEZ
+[s{{fpfhfnd<]y]veP[aR<TfD<U^=X=U=dU{{bET[cnatcyE{[q{fhfhf^h=TLXebCRC<=^dbUj<@Sc
+uy\\]xEUUzlKp>[pczZ[ZgFvgFFUdfszGTt<V^d>cvCmczLAfV\Atm{g<{LU{Uyc{rfnfhrfF\Fq{{I
+Ll<<DAx=THSzUa\UzPAsTmyd@SqB[u{scrgP^i>f\GV[cszG_j[BTUz[>f<H[eahJRCyj[j\m[uCuey
+c{fnff^fmN]x=uz[CUlGA^fD[DZ<<=X<bvv@Blt?A{NB[co={`M[a{{vdnfnfj@=Ub]x]uq_\E<@=Y=
+ExWvjFJjB[c\^Cmc^Uyzu{vSA{y{fngnfiMb=lApA_P[EbG^V=QVjOvj\AzPLA\m<H[{xM=z[>ZauZo
+y[ZiFgNfr>dBTkg\ptfDE?JBg]QVjUyzBTTTMz[a\]xMVM^SEZZ[Uy[iff^ffh\>d{{Sd<<^edVjo]f
+thS{nFdB]y]xy<RugFc^SxvCr[u{[FiFiFgN<cuyIPt=b]gnb]ftBUz[l<?<R@amubM<<l@eyjj@QOA
+yc{sZpiJiFg<D[BZRMOZTW>UdVh]D[^[\U]a]lf<w<Rovjf\E[PmzSk{zFhfgFnp=THMjMIx]{ZTVdb
+AvMZF]wZ<>Jaa[fuYuzt@An[m[{CyfgIfnfmbBZr?{`=UIx]f<cleZ<EwS<DZypBgeD>M{rUVMZEzYA
+uv{phhfnddFe_OF[clD?{`Beccam`^A]oIoTVjJFAmq<bj[eAzHauxs{vfnOiFd=tON]x]tcux=dHL?
+czL{``k?lVibB[_hTDmZj[{F{vCd[zk{NnnfNg{c=<SLN]x=t<D<A{`Yz`l\JBfV<=Zqd<Dz>HS{uJ[
+ap=>CmxkcSneDn`f[coUbFLAbTcuy\q{t\JBjW{zRX[<Dz[cl<]xac@Z]xCzIs]Dfff]y]xzF^U\V]x
+]znCuxv^BzV[cxppA]{AvClClAfX>=O@D[{{{Zf_Nh=TLYKL>F\lAp@ZFCrCg\={zFCxcmuD]=]E{<R
+UbWD><oAs{=a{{yxfffUdryL<BTjNLA]=ftCuytTS\=xnDdgCmb=^dc\Euz[REzXa{[yvfpfF]{JFF_
+uBVJgd[@S{\cn@P=>>C^d<<=lVCrCsuCzLauU[S{zfff\ZS_E\Kz>d=fx=Wb[anmU\@m<<u<R@B[tFC
+{kc{nSpSyu{xgPfyEzoD[cl<VjU`L]xadEL=\BVEZ[\=[{t>d{e[cwezR[uu{wfffyR=Z>FCrC]flf@
+=VbZ>F]cxAz[Cuxt@[pK<F_uQ=Xy=YuyccS^gQgJFB[]<R@BBf<Uh\><<]xEXGAd[TZkB[e_\M{^UXR
+E{{=[czYqnfffHbHAub^BdfDLAvR=c<R@Bgd@SAAMcq<Ewo=cuxE{xA{_z{neLfoDuzF\B\=bAb]BVJ
+g_cuV?AwCvZjD[<[L[cmc{zBSs{tffdD\<O\=^f>>F\Bg\HQq\EPdCjC<@=UbnCpA\mX[czUxCscsfp
+h?z<=<<VjCQq?^UgIub=]<RE\ad[<[z<AtZ[U{yfpfdS\Vh_cKacx]QXF\UpZP=ZC{zb>A]{crz[vgF
+FctVertQqSzeb]T<fl>bTLSau{bDHS{]uu{c{viFI=JBiQiTJt[cqIlx<<>ecz[nS\B>[clNR=]yu{u
+{vgFG{]jILy?Qd[TZL?mT<HS<]x>S=d[TZCtNS{tSczZ[zgO<FAtYw_rkQlA]=\rx>S<SeTLA\m={]`
+[ctUy][uYccyfndeJ?PpmQepybVIzczMbAbU\cuxB]y]xEc]a{{czSuu{ph_KyhH>qDzqpF\ZItZ<df
+\\gd[DZH=TNR<M?amz[^=[z[ZSu{zgND]ZPdRtCvUR\?EqIb<=<=<SLLU]`tBR]y]ZEzS>=[{c{a{cS
+QG?czCnRIJqaS@jON=bFF]^>c<RBSvCrZEcuZGCs{cuYc{f`d<SP[_QdyUR?`s@`F^<DMbTuX@=T\Rf
+Cr[<DZ[cn<Su{_scqQ>[bCDTtqAuOJdtl>D>dBRU^<LA^=XMd[DZUz_C{mf[cyFvCKuAPcIQtWl?@<<
+e^jU^Tu<SLLH[\B[ao`C{awOP<P{{i`VwaQn_k`T<>jd=bF<AlD[UwtM[{u[XODCu[{u{oorwQlHWf<
+<<F^clAdmczuX[ctE[ZF^CzKcuxuqE[DaQqJxJFv<JEbT=auz<cd[H[nSlnnTS_CvCnCguYGNUjQcqH
+B\p<E>dU{E[HX=TTci_uoF>[@E{<SLNkwpAaJqeSqcTlt\<]x>SDBU\Cl_AyuHbZeAubGf{{cWlIASu
+QeS`\rLAvR<F`R@cwGmDHLFS^d]fuz[KatJDiOSaSaSOPU]U\JNHSxy@<cal>Bgd[LS[vy[=j=QWWSa
+Q<lf\\><cqUwl<utBgLA^Zo{zyP_OPU=i]QWZF<QbZ{oIh<==fbY=gz[coo^vRyr\qbLW[RD<MKWQFC
+nBlfl=Xz]xUvtnTcMUqOIIdIWeDv[Jt<cnC\<=F{<R?@gho[aLwf?AOIGxD=b{ExoF>\]HU]vj>D{Pt
+Hp`jdH?nCc@pQSPl?VFdBg\xleWbBiEGP{zZPwr<MM<<VkKkIMqWBCQF[a{ofIkPiTVxIXrE\zPiW<\
+]xcs{LtPmwh>=hFmUNN[R=aIlA\Ccux<oeba>=zFrO<qYo]nU^VCrChP[Q\=UwNEdYSAzDfU<R@BR[z
+y>OJNJAkMRy<<BVGMz[CneMhQGoRKOq>d>d[B[_qDN<M?bPq`td@lA\mZj<g\qFULnTbT[zg\NzGNhn
+>fCuyfyCPJF>D<]x=tVk<va>@=UbBguxfBTBBgZIADf<Vgqd@<BoqJ<[JGN>_E`<oJ>H]P[kOqO^_Eh
+n>D<

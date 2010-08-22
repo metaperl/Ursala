@@ -1,0 +1,149 @@
+#
+# This module contains functions and data structures for solving linear
+# programming problems by way of a more convenient interface than direct
+# invocation of the virtual machine's library functions, because it
+# allows symbolic names for variables, positive and negative solutions,
+# and costs proportional to magnitudes. A few matrix operations are also
+# included. Replacement functions implemented in virtual code are
+# provided in case the virtual machine doesn't have the required
+# libraries (lapack, umf, and pcx or glpk) but performance and memory
+# efficiency will suffer considerably.
+#
+# Copyright (C) 2007-2010 Dennis Furey
+#
+# linear_system                               (1870)
+#    - lower_bounds                                 
+#    - upper_bounds                                 
+#    - costs                                        
+#    - taxes                                        
+#    - equations                                    
+#    - integers                                     
+#    - binaries                                     
+#    - derivations                                  
+# mmult                                        (255)
+# lp_solver                                   (8605)
+# minverse                                    (1795)
+# mip_solver                                  (8952)
+# mp_solve                                    (1756)
+# mp_sparso                                   (4281)
+# msolve                                      (1573)
+# replacement_lp_solver                       (7999)
+# solution                                   (34208)
+# sparso                                      (4119)
+# standard_form                              (19687)
+#
+# compressed with granularity 100
+#
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; version 3.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+#
+{iwIwj{ik{kWP]NawgvxgF[kFseRjfmZy^gzuGZF>[fcgeKwPdKe`[fyNxvWzvoCv>=Z^tvkkjKKwO_
+>Se_vIIfjvWkeVWZtjfcv@[duPfjjtj{vhtozrGdNCwTSinvvjgkfv[avRzwOzqfvpAv]CwAaf]fzgk
+{fv]xczx{ww?wZiRgd>[eTSDz@fBg]fv[clVjpAeCv\v[cwYJowKvj=fv`[hBZerf]flVjd[<ZBgdEG
+]zkn]xmzlFz`cjb{ePBgfd[DEBtQDdVdVhlAbTVhb<T[oDo<RBAvjsONzzljsfdVx]@R^_J^dV]geb=
+]fd<M{J`bTEzyw<fNawYHgj{iDW>^``afFB]gdf<VgE{Tb^fMzj?vjdMzlFfgkIIv>CvZ^A>]]\D<V\
+L[nsd>t[fx[kZ`jjgfvjahJsd=T\Ffd<]f=XNKn<T[fkB[g\zl=WkZvBggoiJ{d^F^dD_nxl\Mzvj\M
+xgmz]KvtKhdVjewwWooZ^xgHVowgEx]ft^ZfxE[=<zgmzq]fw]wYIVZhF{fhFgMDqoZ==vBg\mJgdao
+PjfxEZ\dVjoYH>kPmnWkIvhfl`gAaFd@]glVBg^cnmZvjj[h]fvOQfwlg?kKgGKvhfmLgUF^]hTdVjl
+A@ZZ]ft<MxnBgeExyvvv`eW{uOKKviFpzp_F]{>Bk?m=WvBgech]fvKAg\zk=VpkE[{gWkwsZgFhPo`
+^f=<dWB?D@cDVx<mH]fvAifx[eMRxHHeZ[{vyKEcnnxsphfqBmRLL[l\elW>BfBggIQFxezyQhw`f[l
+[c{zKZhFurcnoivhfp@\Ff=<pp]zGDVjiTgfv=CwFG[SGvpCw=zEZS{w[[F{zmo{pwSKxiGhio\iF=T
+F]fwcWtVjDCwjNvpllx_@S]=zeycu{{SSyReg{{uyib<Pznf{{h`fhANf`>DfBggANRdVjBSjp_JiJ\
+l\tz@Sa]T\S@[c{wRYQgQIFScuZ[xmOraK@hjqvysnnoIQoBH]fv>ySDVxBSKTEON=Vv=Cw_vBUchcw
+Au{yXikNObkF[b[ezUzRYiyXGFeEGsPzg{vhwyPpqODVj]MQhBl\ag?<fiNZlat@[\u=B==z>S^[cwW
+GpXvHzsN\[\]z\[\]zyysqQxUoFizqvbZkGwwoFnqMPoNnBgJ>rd[nWL@oHqN^[lat<t\Sz[_Aucy``
+[KUML[erG=x@[HClMy?>RRiS[gfzONhs[y[FuFyg{KIpyOOIAYYf]gq@kDA_E@HvgkA=X^[\B[\ECtE
+z=A{nIRvcU`AwMn<CjA\=w]ZLx{YyYPNCoP`OpmYQStQo{nfcNU{kfzsFfgPgOPpnBjvHy>?JOygqff
+ZPAlhS>]y\Sj[ivcIAPKMF[g_db=`E\UKo@YnyQYSVd>u?HfazG]SQpk{{tI?njB[jxi[oNoGIHoNpn
+dT?FPo<Kfy@hRPdUbfZ<a\MTUx<mZsXIFzAvdVCwZVfEfElyg\pOQsYYijxrNeYqSkQp{zF[Cux[xaz
+KzjBVpzkosploGDfhqGGDHdgFzn{\dzt\B=bXbu\mtUzfa<nQvSWDLCwqEfE<`<mu{DisSUyrWbpXiQ
+Dj=^QNw{trAQvlZU{=ucuVKXk{{{vtnsVK>{s[PeGOOIQOOH<OPzvgIPFYsL<BK\B<Md=[NyKPhxm<`
+Cogo<\?]Y=T_Ycuzmj[hRljgGRhjW^FwTQSqJUQNdLHKf@??wVoSFScuZ[{{{{h@zZspu[[YuPhpqOQ
+QPn_OKopegDtQ=N<<<tU{L^_DyEXf@CiqrN[PwLuzmjmkhQhWwKiQ<OiNnkNVFyQbQLvXu``]CuDM{Q
+GEy^czAv[tScuz[c{{{dMw`k[Ozat[kkZPpnqqQNPoAPxmH@_fhxE<>mYLzEOqJN@WC=[GQXSNJmkhQ
+wAYuGw@yuCZLReRpjgfpvjKcRTQQEoDL?tL?zPcsSnl[]cw=zB[dST[dST[cuz[cvt[vIyQiqZe{=zC
+ywkpphqRPqPnpaLnnjkEWp<aioE\RwwEg\o[GjzY^zmSZOYuFeQPyuHeQNaQSNKqHBgkF]fuSqUq\jq
+FhSHSSwxq[MVbAtbSe]ZEatc\mzEtH[dSHSdSHSezO{_qGkLz[Si=zl[^S]Z{WyGGDoGFgHoON^_np^
+@shbp^QCa<N<?{SAJkRdkMpyuHeQPfQQNxs^aQPkIgoZZeQPhBgg_dVkaPkySOqGfaaaapxOi>sInz\
+EX<al>S<EXlTD[hB>Ctc\atc\aw{{=Z[iMQeqYXI{S_@S]=zeyct[srvqOOPnfnhvtebnLBgQpzPLV[
+uo{{`gRhRP]>tuFQQNxs^xs\^gsgoZ>Fk>FkWBozQJBgNvtBgQ^kUnkvgpKOFJVJWlvkJKqqJcWETan
+REVELSDa=Xl[cw=z[eZ[{tcwAwCfCSyQxi?[qtJK]AuTRDAmCt[kjvsIWPfGNgNqxnpNdjS<<]NE{SF
+kcuynZ=vKj=ZVgoZ>FkZDfytyjsl^gs_rvKWkhNiYFgLVdgftVfrvyRNycHnwgpF<L<LP?VvSsAoQaT
+QFurVurT\c^>Z^<EAvD<`Sf[^[auzl[\aoypoYQQKoGpi?[qt@[jKdUbZn[hS]{Z{D^nhFnhNh_PnUi
+>mVzjD=ki<jWd[<[ZXVOesYqEdDfytyjslyjssEGlxfKWiynNxX`kCZNO[Xph]gftg]gHAvjyvgqUD^
+jPgjdUYdvYLJ{ezuJ^F@\\dN>>M>M>J[>J[G=zHSezEZbAtakAahsysVoxM@XyGLsyY>S\Mz?`@T@Ct
+EZEzCwqhnpiM?>iHBXn`D@msq={pze?{LREmZgcOTQ=RkH<yjssEGlxgnNxKFnDo`f=nNxSFnDo`^Ht
+eQPigc>hfB]fzg]ddK^jQ{znwsfVk\gaOMyOVJJNc[CXQeYDE<`jj<HR<HRe]Z>SHCtal>SRVRxz>ZM
+CiQQaInc`XyGLsqVE{>S\?^=[uzHSb[c{tngIPH^eOIFnj?OR<]y_XfWAlEBFYkZT?K>SSUX`k?nh^H
+uF\NDo`f<L?lkD_JVd=<K@<xkIvyEdUPhBBg]ftUm{fzR[co\ga[{lVkRguN_G^NiKO]PwTJ_DJD<@=
+<E<`\EXEVTS^SEV>GRK]FMOIAahalQfBc`XyKlsPPAnEz<Uz<`[\ct@Sc{[q_HfqFh@D<Eeg<qFCrPq
+d^cbC<p`[zMWpXAxnDo`f<L?ljL?ljILJL?qG_PIL^gsoqGShh\Bg=ftK>S]fyYD[TZkfzR[co\VjdV
+kPgnNh>sYOdx[?H\nArnSU\EYUgbOsMPnOpsYY?yYl@dVZMnIO_ZfZPAlhS>]y\Sj[d[ac{{yINp^n@
+nZXtlCRwOZHxCw>CuYv@sj?IxL?ljILJILJXg_QTJXcDyjonjhHSQPlVdVxjf[]fvo@=TLVjBgqp]y]
+vtVyDVjf>tPdqUzAoHNnyqf>>jV>NR\\dLqXiok=WscuxCKGFd@dVZSnWcLUbfZ<a\MTUx<m[D[Id[c
+{[sp`h@fHbOoP@IMM`^N<F{gfCr[{nqY{SAJILJXgcFtjgcIntjGx`kBfnxJQOfH]fBmftNCtViHUb_
+ftVjhm<R@Bg]hT]gplnGb[QK<vIG]lRZ\^]@jU<vuysUl@xQQh[h[OGNt<\N]ds^Eet=\UcEjTHZB[a
+=YOTSd[cc{kSPPgQS`SJ`ucI<FWccY=VHUz[NGak{uFqenjGftjgkJg^zZgkGoD_JX<QHK[AyN=dZjg
+i=ZBfGtf<VjBkOBUdvjCl=hTehoppKG<lhS_c_G\\dLHZmpRCeVyr{w=ShAPVxC>=?pTE?T<BK\B<Md
+=ZFRP<apmZAT[cyw{GGFe[toQpSO`_Bk`a^>L=d[<ZmV{z[a{EtC^vjxvjxvknTVjxwBvkn[E`<xgDn
+mSUQF\T@LVj<ctVcY<=ftWBGtf<Vj=LZeNfeQ{YorZ=Mu{ph<^{hRKXHs?kSAQsa[ZQ_dQj^_M<y<<<
+JB[_y`a\EZTL[d[u{[q_IOPCuysIOQNxnBgZOHTPA^X=HYfKd[EyZJVNxvknTVknTVkEnBgxcwA=fxc
+HcDqQphzakwq<DVj`[]glFBg=xCY<=fu<MKB\aIzAvacoq?Lcw]NN{ZOnmSCNAdz[afQQxeQSlC{K<S
+FI<>mX^Sfuz[r<SP?{D[u{{qHpfd[TZTnjbUeoFZg{cT<EBFtI<qx=T=xSguqnTVkEnBgnX]fyOLViE
+os`\VkPqPpX\xbASKYQWODBkF]xBjbBf=OlFBgLk?qmOqKPiLnWjx<BwF^gfQP_gsYEqMOhYQnxsmVx
+smXyWeLc]X<a\nVF@>@SQUtM{oLKy]Z[y{PqAQ=TLZMOQpzwyU]f[cm_B<bhQEubEfYf{b@cDVkPpBg
+QI=flF<ViONaQLVh>\>\GgqIZ^KikNSHBm]@R>kzBeGe]f]HGkuOLfJzOXnxSkczVQfvxsS=[qKIga[
+hSjZDfxRxDfxRxS[OmlMexcR<>JZJBATShLM{nB[tSac{voNdEDzFwzqQ_KpLbBd[T[`<cc=ntfUlIV
+k{uPpBg<d=f\d=f\BdF>xs]f\?ngfXnoSN{pkSP]{>afw_tWF{tVqfuwyuyiIoVjFoAPpn>Axf]ft^g
+maqXRyrqM[OsaWWhXKWgVJKWgVJYyqa@f\Mk^H<TULF>SCrCw@DAtEZx]zSzqQPT[yAOylrQF]L`TY=
+TL[]`x>Gl<Kh=fuzSZ>\Bf<V\BdV<^gs]gnZgiKnnUUCQQEOaq<LEtVjkCtUfw_tV@vjXkH{RyPQ]X{
+WD<lm`Ne{mLVjKWkIoAraSS>aQzNaQUIWwAx`k?Npx`k?Np{xRSortF<=<=S@a{n@CutcxcvKH[ezS^
+IF\[coUyFPUOhA\T<`_{zMUZFzjBgd[U{z<V]dVBKWhxBnX]fxgp`ioUKO`TVyN<>BgfxEZ<VjkCtY=
+fzOHDKqxaauImKMEfgKFhSxFBgX`kCGQgW`txeY=]OdkI\gPYuRnDobNQnDobNQqsSkKyhip]injT`R
+<Asyb[g=Zq\LKh?z[fgNCnCqOjnyrQMxU\[cszH^?fuulVy<R_B[atVBBCEGmfdYOLVkDJ^JXiQWH{O
+fK@=grgdalVjgnctPBg{dnxoXlKzpbRKtHejHtDEzldVh^HtLU[sa<a==SGU?d^gro^aQUE<KHjHL?o
+G_MoSApJcU[ByDKBR>]>{c^MT<=ZGcmQ@[eCt@[qPi=Y=GkQF^FmSgmM\]x]uz[Y_BguETW>U\B]xcl
+T=D_JX<<>\BgH{=E=_\FuorkOQDW>Bg^c]grgd@[tBg[y^`l]c`cY`r<xoQC@paXUCypBe<K?[kMDEV
+BRINv_rwLagoTHILYo?PCXqrUv]yR?OEYpj=[I\pY]]>{ct>mZSTSa]ZlSgOLE>qOg<rJHOPAFY=Y=D
+[TZTl]f{`nCtf@=T=t@<xf<Vh_n>HxSKnuNq=Rl[]fw<LW>Bg^={lVez[PbHwBr?QFPdmgElTXH<\O`
+fB_PB]Oz?YdKGkJcEGluPDfyMnusEnusRfqpQZ{xnIKP\aKjIEtI<pY\Tz<aSn>SdEZ>[qQM_RHf]KE
+Wdkb>Lh=TLZL=f{zY\R<BTbIQTVpqD@JnHogZDobp=TBk?]zBg]awdVd[DZwFchQoDxyh?fhOJu{qLU
+nOWIP[qHRQD_yD_JRb?rw\jkOD>vyH]lalV{L`yy`JXRtUCWPM{nS]P@So[=`amEX\[qOLIQ@RH^jQ[
+HbTbVK\Vh[cm_>>e]n?]gqG?==?dSPO{OL\WB>=TBk=aoxBlAp@QB[ZNxLaGlmJkRfzP>CyF<jsmgE{
+nvWK]Iz@<x@snNxVxfxAkFk=W\XyD{UKE?`?AiaQ\pJTRA^{z`aopaxjZjZ^[pHdn\N@CJQO<b>F]{]
+fd[T[`<<>vt[LD?\<gZ[KNvdCx>=hDETx\UbG]HfQP_dT?\[GN@\?qO=[aKFXRJgxgPAcqkPYSLqESD
+_JAXcfxInZglolzmp@{WlIF?WQbwDyiOL=TSn^R=ryJF@LdM>M{QQN^WAF@=\=z[=g<R@CtxftQJW?y
+RnIKA_<LDCxbqD>dpegoXxPyh`=pyPea{OnXSVvxiMNY[o`dt^sOCFy@<x`cDVk]EnBgt?StbDml[_V
+wcJGRetmQk@aOMTR[?EXx?\td[qFpMFg\VCnC]eb_{xcfyQDeXQ]e`A@P\=TnQF<f@^FkEMEPSMIO^z
+<cwgNXajQnpaE\xQGPRMnFnn^vqDqIOLVkqOLVknkrPsEZ]FYkASGBfo`\hLzK@_V>J<ruP<<MAxpe=
+?Hc<SLLTf=z[NX]fyHE=NpcGaNDH>=F_rvIjdo?\n[ODSKpqIUDGE<TKMWaEpaMsFjxc_CF>\BkJ<d=
+fo`[O@glYqpkXmWptAoPZQf^xzIPOm`xzFSiIDnEbTd<D[D[PpBgiDgzx^Qo<T]nNxWnElMoHj^bZKD
+\F<IQ@mTnR?ok@psYKEsV^t<W>x<VgoF`hmtzSPXZVDzrwiXq[uolL^GrPALHKYMtzeO==^dlAp@>\B
+gLmxoXUByIED_JOs_Hj\^{<<BqH@XL_KYXRPWpCoNCEoOQWnCuPBeP?Jk=Ah?kACXFErXa@qSAMz[ZG
+d=>SzgSEW\HSpe=\EbF<ViQO<qDaGID`<yHq[>_x<x^QFz`YpNQ?JAj@yLXqI>Hoxb=UfBv\ND@ehGs
+{_ETIRbL>sPd[D[L^zAK@EmAgUmE{GE\fDVndLJ]^yp?PljCJ<x_PlDJaA@j^cY?Hfv@^>\OFxcD\bB
+Epzet?yzyn=HaILNvi<SLO^jwlvnWWqQg<zpm\DWP?QTZYEo\RaNqINc@dvKaNNf@\xD<fFyOLn?HTN
+fZJBAWHHE>wFHyPU^rvjjP?XKYEDgpECwFb=aJyTQtDjyQqQF>@nGdcNo@^o\SftF@HJH>]VKgLBt=M
+NPpdF^>]fvkascQCNuqa]ZOM]EPwQ[QKFugdLDT^eu__dJ?ptVjBUx_PA>[bC`Df<<\BgvkMyPxgpVr
+[X\aypYUyOcnaSEfyHNX^BOyid>qNtVkHkLc>_OxoP@\VxBgfHjLLGVRIVYc`aqNBiJwM[AGGEofzJ`
+^ZSzB]xX^jBkM?qSYOqqPf^Bl]fvx`\QKNYOKhXj[PbryPgPaGGqOLVkMnE{]z[UUHGvjBm]JF_x[bL
+F_O<[]fljA?ijssUshRF@PpYNvlIuFzCD>\BgtS=z[D[D[uuOnBg]v_EltTb`eZ><R=f_DaIMQOsfM[
+ZOlJnc@hf]K=xoE\BgPzD[D[<SLS{{]nTVj=@oJ_z?>^DDBei\u\xOmPkfQPa\AMdMA_wPlEnBgfYlA
+p@U^cuZ[cpcDVxDD\A?>ylBniApPhRderkIideL@cXDLNdVptIBTdfFCn[D[D[PpBm\F=dl]xVqGbwo
+ZAL^gm`nLfP=L=jP`>d\H=T=x=Y=<d=xPi`CCNUIHxahpv?rv?F^x<Y]T>BTbU^\=LbdHG_TwDSs<=X
+X`k?L^FAUlFb>da<AfURR\sjR?nDo`HJy?\<<nNmiQOqN\xHL?mSGR?=P]w_eDu@[TqIDbQ[NUqA`kB
+CCcI@PetUc_iZdXs_DkM^_K>[qEQU[YSXKGPK?h[zNjPaNOdRunYFJKlUz[H@jkMXIhnXiGDx]d[DZh
+aOs<yPWPq=BiNX=Y=JJ<SfH_n\dMGPebTdyOmIXwl=l>=^dg^dw=zaXXU\FkGO\opg?@bVjESS=LqrE
+]fu_Fta@`]]f{<WJAPTViruhqM]fpnkGJTTVlRgxYsBBlrgxRJjbC\BghPkoxTXBgrvKDKDW\VhNPiN
+qEk=fq]PiNbQ=gQ<\>=v]jGu^T[OHbn?d^Elkl=tKDPiNQPd<]nD

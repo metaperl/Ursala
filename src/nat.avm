@@ -1,0 +1,63 @@
+#
+# This module contains some frequently used operations on natural numbers, which
+# are represented as lists of booleans lsb first with the msb always true.
+#
+# Copyright (C) 2007-2010 Dennis Furey
+#
+# choose                                      (1290)
+# difference                                   (318)
+# division                                     (852)
+# double                                        (12)
+# factorial                                    (412)
+# gcd                                          (964)
+# half                                           (9)
+# iota                                          (80)
+# length                                        (61)
+# nleq                                         (119)
+# nrange                                       (262)
+# odd                                            (9)
+# power                                        (444)
+# predecessor                                  (193)
+# product                                      (190)
+# quotient                                     (857)
+# remainder                                    (857)
+# root                                        (2605)
+# successor                                     (40)
+# sum                                          (137)
+# tenfold                                      (167)
+#
+# compressed with granularity 63
+#
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; version 3.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+#
+{iwkwwoZ_NRgZvFoXsg^RvriwNkKoiHse>?e{JgxgZ{xb[nvKgigZnh_THSnv][KHhsVqJ`dUzhvE{K
+?OHhrmDbfH[nKr=[KGoKFkzit\T[nkLB[rekgkGk{gv_x\mZDzllSfgVyGfoGK[s{OqGo>>OhqFJ[po
+xkQGfxgk]zu{[vkQHzwKwKO\<Ov]N_JGGpk`cjzUZNSh{s[Pth_SIgd[dxiG{HpfHcFzEiGyGIN>[lc
+umze{sfHcFmUN\D`wQBBdShdihndyvnhsGFkqL[<={lexE{sssOHnFrNe[eOHfcyOldDfiyODniVg=I
+\da^S]\=TmXJSsyzdDowNFNEzRV_LOmH\]H{vHgxjxraq<EjSx`>RHczSF[sp<oJNH]xkH\G{_cNSQZ
+^enpxg\OoKe<e[PibnM[nZM{y{fpWA>MXxV\FAxhdsQHhrnSQHwDg\QNacqfD\VexmBU=Z[sys]]D>J
+Njn<eKNH_^iHaG<?DhqEKUTDH[r\>B]WdBU{]{awCsrfl?GxgKwMEJ=d=ep<\PjqX<=Z@<BUL<@[]={
+r[^[swrDIDx\>DSpo@nnoDRxWae@^iEcvEzvEAzE{cok{h^qDu{MDX^eqKHPxro<N<MzDcwxFSpfSx]
+ydS{sfYNd<S>hp?HhdrG_Pyz^[^MzKDVSZ<aoDE_NSC{sRn\\EyFw_Pni?PJ=ip^MzJCoP\EX{EwnWB
+clScwyslz]f]teNFZ?_WHvDt[<TSPhc<NrBh<@>MbSn[mZ{zhn<QOpILoOmOMKl=]TE<\e`>=@vn>[]
+=ZUzcsyXnFfyOQb`PxRKD>Qt\^[\@UxeZ=Cu]u{{po=MJGNIJFP[IOV@^NsdLZR[fCtLXAu[s{HpHb`
+FqzXwPf<GGiL^NGCm<[f>[E[r[{wQOHq=`oOgl><>piLt<MTmZQ={cv{b[c{{Hn>GIlJk<{uNd\fLEx
+HM<<ApwO\mZUzSkqPDQP]NKhkI@S]zUtJc\F{DEZ?AzSKQ_HnQVnyKLk`n<\=@=dTOOTctUz>RHWQOP
+=eOp=g?ZbTt=Alh@Sdm{ERYFffN=gNgQHoD>Z<J[\T[I_NKQQEFeA^wnF?D=AlHRDsMPqg@R@agT=ve
+tE<xbFgH=D\eSYE^Xlyfhf^<iXd<`yzHhfn@zv^<[INF_HGYnMqT{OQFeHp@kmmXFhB@T?wEuyQK@bn
+<_eyNkaOoy={PqkpwuSjM[IFoPtkIVoGoauINkosNENe>S\E[<fHrOh\oE\sqbyPOPKoEXmNB^kwEWt
+x]=n=C<>AyRmQINX]Ru[OlUYNfJx\auOiS<\FQrNOnxWatdeo[yOAKIol_^FAx_TjILn<lFOpi?PJPw
+Kxc\tr=l^AyOOoNJFSnVMLvXvOqJFQ?\OzFqzCol[lUHpyD==[S<wNbexP]NMNWA`ruD=`MeJ?=INNm
+QC<[kSKPmJFtnUOHp>H]{NvGx?nIOPdDX^<

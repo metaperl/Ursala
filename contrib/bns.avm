@@ -1,0 +1,72 @@
+#
+# This module contains some fast operations on subsets of a finite
+# universe represented as the type %bN of boolean random access
+# trees. E.g., a universe {`a,`b,`c,`d} could have a subset {`b,`d}
+# which would be represented by the tree [2:1: true,2:3: true].
+#
+# Copyright (C) 2006 Dennis Furey
+#
+# addresses                                    (262)
+# cardinality                                  (109)
+# contains                                      (61)
+# contains_element                              (83)
+# contains_set                                 (377)
+# dot_l                                         (45)
+# dot_r                                         (45)
+# intersecting                                  (73)
+# intersection                                  (80)
+# intersection_with                            (613)
+# leaves                                       (280)
+# remover_of                                   (487)
+# representation                              (1966)
+# rtree                                        (335)
+# semantics                                    (545)
+# subtraction                                   (70)
+# subtractor_of                                (776)
+# union                                         (53)
+# union_with                                   (562)
+#
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; either version 2, or (at your option)
+# any later version.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+#
+# compressed with granularity 53
+#
+{iwiwWKwNnoZpJjwZnvkjh{jGfYONwGzzjgeOPvon{jrodvN`IKfnzsh{NINnwiNnof[zqjwHgLnXke
+@nGHhSgOkdphp`dNV{JiGD\axppkv]=DjcFpvzrAODzFiGwZ\GnngLpgxKjGmz`fipsZgEi=`pGOf{K
+dA=x^RyTnoZnXdF\y?PiJoxhmW^uuWnhsdngKfOLPIHpv\BVhgIpkGJozi<gHn\`pA?P^gFqIGflEpw
+OZdF`Fz\`pD>hf_kLjgOvkkfd]Hov>h_IpX^RgGYGGnowfe?HzfiCEeQOGkRFRRhqvfn=?HffNadHnk
+FZRhgNscZnd\LfFlHrfH^oYFPqgiS{Znf>f@ayfLqNvnunQJA{[YwNff@y@fFJy?OQwwQcyU[[YWJfg
+KtFipX_GXGEzJ\M{aU[C{{zlfffoQ>enVOGYah{UNlSsLUXt[pSi{ZpffegDfeV??_vZqQPt]cyX_c\
+@[tcyc{sZqFflvff?GJcA?F\dwL=CwQ\=Bd[p`[cLScyysgFfhvxfNHjaElpYBJCxuvM<SvdAlvcrCz
+[ssZiFrkGNN\n{iJDXa<@S][xDayTU{uhR@C{>Su{[YwIRkp`=hh_p?_FeRe[YqZCcrX]Cpp<EDav^a
+{hSu{[Y{Phpfe@oxiLzWdScctndrh<h[WDus^NBSfNSklE[wAz[s{RlIGPoLpoGQ?yFe`L>=ZXfhn<E
+qc<@wltu{Guzxou{S<a{^Su{[[TqIQQ=PnDFxmmMVUyUKfxtqX=Nn<<=zL<\[Of<>M[gccxxe[tayEy
+{zIAPoQQKowxOY^mXLOH=T@uZt<EZ?A_l_ct_l>M[f]EZ{FSpLQE{{[PqQQQOH_SIhPnP<aIBCyXCcj
+[<bp<BCwH?ctoKcwOeE[FpT[a{{ZPqQQQNDgAaIpW`n@cyiMQWDGAzA<Mz?\T[e<<\[riGu{]n@Cz[c
+y{YqFqPqQ<FrNOQ@kv^[p]@dg<>L<fEZz=Ct?AuXv<>={tT^S\Mzm[N[ssNfhpiPzp_QE<Ch<=jwNPX
+zJ[CN^S\cyLS?AzstUZdS\ay=az[szgOHno@o`aICp={a?<Xxn>mVp?cs\zuP<cx{RrJ[`a{cx\asbS
+u{SpqQQFiBmTl{j>ErCp<U\EplGA\@[iJZ?{WJoy\<[act>M[a_klEYtcyCyHoGPn@\YGwqN]y[EOJ\
+F<a@S`i<@[BNoyjopEZdMZJ[z_@pwTwx\Sp={FnoIQFwFyKTNhVkxYF=xfcx`rCnLOP?NozJS\tx=]y
+i]I?P_@pvU{ucwFpsIH?yLsa[H<MGoQX<OG\`[iF=ADJf@@{N>at@R=CoyFOLApIDB[ylBSf<oPo>KD
+qqGyptHrvW]b<fCrFJ^o<KHnRKNNEYhvF>\OL?Aw?<UznqPfIOMRNWSzS<{KKKoDMAo\KHfppF@RnJE
+GKmt\\cwj=CuAGHAN_P_o{GSOguLPJ_zi>`Pa?eHf]E><u=GuH{\SaCJCpoL\]GISWsyUKK<AFglxy<
+=tFI<xln@\oNLoDEySTBC`NbJIaCIVqlQa\s[zXGwv<DBk\>@wn=>hSFk\MgP`mXqs[ROgqOkyPoJly
+xyEPSDRk@>BS\=O_NEPQuMOY=RRk^x{SADP>no[QIePYV[Kl?YI<<L@uSGGOgqLymVyJmN\>sKv_@ph
+{a@p`q@vHrxmSJkhk^uuL@biNf{?E[qDfe?xXejSToxJXjHu?ESGasAkYoNf?[oH>yV_A`sF^SBRBS<
+xcKhxwo_PaXZP=F^cV@R@qH><dp^hpNHuEIHp_PnKX<pxjH\x<{YoOSYtNF@>GA\^LCQOhjqFLeLfZg
+nMOxder\NeiH^<np\XfcLcL><kMyl?PTOSIYs]EwL]R?d=XanT^hfPFaZz]FbqN>N@?DpFLeNJ>kMwX
+c@]Ev]VDFp><x\^hpp^RlEEC\<<NDtJGlxbas@Xa=Mck_lnNJUHRYlg<MQMMXHnMbcNh<APypajK[LA
+q_khqOSX>WrvILudZXqO_rlQtwmDsssqAOps{@{xeR[RP{?rdcmNoOjs<^of><ENnzyPgvXBo^zCIJh
+?[XVY]KoHc_FdNeMreIQH>Xq@RFxeHf>@@fd@\^nd<A<d_\<>X`^L<

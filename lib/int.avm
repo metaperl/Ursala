@@ -1,0 +1,53 @@
+#
+# This module defines operations on signed integers. The virtual machine
+# representation of a non-negative integer is the same as that of the
+# corresponding natural number. Negative integers are represented as
+# the natural number equal to their absolute value with a zero bit
+# appended. The bit operations double, half, and odd defined in the
+# nat module will also work on integers in this representation.
+#
+# Copyright (C) 2009,2010 Dennis Furey
+#
+# abs                                           (28)
+# difference                                   (739)
+# division                                     (976)
+# negation                                      (44)
+# predecessor                                  (280)
+# product                                      (294)
+# quotient                                     (981)
+# remainder                                    (981)
+# sgn                                           (26)
+# successor                                    (295)
+# sum                                          (741)
+# zleq                                         (232)
+# zrange                                       (630)
+#
+# compressed with granularity 39
+#
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; version 3.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+#
+{kvwZaHsihoz{JowzjBzv[e{w>ny[Dcv^xsdRkPgf`[kEVivyo^n{Dt[KNhgYV?fHcDx^=]ZvE[hf{_
+noIiN\`etkGGgWZfG<_GPgXsN?ngeVh{f<\f>>\kIkp\jkfwk[IOdWlYnHfve[GwPnz^fng>_geFodE
+zgSJFoOWP^n<KDcFKr=ZgiVYPf{hfGdiZjkLB[nbTOEIny{i>n]D{FdzllSfpXlRhu{yqhfnoo<oIN_
+cxfpfwDF_CoC{xqnoKjgKO\<Opvhxvd{<ZU{s{wOGY?SIi_NpkxhcN@yN{zExU{z[{r{GFFhhRPhiM]
+fAyIN>guJkOIb?\mZkXUzSj[Yt^iH^i`iEHnf[^]O?sfph@HlC\axhY<mZcumz{yxffsiDfebdp@x\f
+sqODJCj^Ez?rtU{`[qlSu{ssZnaOHuEIOD>{viKz_PmtyF\MZ[qn_CtFC{xUx@A{mz{[vhgPW@pbd>]
+ZJaqSdd^A[c<uzA>jz=]x<AwzJ=CbSgsE{Aw{YY@Q=DAID>`ziYPnoXGJ{t<MXiHan?Auy>A?eb>[nm
+LLSb[exm{qNhfNgKw@_^iHaFaHqEzev@jxdE>mTF^<PUx?reZ=Cu]ucs[yILQ<D]ZG@t>\C<F{Mcu^T
+?Hn@\E<>]=u{EUzd[\][]{my{PfQ?cyHNhnHrDHS\`{DKDD`A?VGCm<[_l]=gs]v[z<ON<AnlVFmYLB
+[^Hm<JJkN<@RHSwDeGC==]XcyP^[QH@OKdmz<<<>`vfLEx@u<yfFZA{XodWNifQLBCtQlCuc`<[q^`Z
+[g{O<AH<XBR?AtX<D<M<PFfGD<SOiKQIOiS<`{Dvxj<Et>ko@<omjSKvb<`s{dTOOXQHPxrvCvrPOxn
+<MXGQ?TjIL>EKKlFoPfZ<OGLq?e[]N\Pd<?HmtJI`^[N\ChppxpnCliYIMuA?l`Smn]QI^aDuNWgPiS
+t<EynQLJOIP`oLos<v^@DnqDP\HOaRqC^VQ[LNOXhhiVhPwoTSFt@`oh^GIN<D@<

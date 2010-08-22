@@ -1,0 +1,115 @@
+#
+# This module defines operations on signed integers represented in
+# binary converted decimal, type %bnLX, with a boolean for the sign
+# which is true if it's negative, and the digits in order of increasing
+# significance.
+#
+# Copyright (C) 2010 Dennis Furey
+#
+# abs                                            (7)
+# bleq                                         (711)
+# brange                                      (1377)
+# choose                                     (21056)
+# difference                                  (4196)
+# division                                    (3330)
+# factorial                                  (17822)
+# fromint                                      (960)
+# gcd                                         (3382)
+# negation                                      (15)
+# odd                                           (20)
+# power                                      (22226)
+# predecessor                                  (536)
+# product                                    (18416)
+# quotient                                    (3323)
+# remainder                                   (3323)
+# sgn                                           (18)
+# successor                                    (542)
+# sum                                         (4172)
+# tenfold                                       (19)
+# toint                                        (379)
+#
+# compressed with granularity 66
+#
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; version 3.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+#
+{iwKwEkwhGiwgIsKvwoJGGivpgG[J{jsimJf{gz]ZxwZ`fx]XsN{Fez_IHsjxjfu?FkHNp@wwGFsiPn
+xIZl?KjdkznGGioZuBHt^sF_SIn<dSj_gggXsihdxhHngAaG>`vDvggxvniwRDiNH<dgUFh{hz^ve[K
+oggZiLcFhzp^l^AvKZHvF[_Ssnfjsdt^wDoJNFJ[feQD{J=Zty>jeFp{zpgn^pW@n<AngoFy>B[ehqG
+xrHkGoZhkEh]D>^Zd^f_wDlSHrfeXoJjyFvgZ]HcFFidV_roPfJZnZzkR^neRv^sHwZoPpd@<Nx`hyJ
+\<N_z?HcSFqjFSVZnKJ{h\dGFnDdxiFhx{DgDj_PwhxpkP^yKIIvDF^`?QBBgO_oHOJ{Fpfn{N>jvfv
+kOOivgFEOHf`{Hg`iH{^GRn>jtGxVFSVvjkJ{fffRVd`{FqbJ>KKoIJyIxWKuNkGFSVZyKIIvgFxn>g
+oIT`NEJkHgIFajKuNKKnfyHGonqFvkOOivvvxVfOFd^\hxoFvFpetioxgJkHjFw\KNLf^arjggoivhg
+fwDFfniHOhgrFONcxoioIhzoFxFskgj<fKGFSWzyKJ{vfgF{FiHf<^xaUDfoFm[EZgHtFOyFy^F_{AO
+[zpyFGonaPgfyHkKvhgFdx\FJIEHtbIDfdE[F{QJtfkHAUDhyox>t{`QTGjLyD^^^arjgNPp{fpgNiN
+fP>f`a<`gu{EXl?`^nOF^TpGoioAkX{<fywtjuBtxheYhGgkKxiFPiNj<pd<hd>MyFoFUPFgFP>fSvo
+EphwXoVfKvQI{thoptkKGeoVpiIxffn\\f^nF^]ypf]<IFt?NkmPf^havhoCgIoy>d{^QNRjtLyE^xj
+ir{iHs^paGhf^F=@fFjDh`haoDFjeF{IJtG?HwXnRsKpGDOZzGj@G_ZDQGzrxoYviFhpeFjni@fL`gH
+npPnSHlteghazhnchwXnSD_{aO[zG[KvvkOoPcknoziEFGFF\P^<`Hpw\\AFoFDpPbnklpFljavhocn
+sKm>d{bQEpeV{elEQHc_MkGgD{vgFaFfoDfJFXGLg><MFaoHJdkF{YJu>vhwXnRsKm>kQPyZ{GffAWF
+iGaVzvz{gNFfha>h_M??fLOGHtaHbmXnLmd^zpSvo>[OioEZufqwKqo_ZEI`oFjrgFjggPiKwGGNfff
+^<fP_IJu<MAfo>DPnWFgxYFdjavhocf{{EGlsJOaoKvkN`nvcXkPjgH{OGsviFffhfiD@fHVD<ONf=@
+SfaoE>gGvkoOhDjh{aPhruOaoZjEZ{dyzFPNyPomFvgHolJiv`rlnpgGGLm@]NLfl=>pho_HNWmXn_^
+`knKKldnSS?Zff{AoKqwxyyyU<NuqMkGH^JIojwqxfzhgnfnf^d@hlLiJl]=Axg@h`mEjhvxnuNuJF{
+a@SFgcShOyXt_q{QgNgsyICp_onoOwsFFqhw[wFgKFndf^@>_^`<LgNj==AzhzoFiwQwZAoXdjPQw@k
+NsJOanqcQVqQ^hlQ[iarNzI^tVIeHfxgJIkx{zpgOFvffdfO=FFm<@GFOyFhtGhFxgzjLoIXdinijEO
+aoZjKXikNObNfFFQZmkH^S[X[XyVA<oXkv{r[O{yveFoHfnfff@@g<OnkHaFeSwAFmXkQw<<fflnmYX
+?Zjf{AnIhkModoxfrteP`gQFpnjtgdt{N]pOGxniRiLC\[qs{ziGPfhjjff>LMFOFDpd@WDi<jPnFxg
+MDlNjO^kuXMXvjK``[KUML[\g?Htg@fZgPgYFk=qYYV\dWINeyv_^TarqC{[S[NwIQg_Fzff<FgFA=J
+niXh?OH^\gQwZAoXh>uXQvKDqWfYbLSf`KHvqZnncsNQHlJQKlGDON\BXy[IM\cbU^Syc{zyxpg=PfG
+GnffgPv\>H>^ffG<FnDknkvu?IIXh>sKvcIAPKMF[h^Exp?OvgShnj]DsjyeXnd<iP[qx`\`YCmcv{^
+[we{{[vngFfoNiYkndeIGGMFgNHSJmX{Qw<DGgG?FSXIFzAvdVCvh`TvDkr>HzffPhj^niCkFDFhPX{
+SgFni@\=YJqveZoRU{Uz{S{MNiPfpoOOOjwHLP<dHdAGAlGaoDkngXN?<^a<nQvSWDLCwE=LrSjn\kr
+AJPcnGOnN^^nriPXwSod=n\c\F{n<apqN?AwEczSk{[xndnfIFqIGKKKd=G<_NhQnm<sHn>lFfyKPhx
+m<`CsDANKwuNSjoGMPjA>[lefdXfmQB{SoeEj]]IxmEx=F>Sr\m[v[sAwK{{pNqOQHqQQOPqHpnNDnG
+gFG@<hht^_DyEXf@ChL_Z{_z@KwuQVnUm<sh=gG]KgAMoyYSiN<@SSRI]b<cunB[oD=zQeZT[Yko{qG
+QVpqQQQOPqHn=H_XNGGN<fK^PyO`]CF`{Skooxskt{]NgPhrnwDhi<SGfQMoy@ytAEzQG>=X@Sh^H[`
+DayzU[nCyFaz{szgFfiHfqQQQQQQH\^lGD\oXnTAjznYFSjgyXwJkHh{SkooxgNnlYjkSfmltKJhQMo
+vfQL<nZ\<hj[d<T[<uZVH\cyTEfQ>[xAocs{nfnoFiGOQQQQQQ>nlfGDaMuL@\=Ngz{Qofv{?zhgeZv
+kqohvxoF]LCipfzXJgnsJ<ggAPXnkIwM\x<MY<mTFS]XnCozcJbMznckCwSysfnfg>foOQQQQQO@\HP
+LV[uqNSkl{ljkn{?zgy`jvN{kqXvjkl{GFnpopi@dyw<nobY_X[KgAPl^gYFpiFZ<`R[WDoAoZD>v<d
+[lMbFLSkcwK{[QINiGFiIIOPqQ<]MNE{SIPkqogoxGxKw?zkKnKH^J^aAwxKxGgxkl{f{PhoQNySVDi
+yOnp{KQCTO\[GgA?sn]n`]^XdHZoL<`Rx\H\=ZDBdcqplSic{{YwNo>ni@ffiGNqPo^<WwLQQXvjkpv
+xn?zkKpKKoJkHfnjfI`kqogoxGxKw?zkKnKH\nfpqJGEGO{dmOPozGcSQ_UJ?owX`wgEe\`t<@=Scpn
+yclAPC_ab[^PAyv[kssQIMMNF^fiGFoEQ={pzp>v{GxKzK^njx{XvxnOgoHKnneNwm>]QXvjkpvxn?z
+kKpKKoJkHfnhiGQ>HbJtSQZ^pGLx{?{vuqCTrj<yP^KXaP`^<x<_E>I\hRO@QqD@[pU[YEE{aw{[qGP
+fdfhffhfht>CrInhkl{xKzx{>kpjzOgoE?xhg_xhg^{XhlK_\PLjkn{?{_xhgKKsJkH`vxo?xhgphrT
+QPgHcOSQHhsDOJkHozQ[k{qqUsIga@=Hx=P_tX\q\E<KFVecu<c{mTLSocz[J{{QPndfnfeFfnqN]ya
+IG<{woxLx{?JkHdxnK_]?xhg^{PdvGynnDKHbHftXDN{?{l{woxF{HhsJkH`KnnfKnnjGyngd?W^LQN
+>Gf\tgOEOyOyHf_oxFQOKuQzjYSQ]sIp=C\VoO\GP\>x<=CuB[WsHeZL@[o]wL[[{yNfhpf`ffNhjH=
+qjpfx{CJkH`vxo?xhgNnjtHTksGH\xn?fDxnLvvnjNx]@N?{kKm?oxHvxn_oHIjD{GFtksGHGynoDKH
+^JFWa>aG<{<O\V<[OEKlfnogoG^^KKleQzz[OcSqT[nQ[]Gh`wfn^[dL[rdr=UzFCt\]>tZ[qSsqQNn
+n`f`^aQLLqABGOgoE?xhg_xhg^{HhpNwd>]?oD^FfnjeHhg^aAGI\M@=KKmogoEJkHlzgFxhf_a>gyn
+ndKH`HfKH^FgGFveM=]QPozMHhj_NxoOFo{HfsjOgoG^aPo{Sxz[PuqYQqg{QquDj<Ol`[^E@oHx^mx
+LCtI==t[vmZyzfgO@N`fOOeJUnd{GFtkoGK^{Hhr?oFIj?dePGFxiHjzBEGK\\?W^<ogoE?xhg_xhg^
+{@jz@hlBA?oE_fFnjFrhgnX`jzL\@>pooxCDgxFOFttpOxNgFBpxzoFho^^KKnaSx{p[OuyJ[Rm`sXJ
+mORkLy?]xJAFWd<MTm[`d@Cu`u{JA{qGFP\eDoYAptHkoGI\xo?o\_oFKhVndjXF_T@hr==?ttMLxtF
+lmHKnnjGxnoLkoGI\xnK?]_F`>njN_Php?=NoT=>K?]`Q@OgoHp<x`fy^a<kHaJpO_mKnfo?sjOgoG^
+aM_oxi[p{p[KcsQPpjyinNw=HcT=]TD=Wle<cl=Dcx`EAtoazpgPi=DiPqPkFKHtrtgFttLnnkJA=No
+LM@F@KhTJ?B<tLp@@gxnotKHdrtKHtzuGFw]@Ni`hz=D?W^<zu@tM@HpxoFvvqGQ`^\@njFN<_>goIN
+jD\iYKhng>tiOgoGfQC_oxiCo{SMyGQIXdqPZphJjZ>MQHCuc\^[l>auDexnxhaD]OebVX^hg`lmHdv
+=^NnD<\?F\A?]LLF@BD<_oFKh>hgo_Bhg`lXEGj\D<lLzlEJHXlXD<\MAJpkT]uPg>TpgrVaEUHd\fa
+ItNOyfhdsJh{oFhF^qxvxnvqtx{Fvp[PmQwODkZ_FbedQUTl><@L`[eeX=HSUHqPdoQpzwyGH\@@Jda
+?gfx\>=LQGFvtHPhn<HAGF\=>J^_DJ?@<lL=?NOnIa>kLDPa=PFE@@@frq==BFxnQHg=in`{Bfo_GfQ
+OwHflfeQJkHjSVpZj@yP<UWPBLKJqv?f__]y\EV>MuWOIPwzqQ_Kp^FdFO<eMM@N<HfvLN<fh\Jd`eN
+`@\\LOHyBIKQn<Dh<PnL<=MHd\tp@\hgoEPfa?HteKnfn_G^o{HflxhfiBmDwiTFRs@xhYm^b<=]UNU
+tPYPiHAOylrQF]LnpbDD<=Lte]EnN_LTPA@Ne>N@thnp>^<fna<I`OFtIF@[>vxnpwPHW`{>fo?pdnv
+qPSmgP?hX=Fau[Ln>Pe\F_pn]UyFPUOhA^LMNFa@=>@\L=Hd`HbG<GPg<LLgRNA=BQmHdleD@AXkHiF
+uJt\mfi@{aNS>_i=YOQnCTD>ZmFQJwGsUQCn<ND=@QH?Ha@?F=RD\<L@fi>`<FOFpFeAwy=RyIoxhJt
+k<V^>QyF<KWIRyPfDgAZkADlLd>F>PDh?NdMVkTILKvQ<=LiOioIhGlKzfGRv_HDOQJh?TtmILPi@lL
+>m?n=Qb^<SKnFALshoK>lRhkqg@ei<N>o_FdOnRvGwDM<`LE@pwXoRGOyHy^eqQKS?i<tiGCQ@RH^jQ
+[He<<]=[g@dZPsHAUDiSu\VsVnQL?^Nd@]=oaPlH\klpg^vPoFbQ=QhqFf_ODWNpdbmN]=MXn^hN{GG
+I@]tOQ@SH^sGeE@fj=GHxh@bvPg^Jn\^@\W_^YF@HnPob@@SvgMHORLrNzhA?D_^M<@GqD\DI]PF{hp
+@Dl@y?JIA`x{=@@@OESTvG_oK<N?MHGKgFr\rO=GyGHq=DMKHgPk`vhgQ_PzB`hnEDL@bgPfM<aTp>>
+N>`\<

@@ -1,0 +1,47 @@
+This package includes the compiler for the Ursala programming language
+(bin/fun) and related libraries (lib/*.avm). In order for it to work,
+it depends on the virtual machine emulator available from
+
+http://www.basis.uklinux.net/avram
+
+Please refer to the avram documentation for installation instructions.
+Some optional external libraries usable by avram are recommended but
+not required, notably the mpfr library for arbitrary precision
+arithmetic.
+
+Root installations
+------------------
+
+The compiler may be installed either system-wide or for an individual
+user. For the former case, the system administrator (i.e., the
+root user) should unpack the .tar archive (probably done already
+if you're reading this) and copy the files as shown.
+
+$ tar -zxf ursala-0.1.0.tar.gz
+$ cp ursala-0.1.0/bin/* /usr/local/bin
+$ mkdir /usr/local/lib/avm
+$ chmod ugo+rx /usr/local/lib/avm
+$ cp ursala-0.1.0/src/*.avm /usr/local/lib/avm
+$ cp ursala-0.1.0/lib/*.avm /usr/local/lib/avm
+
+Use of these standard directories is advantageous because it will
+allow the virtual machine to locate the library files automatically
+without requiring the user to specify their full paths.
+
+Non-root installations
+----------------------
+
+If the compiler is installed only for an individual user, the
+libraries and executables should be unpacked as above, but can be moved
+to whatever directories the user prefers and can access. The virtual
+machine will not automatically detect libraries in non-standard
+directories, but on a GNU/Linux system it can be made to do so by way
+of the AVMINPUTS environment variable. For example, if the
+user wishes to store a collection of personal library modules under
+$HOME/avm, the command
+
+$ export AVMINPUTS=".:$HOME/avm"
+
+either executed interactively or in a bash initialization script will
+enable it. The syntax for equivalent commands may differ with other
+shells.

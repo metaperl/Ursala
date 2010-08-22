@@ -1,0 +1,66 @@
+#
+# This module provides mnemonics for the combinators and built in
+# functions used by the virtual machine. E.g., compose(f,g) = ((f,g),0)
+# which the virtual machine interprets as the composition of f and g.
+#
+# Copyright (C) 2007-2010 Dennis Furey
+#
+# assign                                        (10)
+# cat                                            (3)
+# compare                                        (1)
+# compose                                        (6)
+# conditional                                   (11)
+# constant                                      (10)
+# couple                                        (12)
+# distribute                                     (3)
+# false                                          (0)
+# fan                                           (16)
+# field                                          (6)
+# filter                                        (18)
+# guard                                         (12)
+# have                                          (16)
+# interact                                      (21)
+# iterate                                       (14)
+# library                                       (12)
+# map                                           (15)
+# mapcur                                        (19)
+# member                                         (4)
+# note                                          (17)
+# profile                                       (20)
+# race                                          (15)
+# recur                                         (14)
+# reduce                                        (11)
+# refer                                         (14)
+# reverse                                        (4)
+# sort                                          (16)
+# transfer                                      (15)
+# transpose                                      (5)
+# true                                           (1)
+# version                                        (7)
+# weight                                         (6)
+#
+# compressed with granularity 1927
+#
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; version 3.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+#
+k[{uu[{zcu[t[t=Yamyu{vZJZEuzKacjB==dA=zCu{z\NMmCvCu{t{t^Dh[MCtauZZ[z<<]td[F[uzS
+_uyte@EuD[\M[cxS]y{]\MI=xuz]Auauz[[zG\<RDMXJ[_cucuYQy{t=bJZ=]x<=Z?CvZv[Q[[Z=<TT
+HRctTS\@NDZt[q[{v=<at[]aw@=`tSJa{{KzH\@Alu{]@<aaB[=E{kq{_^Z<mz<RN<=xD[nAz[Kz=TT
+>[DTEe=yR[pSmy[v=@A\eV=T<My^[][cs{^u\`UdcnH[U{M{Cy[t>L<TlP<MT@STexd[uyyt\JFVcp<
+Ab={M[Q{s\<b=@bXt[ecv]{{{z\t]LBCl=CtD[]U[{o{\<\HZb[LCyN[]U{kqs\DL@C`Cn\m[PE[L[e
+{{^^TEz<an^cv>S]{{s{t`lMJ[]L[NcwAtNSq[[Z<_^E@>lR@]zB[lcve{S{{\<J<bpAl`Sfmz<mZqA
+{{Rx<`<c_cr\EZ>S_bS]E{c{VrB<=T=cscyDu{<axcz{x>=U\=T>MZL<=ZfSlE[FS{zDa`J[>[uEzFS
+`EX@c{\]<<[tS>zAuEzVS@AtRL`<Et<B[JUzAbbSqO]@DA\<mZ^R>Sf<G^LUz>Xcr<C^mZ>_Ab<\EX<
+E\NZ`t@d>>\

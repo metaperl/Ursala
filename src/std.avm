@@ -1,0 +1,413 @@
+#
+# This module contains general purpose operations that are frequently
+# used in the language.
+#
+# Copyright (C) 2007-2010 Dennis Furey
+#
+# command_line                               (23690)
+#    - files                                        
+#    - options                                      
+# file                                       (23607)
+#    - stamp                                        
+#    - path                                         
+#    - preamble                                     
+#    - contents                                     
+# invocation                                 (23708)
+#    - command                                      
+#    - environs                                     
+# option                                        (47)
+#    - position                                     
+#    - longform                                     
+#    - keyword                                      
+#    - parameters                                   
+# all                                           (89)
+# all_same                                      (66)
+# any                                           (59)
+# arc                                          (174)
+# assign                                        (10)
+# associate_left                                (87)
+# block                                        (674)
+# border                                       (260)
+# both                                          (34)
+# case                                         (391)
+# cases                                        (397)
+# cat                                            (3)
+# characters                                  (1947)
+# choice                                       (162)
+# choices                                      (189)
+# closure                                      (248)
+# compare                                        (1)
+# compose                                        (6)
+# conditional                                   (11)
+# constant                                      (10)
+# couple                                        (12)
+# cross                                         (37)
+# cuts                                         (365)
+# digits                                        (76)
+# distribute                                     (3)
+# dot                                        (24268)
+# either                                        (35)
+# enum                                       (41837)
+# eql                                           (42)
+# false                                          (0)
+# fan                                           (16)
+# field                                          (6)
+# filter                                        (18)
+# fused                                        (179)
+# gang                                          (31)
+# gcase                                        (683)
+# gcp                                           (56)
+# gdif                                         (141)
+# gint                                         (128)
+# gldif                                        (201)
+# glimit                                       (288)
+# glint                                        (201)
+# gpl                                         (4806)
+# guard                                         (12)
+# have                                          (16)
+# indexable                                    (109)
+# interact                                      (21)
+# intersecting                                  (43)
+# iol                                           (90)
+# iterate                                       (14)
+# leql                                          (34)
+# lesser                                        (16)
+# letters                                      (390)
+# library                                       (12)
+# lleq                                          (62)
+# lsm                                         (1045)
+# map                                           (15)
+# mapcur                                        (19)
+# mat                                           (71)
+# member                                         (4)
+# neither                                       (41)
+# next                                        (1083)
+# not                                           (15)
+# note                                          (17)
+# num                                          (118)
+# ordered                                       (71)
+# pad                                          (302)
+# permutations                                  (99)
+# powerset                                     (283)
+# profile                                       (20)
+# psort                                        (120)
+# race                                          (15)
+# recur                                         (14)
+# reduce                                        (11)
+# refer                                         (14)
+# rep                                          (828)
+# reverse                                        (4)
+# rlc                                          (117)
+# sep                                          (197)
+# singly_branched                               (43)
+# skip                                          (84)
+# skipwhile                                     (44)
+# sort                                          (16)
+# stochasm                                    (1079)
+# subset                                        (51)
+# substring                                     (84)
+# suffix                                        (61)
+# swin                                         (577)
+# take                                          (89)
+# takewhile                                     (64)
+# transfer                                      (15)
+# transpose                                      (5)
+# true                                           (1)
+# upto                                         (166)
+# version                                        (7)
+# weight                                         (6)
+# words                                        (247)
+# zip                                          (134)
+# zipp                                         (154)
+# zipt                                          (44)
+#
+# compressed with granularity 162
+#
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; version 3.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+#
+{iwiwOkw_OOZpjtwZnqiiHsjkpqIhwZhkYVvqjpwzjEU[GPkPxnphsenx{rk\xFjgixfsdg?erSlsNv
+v{EORiJwZzyR?OEWO^xAEXo_qOWwnivpg{oDpxjra<kR_glh{kzsfoZrvOsrLumZPQK>YXgFvtzSe{{
+HSFvivOXonLu<mWVttnh^vH^xAgpcw]Z[{f]hzwiwVnwlIF?WQIXjwJ{KUMRkQ\SdUy=x[zqvK`zpwz
+sMwtrjuo^felwNiH{^Rs>oJFB[d\Z<S=Z[gpFqN{wWVozxitDNcWmQnmgJ?r>tDx{Exn`dnTlSd]ub[
+^Sky^sRc{xkIOFozw<rWGsHRyJ=V_vll^OgoF[qjFoDuzp>d@[fSf=KnyWw=ZS{eRiIHGKwvKNKCb^K
+ijwRE{i<hxoFvEzRp^>D<@v<>=zNSiC=fZ[qnEzau{w{DoWhKkwkIQwMs>^YcEMHGEz[eHOhgrJ<WcT
+F?z^CouzfSf_mQrhI]zeZ]z[iVJr{iJcwozhka[kKzHa\qVU<NdSlKj^xaUDgczllfAw>R<EAnYqn_D
+g=]f?AwEz`Sl[j>cKoeZrp\[kWozgIsZwff{kX\OEOP>r[h[kmHtbIN\][LFez\bFRkaq>gfHx\UxJ]
+ZH[\AwL=hqgf[ioVEz{xyiIwAZqra@rD>AWHHE>wFDHCm@SGvfeELHjS`_LOfMujlJxF[`LT^mT<amL
+SUzwojRkR=ZuWY\cwSYZ{xzoznvnhsni`Fp=j<PPeHZfZkjiF<>dm{tkzf<tehGrkatt\E>SNR<CwOZ
+jQQgtB[kKJRfUzmoSAoSYZqOdkw<npRhyD`f[bC`F=]=lWKop^l]LWzd>]Z\<fZ<{FSezZoU]Ud[jIS
+KIJfKZHAvvckKN<MZsUcfBmoSAoyiJysdqFPnH<VgOxoPDTFHxmH>dlSwwDeJfettVuX<S[vv>DC@Si
+C=Wh@PNiyLuzkBCgf[FcwfiYASirUv]hqRzhwhiwGVeDp?KSQNf^PQ?GMDd[kjfozddR_v_ceuz[d=<
+?cocWwFzGKz_<<OeMIpkBCf>CwlalVkLjfqpQZq[PooWuxwiwXnEEWu`>dpn>pdjD`SoxyND]Zdq=Lf
+==jB]ZEx\EAi?jcVMYPaqSdgzxOQeMIqDezj=op{rK>S=gy>qSlwSVZqqqPiJ{iDCENb`eZ>HFUngcx
+xmH@_cvc>^eDAUz@R_btK?]PbwHsQHhrdSheExxOQf?AvxJhI<Oxj=op_y_kPtxpkOiJPlGPhIKYvCI
+ydHFD_{Hh]@AuPHiF<Anypd^?=xuDBIdeK>WmH_^iHaFezw_mWFN[N>[dq{c?C=glzmp@{KC?k=WdQZ
+zv[^OTo?xhshtAmFkXqHbWDUzpdh^Zd{>d@mt>\q<ArnHNeJ=d=_LOip]WWjKAfdSfkrPI^SfI[^T_C
+=gg_mPnxORiPpi[n_oHxoHgZuFw^VHGMcHp\MzFUodV_]n\TRw\Sk?UHOGDkzp\hqOYDRsDezmyHNjc
+YXf{UOXawk?lSfqjkqOF]FeOsmRwK@Pvj{hgK@FrO@oNpjC{oF\@fKf]\gnxPgKNCDd>]Zj?RFp\hqN
+^]ZhfNnC_uYLmyHNk=sSFHAOIcbglQlv``I`HH^cijivKFxq{i<A>bdI><=DBCpnU^fA?fGGQaddWho
+L>`vQcWg\q^nnSdHvxMW<wlhfNoC_uYMGViPnmNHTtyFvFbqaPqihARjdqjGOZ]p\>=DHRUoFFd^^g]
+OJhiNggKw_ANRaUrx]ez\ND@ehGr\oglMW<wlhrZWd\nrk=V]nVUFLvqIWyxk>uoVlgZrbf>PoNhpFf
+S_K>ElDZ>DSy<kQzHQEX]L[iKfZ<{T@^=FW>yoYHhMP>nnQHnt]q]rdviWNsFeLk?iLoJ{iJfhl\=FF
+hySbfaFy?cvfA<hi<kQn`awB@fc_]gOvc\Klpj^?bInZiFrekVBiN_PrjR<xfentn{GkvwIFj?HhFiP
+m<fVyN<AqO]IVA<hdB[jH>]VKsB@fc_]fEPAHpyYzXcnqjy^K^o_XCKKf]AiWhkVjjkePFi<Fjgvz\^
+oo^^ZhpFvtODTS{nILPFjH>]VKhUv?>SOOG@kPf{k]W?i?iJRvceQfgIR^nqxfwzoztAHpnhwY{NHG?
+EvCPVPhpH]cvkLc>aKnILPGPrf]wgd\nup`t^QFlHfjfkKKBCdhwvhyfp{mWvwqznwzqFQJfhiEKW\\
+gH\@iFiMeDlSnyQsPgpEld^\fh[aMP@kznLsxaj^hdfvca@sNtfsmJqpoO[QiD=gkcQXwr{szhvdGnL
+DFfqG<^pnqQFdu{HtfKlhkQYpfhE=[cbH{aRdHZtKIAJaGm]{@qWJR\JweaVgOO[cqdvwQ?OQ{kQ{bj
+qggNoHgD<QRH\O<GQFd`Av_EltYSJF_xWIFe{OPnKKlhw=Qp?fDpEa@sPeExbxfZvjqaNII@S=YMnEg
+yxyoRiazYNqqGwK^fnqSHfqNoPQD@aaxhod{ndnXJBF^nXAv\dHvxndo<jiyQEGmISjKAfWhg{pgqaT
+FgfylGSe@jgoH[CsppFqMYoQZ_eFkxhHffgPaHGPFn`NKDD\A>_NoJ_zqN=cvfowHfr>iFh_EHoFN[S
+NAif`yOX{S\iMZQiKKOpclXcWgJmJCCBIQQg[EyP{yYpGFwrqH\xoHg?EAN`Wf>\n\^<PHIP\m[HeKp
+foaaUAvPLGjKAp\hqNgkN_goD<eoQZFdjwZY[riv@BxuSd<jMgPwnkHtbpyQSaLiWGpkzQNoGIGPoF?
+MKIODF?PdEZ^FxnPf`J\]DbhsNAij?RF`ejPkhnfJjuQXhkA{{_shfwqPtwfazR<JSY@QOJm<UqMksq
+jO{hiPsHrqFloIVdn<_wnFoNgKcyEHd_Naq?[Np\hqMRYjcGKNKrFgKKKWiPfo<xF@xEzAZRy[mV<Jx
+km[x<maS`jQz@YPpqNeQqEySHjHzhj{QOPoODIF`O_PdiP\DCyFgFA=I<{PG\q^tmPaD@JyGoIGSe[D
+aQqJnfIZ?>eDxhFLiC{sYdw^CHcnf`[PCnazSmpqq[YJYhuSaWGRkXOHiSNgHnlgHGwfhoFDE[OOf<H
+kHPaUry<k>b`wHnfEUdfpbWaUyPff@tpNHB>?K{{_q_fDwho_Af<u?@xGxS{XtmSQOmE@pqnBXZHnsB
+yjYHiyg@hhqGNNMjqNd>EjnFONOwftmPaVA<]jyDfjT<FRPwRa[RXhbKtv{>{{{{{zK[_>twhWDE\<Q
+?^CHczhf\QeZyjtQ]aOYX{VfyLjZ[uFKk{qFnnni=PokFne[nhLDqoVi<k?g^B`wFytDk<pQ[aRa[Fh
+ljudZgX{{{{{{{{{{z_Y{R\Lwge>OGwHy=[FZ<s?KC@k@@YKHBw=PZnogIlwsCx_eE{{zdKOHnn@ZvA
+GffCyD@hRPpfA<hp_JxetXL\t^qIZQZQVhbSzlYPRNVffffff{{{{{{{{{{{{{{zC[qJSGCj\Vh]SHW
+FUy]tNwRvw]L`nZfPN^_FgcTdk{xz>[faDEzSz{R>nhiGEBOiN>\lS\dgUFhuPV_eJo\<?xBtAQiiZQ
+NoDMjbho`CKsYssYs<D^D^D^D^D^EbUbMbUBM`MbM`UBMDkL[uoLJ`=whtIiVvL>m[NWKBNxK@YM{OG
+F<xHfQzIRsQK]s<BxfNezcu{k{zoNfnfMweFfexsiDpoQPfEHvdh_OPU=i]QWVjf@zeliUHmKcCC@zX
+XXTfkYSP<^UFFn^^mKcCC<zI?sR^[dEWeZecx\V<`ofNHS\lPId{FxGYw>fwmzqVw?asHZCzgT<AvMZ
+U{ZuySuvnfhfmHOiF]hRho`^hWQFajwDvRyr\qbLWXhd>Gf]UNdFD^fFPM@zPP>p>^pY>><<gX<<>eM
+CPfZFIwxr^ZvAwOs{hxcrWIO?YPuQmNxdKjwfCo^SiOmWs_CaylDSn{UzjS\mz=PvCzS{{fpgHg=zvF
+d<`qBmPpiD>MMkF^YAcQHpr\qfpozFON<<>p<<<GLh?<?<><\=FKosFinYZQD]Wf[OEaSXrawz?sOG_
+IdwJQ<?V{YQCfgKOncviOPm\O[XBmtuZgHt<[\J[<]xKjLPjcu[t[vgHfgDU@wFnlN=NngE`wfizQ?j
+dHQHpfp`EjDv<<<<<<FrLfFGGT`iXD^ZvHRfUOsPQDS\NXlfQaQpuPIiaJ^KV=qNnm{huD[iWLtQDW?
+@ssDm{GZzEZ>MTmTBW_mL=Yamyu{wQFoFlSjnghiH=P\@wnd{PtHp`jdHFp`GtZnq^ffFr\rng=WdEo
+[Hkn>fczeN<ptPjo\LWy>dBp@ghfa{vMOD[fzDPgOYpbllA=jFyT[J[?bBTWjpLc_c^Z[_uUvnfpgO@
+Shf<dFn^Iwpgo>ajTVp`npa^{N]GFFgFpcl<]ejeP[w^zT@i=[U^PIDaLp\y[hnDZR`dcuZBj@=Z]Iz
+GaEehOYlSv^gnF\`R=\t=pwztT@B\PCt[c{vaHoG<rChfnd><QKFowoPYRm]niDS{sFAFFdf_uV<jvf
+cu{oJq\fUxylDhTBfwQiNlIQwFHSE{KREzncyQw@huNVTd[f=HT<u\<=wCkN=EC@[d[c{_{iOIFmLKd
+fnfKkN_SI^TKaGRphdMbv_^b\_FdOX\jv?DS^[NEogt\hSHFpqVpAhXxN`w[hdEy=ZS{RTztaygC[aA
+@gGDt[gOlB?`]E[^D^my@[^Sauu{wNoPfLKffpdBWpfmUNN[R=aIGN@Wvy?F<foadgjqUz@RLBHkz\E
+P\@^fdU[r{NaMo[hfMect[yq\@SgSsiF{YmfkmON@Cv^F\?xSXt<>C^]xe{cuZKcsdniNl_vfqFBwpd
+gUH?QsJCfn@^xvoEFX?f@rwDHCo`X>cuznE>gB{reUsXoUuo[hft>mXEZRSoExpO[QrOTIyrKVE>^\M
+zd<?_f=a>`Lc`]z=Az[mZCszpgPfDzfiN\YKNzp^VCQm[niDktNfpGe^d?wh`mt>TFAtcnuOQMisRiV
+^cNaiPZXswF<<EVcwo{VgAe_ys{amSb?[XBCAjdcveY_r=\MI=xuz]Auauz[[znoNfdzfgN\ZyGHuDt
+RyAWqNnnEjLw`^sF<rwLBAtR[]AdAANPYhiPgD^mKbgaPZXswGE`]{?erSlDEi<{hsXayX[[ZTGx=`X
+VGAv]smSlj<=T]AluzJ[b[aqSs{eHqG>_vfqFJOpiBmPkITyKQNn`^zPk^GNDijpBC\l[JNqLchp_dA
+DKDxDiGaPZXswFzH]{qTIHabOippyOOrSiPVu{yyy\lP=L>[g{v^xv<U_c\T[<<S\mzcjcqSsshoPhn
+KfgFdKkN]D=@JUORO^pgEJG]gq@\]EjhKzOC\GQMppdqEeP_dHgNuQCcIzn\<@=Z{xnIK<ifekcYIK\
+u{jEsMcuGa{sat>?Cv_{]E>BQ<LBB?AezBAt=@^CjCyS{zoI>lrKFgFdJOpftINbPHcNh`K{FyLFFwi
+=z[\TRaNSDdZHiN{J_FpjQMuoXhdcuK[U?cA_[aNsrwZZ[L<A{q\@n@CwYUzZu{yt<cvez[lZdd@>S]
+zBShLBO]XvS{x{vfhhLLvfffaopdNzGNhoNl`Ebvhtd^Ijp]ZExB>gGYbrNODxaoVXgNuQCcJHjT{KE
+?`?AigH\KCQgqw{[pqV[soQghAvOD@[msRCuGav=ZfezmJ{PTn<LS?cz@L>RPUx@cz{SzgIF?^fgN\[
+jNpYLtdDnh`Ek\_Ed^Whr[]A^qMYANqQxiNB]nJcGpjQMuNf<M[k<qdIiNpmWVqOmN`{AkmZeytS{Y_
+`=LEzvw=[FODL[yqcucndHW]{{{u\tc\H[\A`\<[>Cx][co{foN^Nfnf=MkG<va>AFE>^voFFOg<l[J
+Ln_qkdwcOINubanR\nyGaQ_GEytrkJXtfPgWNObYpnxnnxnnTYj<E[FcWYBGCuDP>[aVx=j=H\MzGAf
+=ctd[zK{{X<A]\Ex]\b`CqU{M[Cq{doF^fgNgHxj[F_Fakv>FgjhOC\F<?riPIKj^dD[ZLVCGdHkNuO
+FgA]FYkMQnmfDi?do{[zKKdIOv?PwnxE[nfRyWf<cxT\[^tPM{ghAt>N\]zHAuZcuzzhQd@LR>adA\=
+CrEzAz[[zhhffkN\cjGtpPpfA^WdEFWi<TR{UqVBOp{@{zsybVSIdXkPhd\cGsHRkO\P]NAA=[Ss[{>
+?qjTyWcQCXQrWbFiWwqH^=ZV^WaJ>Ax]LE{FhAve{cvezE{JzZZGb>Mb^[DmycyCx[q{gGFFfnfE`vk
+R\Pf]TkfXhvdTH_XHRq?q?nOEz[g[z{ZTVCDvCJfeamud_zrwddrUaxIStxkMUXP_AXP_@byzYN>[oF
+klIqvnBWh^StJj[e^=zveatUctfWdHW`@{{K{=S<E<=_=L=A\MY^cn]{cssgIFfiFdcjgqJ@f]ZGf=?
+j^GeJ]cBO^iODdSlKvr[c{{i{ZUeXakGf?Ms>^YxXa@lqM?CyZYsiNq?Gpv>yJ\egcXYQ`][<NPeqaI
+Ela{DFAtn^ejV^W\F<ct<MJ<RtB[k{@>{{{?flD?^bey<=U\[pSq[yvfffgNfG@vo^phf@[zeeJl^Wy
+lq?EqFeUzmzbidSlK\[cvs{i{ZTVCEd`e{_ETI[rbLDFA=kc=ZrsIyQi?>Q\laTNBaaecXJSdUSgoj=
+TdSxJ[n<=[h^SvnAw{f[\]z>\jok@>t{zJM\<b=@bXt[ecv]{{{zhfffnf\zv_E`Hf@Ubv]jvitx_dF
+oDDV?=xMAn`ir[h[dSlKvr[cvs{i[RUebf{kX\ODS{OPHlS{?lY?GL[Zjsb{`kuHIKGYy]dejPKS_EM
+MtuzR^ekn][DFAvect>AtnShAtyt@W`wuZ[j^j\t]LBCl=CtD[]U[{o{feFfgFf`OfoK>dMbzdVOd_x
+qGyTDuEHZfZggTHCm@SR[h[mWVAx?ziCu{i{iyu{WFAWHHE>cuZwF^FCwcwRrcxRA][NmIoPIoPGBRR
+YOkXACz_?MlU]Z^ejZ<AzRJSxJ[f<=juzmcvUZ]^wbyEZ^W\Ss]l\<\HZb[LCyN[]U{kqsgFffqN^zv
+\_Hf@VGfHwfxmPdx]LNdB@C=`ggUHZfZ?=xMAm]ir[h[mWDSlK]ez[w{i{[zr^gLBt<mXcuMN\lSk[U
+RxC_XByOOGdENV]NZbRkk>vrhSd][GXuaOat<SuZdScdejR^ejf[dfW\=Bt>[`jy@[^uzP[e[ax\<]<
+LZL[F?AyLay=zc{zffffnfNMjdPF]GzdvOgKj>?PrH]\dXEGTB@C=`mvet?i<l[@MXTwUzmzJ][<zJ[
+cvs{icuzifcu]\cpAzLfezIYHNy=_Iay=xjbQ_hfwJhofY\uPcLyQ_czevrRrH[fAzS_auZACut<Svn
+Ct<SvSx]Z?atH>tlMZfCvaxej<db>[\EXdez\at[{y{v^FfhjePog>ddbv^OJdqo[PkdD`=ji]\d=]=
+lTJmHZfZ>Z?=xMAlacwCt^Ax?zicuzidSlKvrfp{HeBb[q>BUzfeGJl{pXY[yoAXuERhaVffyM\qyTS
+][@NH@yMpaZN`a=jF[_CvFWuZ^AuZdSfGBv]ZF?vUzm_wJtF[\t[hbtTwt`lMJ[]L[NcwAtNSq[[Zff
+fqfdMwgfn^zeWjfmUODDVV\B`i^LTFEv=]=lT=@mvet?=xMAmUzmz`idSlKvsUzmzbifoqqPg\GAnf<
+@SmognCRShKS<kq]i`gPUDM`\hMl``NIQ[IQX]KvEH^{xa=[i=zPBtP[_Ctu{atuZfB[_cteZ<=j@Dj
+O@u`SdFS_ez?Ht>JD`LG=TNCtU{>[fcy[{zfffpqFM`vzfNtheABv^i`_xtdogT>L=TTFDB@C=`mvet
+HCm@SOgYcwCvNr?=xMAn`ifzU<fH<<EXnuZn@^=HqKNcfvp@shuQ<eQQQP[]ZatkpkR{@]Z\XHkID>]
+jDM[=[d]ZPBvH@tmz^bv\DSd`Sfav[pw^xtJ[\Ez<D[\Jt<?\Ei=XEAvh[\HSiM[{qkfffhqN`ZvkNe
+D{fUJvzp^NRZDvNr>\`=\d=]=lUHZfZXVr?=xMApvrOCfcfvrfVNauE^D>S\pg{>eGyy^wMxGNF>fAd
+QGKc>Znkj\PsLxgayiVof<czJ[^]JF[lStOzPBtP[feZ?ctNSnCtfW^cj<=KLShCxbt>L>ZJ[V<atEZ
+JUZ@cz[yvfffAPeHOfyOeDbV\@wgHuDFsz^OGT<E=\d=]=lT@nrOCfccJi\TLXBNbi{\ld^z>EZM]vY
+pvyH@_azK=]NhgVqQhrSZw=IOWcq\t>H[mdqRqN>Ct<AtkwL[^]jNAxAz^Avect>BvUzGBth[_HSkve
+joAzyji]\<R<Uyu{NJ[lE[E{k{ZfffqN]zvo^feDbdsjiBm=Uz[eWgT>LTF=vr=]=lT=`i]\dXhiffg
+s<<fWt`LKl@beGSxgIav_HNfiLPtvxKof?vqAOrjpA=z>jOQa?=Zbvd[^@S_CvezF@tezd=ByctHCvB
+[^lG\RKf=tE{\BW\\Qj>=U\=T>MZL<=ZfSlE[FS{{kfffiPdU@v_EheDf<QJdN<x][<z`Pvr<`BNrB>
+\Zi^L@Jiffb_>iC{p_wpHva<xCjkYY`PNmN]no]kHOd{NJVG\nDx@W]PJQ<f[u{^lS_cwD[_L[_{i=z
+fSt>Au<S\D[_[wFGf[dD[^ktF[^EU?clczN[^au>S=E{{kZfffqN]Zvhn^`fKjf\ycwCvTsgT=vrE?@
+i\VNsFfi`_D[kMvFkM=D_F\bciaqCqQNouHopztqCq_QNJ\?luzNpNBUz<DS^ez<=Z?=ZDMZ\]zDMZt
+d[fObWecuD\j<{tl[^ez<]ZHatDL<CzAlk]ZN[bam=ZA_{ukfffiPg@Sf>HeF=bx]x?=xMcp<=Ri_@i
+\KgTWgTref>>=HyLNA@zP^Kndb\wlgQAQQs>pS_SIi=sQ?JIwA<DSvOd<MZeJBUzbvezJ[_=ZJ[f_]Z
+oz=WdH[\{v^At^Sd<Sj[hUzL`<Et<B[JUzAbbSqM{U[u{fffhfdrCf>ddWjh_@mv?CdwgTzi^MWTVNr
+ff<G{JG<T{ml\>nc>yciQN]MTtQRhRP`sqJPpBp^jSvwvuZoz<@Su{]b[\<Sfct<AwF>S^DSf[\TSdL
+K\eJ>[bWdf[\<AxtM>=T<HSda\av`E[xcu[y[vfffpfP?vnf=pvvLB@=]d=ri^MWUTwTogVFf>\_EkL
+kRE<fb<{<cGPCy`xM>i`kQRKLjHpZ_C{Ugr\>S?dSjS\>At<MZctUcvWf`atuzHatUZFGiwgBvAz<HW
+ez<jE=ctEn[Tf[hrHSEz[gyyvffgEFLKffdCjdbB<lBNrRBrL_i_eGVfdoHkTKQx\k_]xiPzEq?SKiD
+xjuSHuNpoDPBwiY_hta\J[\EXeJu[bW\=Az[vFUz^ejlctuz_jDEj\JtdS]cz]Z<ZGAtFHRTNCxjtEy
+=ZEZ<zqysfffe>^KfFduJitfKgU<wTtwT`nrnFdDsCO^kL>Adz<mGX[OeWyHuEE`aGDoFlk<lStS?i=
+[pedfW^Roz<al=cwat<]ZdHCt<RtPAt?CtMzHs^ctuz>CtF[\D>S<>TH]zoInMecvcxSqcuwkfffdd_
+vfdKjd{<<uGT?i\LwUWgVf\?nJHbyMPA>=Pd`fNSLxpW@Xq^`HGMn<dSuTSBSQ?L<Aze_dS^R>At>SF
+OvLAv`vez<cw<zm^tl[d@[hAthO`ce=<SoNjg\GAmD[n[FrAuz[WVffff_vfdJO`xlanr_ihZrMMgWF
+sTHoHtk>^`y[SR?\@\NdPE]=E_`zyuZu`Tn]Zp<J[fV`tah{fbW_{]b[`AwDj@jwH[^EzbSdKw\N^[`
+eA<<<ah]z_AqTUy=x[ckVfffddzffaohztCvrDwU>ZrUJifghZtD_Eyp<YPfSVwNp>`]n^{pWSkYBur
+<uZH^ejpH{fTvAtdAJm<j<<Sj[`xtH[^<ct`[\EzV?t>BT{LsE]<S\EfnDC\AlScu{vfffgDzff=zvI
+Xr=OgW_i\]WL=Jihf=xEdHnKlj=Po\nDt=EN\NBvPIYBqeMyqdej<<StlvAwL<uzg{]Jz[\`W^czp?t
+`S^m[DS\eJ\@Sqzk\cvQP^CbUzEZS{sffff_Tzff=MjGAaFbNr=?i^ZlsgVFcN>\^JCSF<v<K@LFCt\
+qELq^[yWRACv]z<?ctnFbv]DSpathS^[t@]zP^tez=cvUzkJn[OR`\=bKgNa<f=Cvav[?{sZffffLLz
+ffho^i`\cgWCihAd=PifiZ<>KdnAwA<FCuJ>?PCuzq_P^AttSdfW\<AzfmZGct>O\D[g=z>wc]j]Bt<
+Bt>w^hRqAD<MZAT<>=zNS_AmZ[cjzffffJKff\ckwNDhNrLCi]g_vrff[=Lv=iDdl[WMJDS^[?QJ>`v
+B[\=[fCv_EjH@SoJhO_HS^bt<Stcz`uEzDEnfPcqPD[KctEn[lSauykffnh^LzhfE`xo`\KgTEWT>dB
+VsPoMV^?ICd=z^wQctMXuiH{\\[fCttSfQCtF[k{dKt=ctoZdS\DWs{hcu`yRgAqPET<`SEI=ZEzauz
+Z{vfffdlzffEwpW@e@i^Zr@Bvrfbei>poDmNkddHCoaiVFD]Z>W_]Z]cv^d[bMZ<NAudS^eZm^teZ]z
+@]z??AtIO[>>YF>TeV^UyT[fSd[cu{WvfffflzhfG@tN<GvrDRr<YGVf`r_>x>CeYFuHZ<vGFluzez]
+clDCv\^[\uzj[\uz<ctLwd`v]zg@t<atq@obQP`ZT<hR\mZn[eAxCuZowsffffaTzdf?wfNOgTci<Zi
+nhPEMn<PFbalBAnieVFbtd[\\Z>Whd@t<@tdMZ^ekLOlbu[t^S^?zUkGSk\fn\J<E<UxJ]ZH[\Av[c_
+{ukffff]@Kf^e@tABNrlRluGUFfEEe?Lf=]eY?l<Stl[\bezdKwz?ct<Sv{tmz\]zf[\]ZFwaOq]xQ<
+<NGA\>SA=Ycy=[tM{U{u{ffffc?vfGw]CgTVV?vrfWCI>L_Lx`Zd[hmZdFCwVAv\Z=]zd[\FCvd?^]Z
+A=JeZ<cwLfx^fo\E>SNR<CvUyEoA{tau{{YvfffdP[feEBuHNr<j?`i^eXd@\`[RZJAt=bt_=zdJ[f[
+\mXFat`S^{havSweJnSl<OB=P=IbAb]z>mZd\awIvcuAuzw{sgFffh=zfaOJCvrFeXifDL=JZCyFB[>
+ktoAwD@[_=z>N\cvuzH?tRW`]Z=Xw>SqKGJ\^=mAt>QbZSn{zNCvawAuD[s{shqIG@E{I=CjBMGTLCv
+rr={O{gd>=t>Ct=bw>UzDaxuLW\]@tdj\SxeJ^{\e[>Fj<@<J[NylDcwHiOvnCmuz>SnE{N[i{sgFff
+\Ezf`UJAvr<PVrf[vvCu{P\EgAtgzl?CtEzvDStkvHtd[_KtNCwEK<>d>MWo>e>[poIiK]<R>HSzSdf
+Sq>Sr[y{siQQIEcxpMwhMWVoGW=z[qD][<z>fDUj<]zlTSgBt>FAudS_{^UzD][hAtsJO?b=N<dAuFI
+vgXdb=alDcz<c{^autauU{K{Zhfff<MZf`mJI]i\cgXdSlK\icwCx>?cvmZ\UZ\JvJ[\uzo<j\MZJ[\
+r[^?jn=\\UyLJ`lGkU\a`E{pmys>ctnuYXEyU{SsZqQPpe{I=zuLJrE`iaUzm{<HCmB[<<]Z]bvJ[^c
+t^ez^ej<jtuz^ej<HS`axL<hRhPa@aT=Ef=Zf\Ey\wT[Z<EzRlSHMYUy[[vqINdD[fdU@uDwTcgZ?=x
+MclOCdHZez?cv<mzHCt<=J<A{P[\\[\=W]bzu[L>QNNoaK\UyLECxHDLS{RB?DutF[ZMz[SysgFfd^c
+vfAw^_i^mGV`mv?C\TLBBeAt>Av<cwH[{v]zI<jHSFO^StFE{pgSVQl<>mT?`hjJ[Pn]aTJZXC`OEZ]
+z[h[YwIQO<m[IHMZnJr?vsLB@=]]\DfOj[e=ZD>[^]zGCtgz>VKzFAtrAxoq[IYc<E<NtX<MG\<Tl?X
+>cN<klExm[M{[yvqIN\cvfI]trJre@inB<^\[v?CvujEAthOdD[^DCjW@>tuJDU[P<mH{SKEoAtv?P\
+w]HPkHhJ<cuHSuyssZoPpn][IA<zNLwTkgY>\FCt>Cv>Stez]{a=ZDz]DOj^{\eKQIwyFgJmk\PZAsX
+pJgHD<yb[tE[oA_ayysgFffF[fe<z??i``VsL?]xFOdd[c]j>]z>[fK\PatNAuHyMKRCqQMcU\CPIS?
+=W]{\oJ<=A{z[j<`HcrSs{ZfgFddSfd_vtwUPnr>?C]{dhO\=[_=zh[`\tj[gcwjyNFkDfg<a[\wjbZ
+AmQSQF?ocwv<`SkOVM{EYas[YwQOOHaxpDzPLwTMvr<U^]zd[v]zoAv=BvS_=At^ej=EKQ\OB=PJx[k
+AwjmzR_ewei]<CowduzqFZh`ve{EuU{[yvfhf]ezffK]lwUBNr=?]x\d[^=j<EJE{bG\ez<AkkkIQKI
+=xwAxmQIEw=DIinQQPcLEX{KLBCufDn<GleBwlWxCz[yyshqIHA={I>_tPZrMvrdHZ^=Zuzkt>CxJu`
+Sf[\mByQ>FmOpx>S_?BMsaIP]YeEBG>XxmH<@[vUlo<hk<FEr@S{=ZZ[ssZqQPnNSoODzlci`mGT<Uf
+bt>Cvd[hCxmj?ctnS^ejnd=P[wKuZfofQQbJS@bXfeALnnEZOG^H<O]TQJ[yLcxY]{cy{shoQH=cxpI
+_uEci]zi\NU{hCtdbw<S]Oz<=JmctioqQ>[{eA<^[btnkIyYJPKXkViFFJ[BWDdxOd<]{ra={A\m[rC
+r[qysiGOHBAxpLLz<@ZrBMGV\@avL[^AzBS\DKkt<MjDCkHp>SctVu>[oNPDfxSPP>@slON<eb>mWNV
+WPSA=ZenmAxr>[j\]zt[r[s{ZpaNlU{I?_vewTSgT^`t^S^]zB[f[f=vStAWoLF[`Soqf=ZTX?rwXH[
+g\q={H\ElHhcDJJ[fR<uyQR]ZxGCn@CyJCz[sysfN<dlSfd`K\HZrmAie[tEzHCt<SfMjezF?tqjo@]
+zeZS{LUyH{EGmagsqqt@oEcdC=^tlDAts<T[tt>S_l@YfEyr@C{t[may{shO?cxpHK\]WTrBrdD[gCv
+t[eZ>Stl[^atIwioD[Cct[yq^mVgx^Ht?GaoSz[ZecH\XNxrUzUT@SXXlzx^a\T[lnE{S==[Ecr[yys
+ffE=Zfg?vcia<wVFAvBCt<M[uJFAl^Sfat=BxA=<R>HShSaax\E<?pL?qIFrdKaukatOIFlkEc^mX?W
+ja_iCxqgR=@v<TSvleYt\[pClvY[YwOAaxpQ_tdRrLJrhct>cvcl?[?c\ctNSaWn>TBS<awo{WGq?Qb
+CjFhycxPqaxD<R@cDn<aqLGlxHPEZDoFnwlBSnH>[l^CtlRXCv[[{wO@N[I=@Khai^Jr]B[<Mj@@`]V
+FbhWectujRTE[axJcU[?o^cI]HcTR{\MzbnJ[\OPqmElmJDo^Uzt\P\a<uyF_@vEYLUAh[]ycs{Szpm
+>{IC?tVZrDwV\mV[npe<=D?j?=z=Zt<NTDc{Q\pnR<HbGq?DxhcOO=ZNj<=[LF?_uFKQC<<S`]el?Al
+TWlF_^o=Cxm{<SQcz[SzppFyI=MzAEwV_id>L>C^_FF[`=Z=PwtLcw{oDpxoGnJTHMNbn>[pAE{LH\=
+rq?_ezPjdExmX>iajYS<LS^RQ<Sr[Uy[wO<FxplCvBAi^_ieD`l\HCubtkt<F=ZOsrLumTDxbygbqFv
+={jZAzBrNXkcTcmDOvXTYNqdCfIj[PiJe[R=YCr[SZffNfe>[\UwWDwWEBHmz=W`\xB[OnLu<mWTNXm
+Tm{<xADb{B\>SyFxDjKltFcpP\Jnl]GDIFgI>dnuQFKiNR<SU{k{zplCI<EzHAi_TwW@<\Eze{fFGAw
+lIV?WQPpK<IWaj>SyODawk>lKGoCt=CbGlGtPvovh^fIZfm{JYRYLCym{sq{qH@pb[_ci@@Jr`EAlnS
+\o\EZIgocJF>\_zXNrvFAvXabwylKnXzwqN[hS<_Eg`@o<xzMILI]y@]T<jt[q<a{U{c{yfff\@S^LR
+ltwX>chEzG@]FYkMQnm\pgKQGLnJSgx\ctx_?XcDqoYJV<y<Y>XiUM]LOIj\\=yAOP]]ZvEZulaqc{Q
+{{^fff[aad`Jrc]]LS\kGsHRkO\PqsICQED^byRRNAwPrQQIGAaE<AKPlxnADOaBjQ>C]et<cwWUxVR
+EYTcrzC{Q{{OOLD[`NtlwX<@f[dCCb^KwWj^To<{R?XACuyc_ayN`_<d>i`vO^kniXgdNXuMYYYLcuQ
+DBZpyUiN=wKpE{k]{y[yII>cu>flwX]b[aCXFEsmnPO<\TXsiAd][qqCvFW\]N]wNHlnVHpBO\HghP_
+wPPtgCw\<MHTvFwe]lQZdCoKpEz[Uy[yII<m[EaTwV<<A{zHa\q{VU=wPgZ\ZJ[iqZ>[]M{pxo`a?H^
+T[SN=FgcXJjr<<SiJQA<C@\@UQPT[=QvfSbSU{cqsffn>[\<M?ir[{kX\OD[{OPNnhSyTSdlOgKcr<W
+d]{JPpWA<DxkPAxL_Fa?PPQUzv=uV`IJu<MbQQ<Ex>QMCyaz[YyIIFAulwXGAlQhll`DauzwFpAZBzH
+uZ@{^ssPqCzDatxB@\TNgqYmTdgoi_\`KaYSYDUPsJPwaH[W^m[RcyCy{spppF[]MwV<`gLBt>cuAuM
+N=[IOsJ_CuDSqQYRPt>CveZJnkp@tkuUu<^aOSTm[\uQa]S_S\UPsD>VKTB[IM=xvCr[{{{pphFAw<Z
+sOCu]`]ze[`HGdTZXQELWgatBQbQmO=Z@cwxDKL?EkLKctK_fXMEyMWkKMIgQyZIZE=YTf[jjCc\Ax]
+yQc{{S{NfgEZLciogOxnnCmu{PNxQsY_hAzDm{OQIxVf[k]ZKDKPoGqMrE{oMHtF`S_YNu?rqBtqMIg
+QtqIL=AeD<MqNWdUzQD[QU{cq{pp`Bct>Zs<PyYQDLA\_AviABhFIbz>]zA={PuLkYDW@t<UzqHtdDo
+^tI<Bx^d_zFaOQtIDntwQWuWPW_PJW_flcbVILHQJ?AuP][M{cq{fplPCvUwWzU<fHE\UYHKPjfCNY?
+=[=BtyEPmZd={^=[PdnT?Exl[u<]{p=uJ[LxunqdqOpjJqRzAOR=L<SL=l?kLEPtEy^AyCz[S{OOEEZ
+<MWX=eFSbTET\W^BgNmJf[_cuGL=Pp\dS^O\\oGHab>Elcu{\pA]ZK=rmuLBcVcGR_QKQWQ=QaEPB{k
+NUy>[n][M[kq{pplB[fZs<ld^<NUSULfiAlUct>Cz]QR<uY{z>DDsV]x][<{EagQMLxgiIOiNwCa<VY
+fI>tuNZYL?PBDHRGCs^[TcyEykq{pplTS\]wVkXzGIV^n\R<@ShCy=uP_C\FAx\BRFhUUzm{A?D^^c`
+HjF]GxhgiIOiNbYYVhsJecL?N>C{NmYECvfCsAz[SzoO=ctewXVHD<HGPlyHjShm[[xTA=_`t\n<@<l
+[@MXFo?tpEAR@ON=?G^dN{GSQYPHHAqAoeeHQR^>RG]xE<QLcyar{S{Ff_=Z?AifrQbuVQx\EZ<Uj{S
+PO=DkuR@mveugAXvMiEjT`QTMIDFoIPv\_TLSQX=uRCp<T[Bu`[qeYM[cq{hpluz>ZsBdMaS?HbbEZF
+{`oi[pDNCzH=]=lXjALjAFYqOBpbun[wjpbADrYLIiL?d@LGTGAwQeFe[Myky{pfd`Av]WV<P?AIOJF
+bt>AzlYy{u>lSo<TFVNtPt`yNbPesQDxCSQzTAjANtLW]XtQ<Uyj]UAczL[X[j{S[@faatewYDIOBsI
+Cvay?JYPySP>e{TEW>NMPaUGJEKPeaW?YaIiIMUWVCQL<tFczND^=cy<CPL[aeYc{ZiHMEtdRsMO@UH
+_D[eczP{KjafztW@tlH]Ch[EFQERNn_KIITvjJWLoPyW_T=@sL<=ArBtTSQBSMys{zNfLkhaiq]A<\D
+@l=ByWCPyuNhwKc\Cz?EIYWm=h[EF[a^casfpqG\Oanrrqk?Duy<r>Rv>ZT[R[{y[xvlgtVZsAngzaz
+gpOizYTAlcYDrFAvqUMnNIYWm=IQQISPQViBRpY]=QiLq<><=CeQUA>I<MuzCtR[uy[wnd>k]LZsQ?<
+F>FCxxhPqSXOpxIFxQTuXuAuzlUMnNEEWloRuOQ<pHVAUiPuj>Yo^C>tmQp>CyRAyaz[S{OJeGvNRrj
+RFHAtwB@yCIUNdKTqryVHZOqOPpIuzl=XPlAOPo\TAoPtvY`R=Py<lPBQVh[j]ayR[p[uy[YHg<Vz=c
+i]POFcuFlTarUuF{@\YxWq]LTzw>L_QIOLuZTtftwQMjAQDQqOdRaiHq\L[yDezvDCzLSrcu{[qNP=K
+tTRs`^BmZMPrfqpQoDpz[sokS=?qP\pw>L_gqOR?oBvwQOz?QbyOSsMQc@CtV`E{P^CyNSQ=yM{S{{P
+oD?zBZsQ<<`ufK>S=goB`COQP[lhwq>yS\=P\poavGPnTcXqHwSiW\PyeuJqAgQXeyXFeytECzAcjH[
+\a{xS[{yQQ<GZHAioH{bLtCKOvDbeyKUqnLxwlO^sS]\yOYDJ=o{PJnqEoFiQTFQAPJjh]iJ<mYL<<[
+Y?={N=cR@CLasySccyQ{[mHlGzJZsdJ][DxJhHyA[IoFyuJwELxw_ExuY@zjqTyNzoGePrTqJ\hwNuJ
+oPsbp_p>WbCO]F[V=aPM^caSZX=C]yzAwKywQLDs^LRsV<u{<q{c?N<{=ZgsKqaUlrc?ogH{hxtAPSt
+iAWUFm>qTuICUMGPtIGYJ?QObKgEI<_i\HSX@tRlbFoq?h=={yV[CaoKqQP>{aaiq>Fcvgy`_HnxloT
+Xson`QOM{{ELx\_PpMzoocNmtaEFf<wPNJZV]U_DjqRRJeoUHffGAALEqCSpF\k_tH@mAQYRM[PccC{
+pHe?ZMEiJ<=AuCpmHzgowsiNEHxwB]SOUQqBel\`DQI@PsGlArUP<ANda@EpOM<nJByiWhQ>MT>Tt`w
+qSZ\um?Pt>G_J<uQTt[^CyzqLBc`GhPuxneGFZ]x_SImoDLLnk=ogpX^hySX\nL]BQqKRqTBJE_><tD
+ajqPwMFj\OQrgPliQYmYVzCTpyUCaN>QDEyQQdh>klgj<@R?Jk=@OHGAaKIN=FHYhhJY<_CMRw<IOX\
+k^oaY@iHAUPyVtqXLiD^c@?dujIQLKcUq?]rYq<snRL\ZuaQHDk\FyFL@^=IB>i`_DaLoca<YRQQvRX
+ZDzoCNONqFIguE_PRqBYDz=J>QcoPjJSq[LzcszKW]S{a]]ypvq>gvNfOOtOwNHlWGYaGjXOKZXsrRV
+O<k<pw\]Z[MPXqGiJbWL{uSQkWrr@zYR]ylpKq@I_RqKSqP=WQiRp\oz=n`TNho`_SM_POomYWnvXyC
+sX`aEqH==RqOpvUGjMVkOHjC{QHrqAcOqILyQW@?QMe[S_Z{QjkQQdphjQZQQ<\s]E_<PW@XvODolPL
+WkXkBMRJwsh@_lWGOJvSQyOoPQTvpEAcuzvfzgaLtptjlhUSJ__\OuqUtozwQQJGaUhLQuoZQLfZcn@
+\>Kl_PwnPN\BaCjW>XJYn?jrT@?QRiaPuXcnvWFdANAx?wdrXQYJ?GYaNSQ{XtsNKqSh_DHnKNa\HcW
+PQcQSwQPp>kgpFlx\PKsgF[S[{sdPC?hcGmonweEZjo[DnH`_UAbR[p[bnNR]FajFQQ^@wSjXpiU@GW
+kQmlWkZBpoHBtKruhptvgNdsoqLGPhKDQYr?=n[cwosUq<updI{O^qjdxVqCqm<gN@]I<l[@MYlLsTo
+PYvvP]OA>pt`?QayUEYNJnpxoPz<^]rQSQYZgnqgF^^ZO^ePkiNGF?waVClCxz[{PynKP?kq<{bOq<J
+DwoZj\TM?eHZf[rBSLE\xnqJBK\DpzuDMuNKa?MM=sO]?TSQ[cGqUQ<wCaFq>etnX>@YPf_ypPHlAt[
+ju]Skv`Jx@vOyJDihqGi[?RvQsK@\P\TLXBwlHdN[My_Iap_`qQLQues]zV_\NASnwSORIjS^@giXAN
+Fchoyt>A<_raDbTLSywNeSZ{TCLxssOhp?H\eofNHUKLqQ@lJDTFC=yU<p@hQMQA\yOJlQaRCSOKwEP
+JvLIIyoaKQYYm?GaFlfc\^@kY\=i@lFb[\=IpTxKwwdj]rsSVqF^NnH_GvQVwG_\mXEPUrHVFB<wImP
+GPw<mETwp]TdrYLdTRjXIRzkPqQ\`Qc@Pet>FRODc\<HS=b__aw{KwyK?j_Z<Nf?UX^hIDbiXvkWVq<
+Y{X\t@iKP^ybKmmDiP`I@Vq^AYEdU_uQcwbtqMiNlVc^{?=p\a^SZ[KywxKkn{hPK<YomA]EGt>CZFN
+HkKPqBvy{fyYHZCUSzOTyTm<mSDOfQUqGSpOFPqQQqSjAFcLNcnGtj_u>FWkmZ{g{ZwKwwhzsYmMDxS
+]DbOED{FhIDptjnPluz[]?_@BpwVOGpIOqZXe[IVVYJhHSNW<vnGqDqQO^hhpk\kZkl<eTsSjO{Z{qw
+zkwzkkn{klinhrZxPE>t`cLkHX<]gYaNZ<X]y]Zc=ntqQP>yLwJFE{RKOLoINk?aPuLi>\zv=^HQNa@
+LkyMqLx\LJVKoqZ{o{Z{>sskwZ{ozuIowhx{Gxnhhh<Q[d>DaN=KkHNFQQ_IJlA]azSEAc@d@tiNHb<
+iUGq=l@dHlyxSuVRqSOLBp>=F{IvbGPm?Yw\vO[Z{iwzkwwiGZiywxG[Z{?oyhfniwzGGwFzwoGNnGE
+Ql<dqoY<zjaFtxBTuYVq@QJLnY\oFqto^zBLnmSUQQwPnGRBQo=O{QKmSPe<`{KkyG[IywzO[Z{aw{K
+w{KGYNsgZxvnsGZxwHkhqFvxgXioNvsG^sKR@hjjd^n\hRP\OGPt=ELF\UTBhBcloILDrGp?EkQ>ovR
+{jgn^XCaQa==<spOqG^>=ao\{oxyXiyG[Iywxnso[Z{G[Zs?oxko`wnnkGZnsOG{KGGG[HkxkIntzOJ
+lvhfhoJpgGhfnhdqJTqPFJFrOMy_HX<F[Cxnt>K\OWNHnyRBASKYQWPx`@qS`Q\Nc]X__m\jKkKlxtj
+OsGZsGZnsgZzwSGZnsgZxwNsgZghnznKjwRpwo`wns?nnGgXtjxvxiljioajfnw\TViHog_gzOVjjih
+vviAkdBDPMwNDNmQ=vMjqyHGd[THiDDo^sIZ^KikNRJlDTqYh]g{JKmX_t{oGo`txgppyns`ynsans@
+ipsktkXiwXiuGYHktxioGYW{GoXjiw{RqWWOjwiJvhgjkW^hwRnwjGjgIjFohkhRjkhJUkpoJnohAHq
+`ohwRGJnw\c<<<OJNFB<QV=w_pdAwpm=\\?EqCHhqpkyGqmF`rqIP=^[voCPxDskktjjSgnovywOOsG
+XoOsGXkXhkGDgXiopnyns>ynsKGDjiookGDxh_gXuWfhjxgXio_b?bqGhkiQGhkVyhjwgwJkRqWWGwJ
+nyggwJkRbqVjwbqN=RTTXniIFp^ZJJgVQ_ifr^rD=MhLNGD{tkPMiKX_JoGh{GEa`YQPaJRLlPbBTBc
+klO@x_^ixsKkozSGxGDj<VtCWvoGjgIvoGjgIHjvxwgrgDgHqoOGjgGHjvhojkW^hoPpwggjkhFohkh
+RjkhJgFgJlI<r?uPbqN?wPblwjQghKhWQhwjKTJwRjqWQghJwbqWJw_cR_bw?wQDxDRLUuKchx=TOPW
+PK<ASWRw^@\LdsKq`tdoLdtnN>GNkNNsI`yJM]glbAPtvZxo<SAYNitgFssjcivnSj>wjJh=lCUvO?r
+j=jz`lygcgHJw`nwkKVwgx\ZxhlygsgHKVuHjwgoJkvZjnwkWGjyVvyNWQFwjWQHwg_gqdD<?\yP_lK
+<{Pw?w?rQjqWR_rWGw<A\B<wAVJlJwRw?wQdubnzlC?b=]RwQdz=\<DUlXBc]\<KRJ<<tq?ORLeLJkH
+\?EgNkL<\T<vDunqQhoyJdyRvNAGxl]]Uabxioo`ipsSOzGZOgYXwow^V\<VC[hlwj=\BshlwjBuwHK
+IvO?o@nwkJw]tT=moHJw\QKhlwkvO?o@shwjAtSaVW?wAVw?w?cJw_yNKjlzqNKrpwjjw_`=<tz?\<J
+_yOiP\B?qR_pKT=iVWQd=<BJt=\C<wqjqVJtBQeiR\<V<uQdu\TFDT<<T<Dt><?\\r<?wHfho>xvmOx
+@`BJ<gcKVyIMaYX??ZHxzOKCsGEy{XhphoJ<{\iw{NnhowbtW`N<=\YZo?o>=]kwHKH=TUzoZ]cwIwv
+O?o@nxlV<T[oHKHJ=SwHKHA[hskdS`nxlA<RJYWiR_bQjqVAMhkh?\x?mPwQDz?URjnzqhkh?\DJ<\<
+J?qNK`<Ty\B<X<KYVKTD=\\<B_kR_j<RLuQdu<<Tu\RN<\\\<<?y^flDmn@ftKDDomX{GaGPAXuJN_>
+ZdvcTn?kssK[sqyygaohx<kvW[Zk_ohujbuw_jX<BC[hsdDC=kwIv<B=avBLXB[dU=cwIonOX\<A={h
+sdDxA[hsdrA{dS]X=seIvD<R?aR_`Aluqdu<qeiPd\v<KqDx?N<JURbqVQgiR\DD<?_tI\\B><<TKL=
+ND<<TJl=L<=_b=\=L<<KHpiZ=E`KOP\LwDoJitcJWIwZdvZWm\qb<WuckktAzQtquKkkwyzSt>Kl>il
+k`kkkt{ijGj=w\w]<=LYz]h<<VB{dW`BBTT<VBTTPB[DXCx]t]TQz]R<<vA[dQ\<B=X=\B<A{dS<LRJ
+TR<=VJTR?cP_lD\J_tJ^<tJQVJLuaVJT<<p<D\<BD<<T^=\_Hf^RVEnPgPhH@@J]YMo{NAQAQ@EEx_@
+fHlJ{BZUyzZ?[mS\qxOuKsouCsmwxZ@K\_XGv^xEyvZzc\zlGhEWdwT\RBtB<=\W<P>B><B<DRC]]\X
+C<<tALt<?\Q?M<T^=dS\T>A\D<A\<Q_tJ><?^<=<tu\tK?b?\D<<D\Fgb<?F=^><t<Fsc[KNvv_f<nZ
+WADP=WuJZbZUtUlE[@qnYXOKeK`z@ymyCpYMwC>?hhNk<fzcn[EpcfX<r^j^Zl_d<<B><BFD<<B>DT<
+LtD<tDD<<T>><<<JD^<<\t><<v<<kZ>LOUhKqAwDpxRYIpnn[H^f>WlQc>umUlu]AtQR<iTQK>omOlo
+]mmMmM_C?BL<LAG\n]emEmE^c>bGTNT]VtuD<@\\D<D<`D\\<ZC@>`^amRGBbLPMQ\Q\AVZe^<MjBU\
+rTZTJ>A]A<a=`tIJCJ?DxYMi@mg<]^\\vYEh`ef\O>dc\L\<\<T<<<`AGMVXjPaELMEtN>B]B<b<RD`
+?>\MDEDAFDS=p?BlF=>AdX\mf>^>H@lDgzkX^Qm]]nZE<ld`LMHFE@E]N]FdE]N]F\BL[Hs<u`WqH]P
+Z=@L=@LLmHLLmHLAO<qKlaGI@HOt<<LL@@DLJ`_BGr==K\<IRaTZX?KjtcRAZ<ouPywQ[P_Kuy?yJ[F
+PMOyJwKHM[AGDCKwqNhzyNPhj=Oxjh?TqoZNk]na[nnf@gAaK=xoE`=[]@RDgUKiO<cD?S\NZp_s>@@
+f?[_HuDeLA<>QuMhNx<Iz@\>F`Qv_\ZZCD=knDBzL?k\As\JZ?k\bZ?cduuAk\Mc]utAceMuHz>Othz
+?StDQtjZ>Wt]c^utIC\ovaZFUteC^mthZgKaES]Ec``ZOCbmtOCiOu@OtOK]QZ@Su=S`qtQc]BzLUuJ
+ZAMtXzBUtUC]mtxZAOtmS_BZHMtxZEMtpZiKaMS]Mca@ZSC@PUp=O@<

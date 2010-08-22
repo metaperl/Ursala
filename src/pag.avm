@@ -1,0 +1,79 @@
+#
+# generic parsing functions
+# Copyright (C) 2007-2010 Dennis Furey
+#
+# ruleset                                      (619)
+#    - prein                                        
+#    - prepost                                      
+#    - inpost                                       
+#    - inin                                         
+# syntax                                      (1612)
+#    - prefix                                       
+#    - infix                                        
+#    - postfix                                      
+#    - parameterless                                
+#    - rules                                        
+#    - juxtaposition                                
+#    - concatenation                                
+# parser                                      (5831)
+#
+# compressed with granularity 80
+#
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; version 3.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+#
+{kwgZyFsk<oKvrgKkw=Hv[dkwVkHCwKkwFnv\AweZz{hggluzxezcvOZlIEL\=zxg=Z^SfwZwwn]zx>
+JSfawKK{kKrnhMZieB[eEzvRxkIvv`JOj_cvcDDCvtcvvxanjgZk>pgYF>MZkVLSd>=Z`fZkNAGoZa>
+jwN>_avZV^[ecwG]vc_FgFskJxPj><cos>i]z^MZvoYJCggRviwFoAjaFMwtnN\mZ^cwt`qWIpaEKKh
+oZwd_wWbjByn=\Uyb=Z]FN[EIRt`v{wjgzsN^YcGN\BG?>dhRdUxn_mVN[JhxE{{IiHxsiDG\qVJn>W
+`\ENGAkDRr_mZo]LlSc{wPrwrgZj?HaHvfbBhf<`pGIP]WVnGnUy=Z[z^gwW{ok{eNLjnhfoFjhkgRF
+hqQYPf=Cb[hScvvOOPqsSkkGs[u\PSPGqF\F{zrYjiTfagkG@=CtEzmYAjr^xXqmX{wSWGGviG`iNf_
+Fd>]RnmPajYkMyWN\G=YlS<ciWLjjirUv]e{zjYF[Jx{FoQIPotfni=<kQgANSE{KTI\c\EzmLiUyeX
+vgSMQw=Z[{QS`z?XhgzhffiDfDffcvA<h\kQxMzo?>A]R@<FNqHqIVxEXBkpFUzmZ[wi[gMnfc{{SHo
+IFoKNhiKr@dPQYN]zq=DVClnvO?QntCKNKrD@S<apA{qWQYonP<{nqS{{g@^GPo>HoKSOLj>srPAta<
+\\_I<vGXk?wCLOxf[etcuZuJtqPiRgQ<G_Qm{Syxn`fF`^kbLGVI@kQLUJvA>]NNv_StbDmlV?@<mRA
+z[qtCPc@nyGq_QIS={T{ys^ndH^nVNanj_IQlsuyeR_IFkrPsEZdTVBS==XlYr_{FfiI{g[pq<AwxSc
+uwkiHhgDHGPgFPlR`]ZzqDzaHmyHNk=sSHL>cfZgEIhA{ODAKQWnkLSpr[@qU{=Z[crsOHhgGp\Pdeq
+NcwwgPOPFoF`hmtzSPL<m>Mn<AnQ=VoOqHyJaJo=[LT[idLSb[LScuwz^nffb_N<AQ>LSoxyXJr\dHv
+x@RlJxDVtnvHqM=>nfj]HuR@lS\MPG^ct@ZUzmZ[c{wHhgFrgP<e{KHO<qPGh\ND@ehGrl<M=[wFPfn
+]x^az@lOuY>MxhL@[\cwAm[xyvdffefLlBEZQ?G>RSViKfZ<{EJLYKxFph\TkmZ@\QoFtZ<hAs=X>[c
+tz{s[QQGL<l?coN^qSIQPTNfZJCMksdYHIGKfCKctFuX<@R>Z<cw@@Ax[ocyyofhffDGA^bVfuXFtlF
+AdziBj{Esho@YpoK==[KEptRATL<f[rAw{=ZCww[QAOP<axoPxcySnILPIELAs[J{EH<ffHWFezJmr\
+dVC^Mx]AyqZUzmZCxvwOQPoHbX_hQKiKLc>`^UIqr]Ysl\<>vM>MxNgk\>>>tZNSJ_Qt@S<apAt{GLp
+aHucHnNfOPpkQYpesIiWW`sSWDBvtZL]Yr<<MScyQIRf[etctSpmG?T@oNhLwEKPtfKmqOliOQIcXrq
+igOr<@LUIqj<DAQspqTHL?ATSuzGqQQ><A>nvpLnXJBIFPnbhQQOliOQIdA{OwoWR>YKHAyIlTVBS==
+XCfhn?LTnPhod{hN\gOnDeOFVmOLA{R?Mdi{RLhwO=[QXL>cfZ[iDqIDXDD\A?B]OWZPN\gOoEcu[Da
+@i[wPQaV@lSiL<m>MtSqPfiOLF?DEdqO=OWZO==Z{r^>d{QPlnSz@lQHBj=Av>mLi?LpIEX\b_QGF[e
+rSlNiHE[xKm{lOyL<NSQF\hH]Rv@IEYD`[TIHa^askZSlXzAvdLSauveLHqHp]RvDjCoDpyEeoQU@qQ
+Hx@S\O=<>=QOHpCiOID<@M?cA^OzCcOEYBnnS=EqQQ=IQDZo\mWXcQwq[sk?eAZZ@AGXhgAIP>?WPK>
+?EJqzCOYtBt<\LhlGE@Hf]o^fiyAWQIKt?QxycQAH@`InmqAs=`wbrPyo`pSyLlg?=O\R>yhs\YPGzO
+pawT[yUAM?jq\Oh@CYjSPwKrQpGtSaxplPO>lP^nOOSHxO\SxQUy=Aw{VQU<Nt\=NgaqFVqrwaOJnSE
+rSlgLExeKENewN?xJPjaQZ[\pnSPdD`?hRMK<DzpIOLU\>=ODpxoKeForw>Fr<^aPU?cAq?{]?yA>rA
+I=R`<mWXmpyDwHeONh?l<rqQVWednSQFfcrXtgKIkIgeN<uPOksGCAEI``roaaD>AsYJ=VwOZprCYlS
+`qPwiYHPqHPiWQccWnHA@qRim>R`eGihZmMds`<ifVHWG@NkiY^aA{LNv_NHPbss`sR>CqV_Hu<LaqF
+aQOWR=RInPhpYNVxrGZysXrDfdS`NDfyGYyqwqpp=QoD\yj^i[{PyXPyqEQXLX`k@f?ykwcRAlqrGFx
+eD_J>gqhk[YSsOrESMISv`<yGJhrt{Rnr{kS_{ER^gPpDq>_eVNa^loWiW{QrqlzrFQANL`Xnh`j\CY
+eFKTwyOgkyhDf{N\fI>t^j`m?@j]gx[{_odSYhzDPYnFg`xnPpeZ`r]I<B[yxtOuIQJOL?C]IMCEaNh
+BoNywU>[ZYlODWnXDwVidf`cIHXIGmui>d>[sXzOiB_SIBvNoHqINleHOYoJSMbllnYrvEMSLUsV>eP
+>\feIFlm=SF<Yj\ooeFDKsQXqPPLP]GmW^jPLoh]tNo=IKgc`l=LM_Lohx^RXnsOTWUIOYrZd>QcDw<
+VjpkBBpGwTqIqoQLVj`fIOoEsHrSY>twIiZrdIOm>LLnnbyESIRSONGPqNkfLLmLPNxnTg`mSHz@egC
+=IQ=@@fwhonJgarpFpyjrh?IJjPJlQKEoG`rSia>y?<LmJ@gTwATMTbqPiuYQLPHMk`gcApGEYQQoI?
+HC@pLqZJ]R{L^jSG>XwUWStSOIPGKEOMxA>uRqSZP=eY?hRFGBKROjIQY`wd`fzeYXoZ=qEmOqHp]BO
+Q?GeY=sVKvaF]uCwVsHerh`rlSuFPYqYLjed`Yz\=XaLR@?QrhUYpH?koHj_IL?PhKSIQ@AsZvLSzoj
+ajfuHQUIqnnjLYK{@]eoKDvsXpqXXB{Z]pfLFj_h[PPxFGAiiBj{Esh]PxNjyfeOHwVrELAs[J{D@@H
+MhjzeF>soUI>UIqr]Ysp@Y<AsJ]LqQQNesIiWW`sSVCE`sULNSEaMOliOQIkXrqik=kIIQWuRHeOFVm
+OMOliOQI_AB^cAOIPiNN\gOoDeOFVmQQeMJvlVSF\AIiuHN\gOnDHDGsPOja<EdqNlPrsaROURgHpi?
+NSN>VIPmdHuqNCaDQj^LpanIYQvhYlPoN=Rv=QjqzpISNCiOIHQAWQXp<qEOQPCiFUJtqMWdHf]IPOZ
+=qE_mEE@nh`CYdqFLlNLvnOWRnLl>\=X_v==GdOP@AwVuPGmkaqPWSHnPFuX^OnZdJmQpNfQ@Lw>GX<
+QJohOaOdrCOdNlHt\

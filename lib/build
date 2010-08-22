@@ -1,0 +1,14 @@
+date
+fun int.fun --a --g
+fun flo.fun --a --g
+fun lat.fun --a --g
+fun tbl.fun --a --g
+fun int rat.fun --a --g
+fun int stt.fun --a --g
+fun flo lin.fun --a --g
+fun flo cop.fun --a --g
+fun flo stt cli.fun --a --g
+fun flo lin fit.fun --a --g
+fun flo tbl plo.fun --a --g
+fun flo plo ren.fun --a --g
+date

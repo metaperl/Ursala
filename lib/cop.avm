@@ -1,0 +1,54 @@
+#
+# These functions may be useful in conjunction with non-linear
+# optimization by the minpack and kinsol libraries.
+#
+# Copyright (C) 2007-2010 Dennis Furey
+#
+# between                                     (2749)
+# chov                                        (2843)
+# half_line                                    (642)
+# jacobian                                    (1323)
+# jacobian_row                                (1053)
+# over                                         (824)
+# t_derivative                                 (178)
+# under                                        (957)
+#
+# compressed with granularity 131
+#
+#
+# This program is free software; you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation; version 3.
+# 
+# This program is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+# GNU General Public License for more details.
+# 
+# You should have received a copy of the GNU General Public License
+# along with this program; if not, write to the Free Software Foundation,
+# Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301, USA
+#
+{kwOZtsRrf{wPxz{vjINYNgOwRtjSGJK{QST{zniiY{hvqO{xXnoP{[y[yiXjmz[CuAHjEoqm[cqqrz
+QSNd[D[cZhiroeuS_yaz[ysHpaC\LApAy[{o>[OQ@sc_CyN[pSy{yra]RPU^{zx[cwpbPbboQUpMcwf
+={V[qc{{PeTOStF^[cmyvCnavySwibduPcd@SyDE[p\[tncu{yZgS>{x\FCmctx[lA]CnjI{ppGn[W`
+[_cyTF[yTE[W\=[=ZSu{PgEMz[lLA\mZjtYBY=Zgn[crBNxJ[S[]b<m[a@EySXe{PXavcnSR[{lAID[
+^[]bC{f{zFFl`Bgp]y]yRfvkaD[S{b=cyt_CurRLcw\v_ub[UyLcu{NVm]Z`S^fCuyfw{{b<RBgq<R@
+CaQfzg{kaTY[{z\AwY\<Qaxp_CyUvMZ<@N]@t@S^[SNp>[>at<]x=tVjj[a{{vDVhEb_G^Bgkf{{OSw
+ZF[cs{{b[QQGRxwr<=[Q?MExtKruzfSRnHbZZSLAbTVjgd[Ux[csJ<VhF]CNBgg]fuz[TU{pqZVClCc
+uZ[clhRJ@WQ_iQSD{JVFmT<=y<l[<EXQPdHL?cbTBBgVk<RDAd[BZ>jBp<ChBkFtVj]x=yR[cr?czx=
+Ub]xcnCrC\UpdOa?CBU[AsrtDEuN@MyyI`\D<@F\BfBgbTc<R?@St[UP]hZg]gp=UcaVClCqr[cnub=
+lA\ClA]=dOKAtyIxxAaxQYEazt`N_kkhD<W=ftgfU]pOtF[k=x=ftWBU\XiP=Uc]yD[BZg^dBTbUd^<
+YQUnYO`J\bviM<K{OLdISPkNdZBk<<<fcL[]{p{<PBg]v^dQjBTCJQ`=THRg\>e\f=bURJnvp_A?Qob
+Cuy]]c?^OqP\dW><<rPmz[TCHLVx=@<=p^dQzrU]]ft<<[qIMxKNJjmmQSFClCqTPiQJGL<[\>f]x=y
+UA=hTtp<C{OPFdBg{wiWdpATKMlPtHILAbZQe_hHcDA\Y<RUuv<Zet=z[TJ<<Vh[awPqQR^QA<vY\LU
+\XiOGoHoL`Ub=o{t@Sz]x]yY]fd[tzXRa\vTFZoQ^dMjLmQ<_LFF]=z[JEz[LApA]q=hTS_CyIrqNOt
+q>ut<YD>`@\<D[TZjD[TZU^o_\Z>[@EzcJoTMAOdAWq_CgLA]=fx=TLTfH{r>ecfMZoiMQu\kQWqZAN
+hUdvjUd\D[uy<\m<e[?mlIXpP^yO^{z?PF\Bg^d=zSuZ<EuX?iDqPe=q\nUz[PQ<=ft>Cr[[QT<uwPc
+jlKJRoFCrCgPBgLA^=[zuR<=C?IQRoiQ<_<R@BILVebEcuyNqIHFRCaPDt=b^q=fFvd[BZojFTWOqBW
+Tf=LB\<@=THL=pgHzKQqQP<dUbC_M>PsJGvvJX<fc\<WRHbyOQSP<[y?poGq?]QQCuycR<_JFSJoD[T
+[PuT?EqWSQ<R@BjqPoGjzQPUdoQ]\DqSHp_Df<dOLRCVRGL=S?Va]EHIOPiXmZpwFn@qPaP=O>TI\WY
+SXiJCyNESPqiMQaUQ`wVQ]yqIRPyPtrptyQiMOQPtiQa]]dnV]URrhnqZXyDDlqOrq\AjNeUahq\iYQ
+ryPgJIQQM\AIw`]aBqQSPwFuaQ@QNYrjM]QQIyWZTwQSQSSrq__pwQ_qQuQHeiWaKPwIDnGkaIQJGpa
+\<KHp]_?E]\NYeTSgHqFa]IQLDt>qnu`ANh]sWLAIQIuBtwQSnrq__sNQZQOFZPwIDnGqUpa\<F_zB=
+DgWqPNqkQ\@ho^pADnYBhnPdDx\YSbYSfJyFryPiXtdNnHbAGHb\_F@aUwpyPtdnWH\^<

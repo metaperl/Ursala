@@ -1,0 +1,77 @@
+.\"                              hey, Emacs:   -*- nroff -*-
+.\" avram is free software; you can redistribute it and/or modify
+.\" it under the terms of the GNU General Public License as published by
+.\" the Free Software Foundation; either version 2 of the License, or
+.\" (at your option) any later version.
+.\"
+.\" This program is distributed in the hope that it will be useful,
+.\" but WITHOUT ANY WARRANTY; without even the implied warranty of
+.\" MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+.\" GNU General Public License for more details.
+.\"
+.\" You should have received a copy of the GNU General Public License
+.\" along with this program; see the file COPYING.  If not, write to
+.\" the Free Software Foundation, 675 Mass Ave, Cambridge, MA 02139, USA.
+.\"
+.TH FUN 1 "March 31, 2010"
+.\" Please update the above date whenever this man page is modified.
+.\"
+.\" Some roff macros, for reference:
+.\" .nh        disable hyphenation
+.\" .hy        enable hyphenation
+.\" .ad l      left justify
+.\" .ad b      justify to both left and right margins (default)
+.\" .nf        disable filling
+.\" .fi        enable filling
+.\" .br        insert line break
+.\" .sp <n>    insert n+1 empty lines
+.\" for manpage-specific macros, see man(7)
+.SH NAME
+fun \- compiler for the Ursala programming language
+.SH SYNOPSIS
+.nf
+\fBfun\fP [file[.fun|.avm] | --option]*
+.fi
+.SH DESCRIPTION
+\fBfun\fP is the name of the compiler for a programming language
+called Ursala. The compiler takes a high level description of
+a program and converts it into a shell script containing
+code executable by \fBAvram\fP, the virtual machine emulator,
+which is documented separately.
+.SH USAGE
+For complete documentation, refer to the reference manual
+packaged with the Ursala distribution. It is available on the
+Ursala home page at http://www.basis.uklinux.net/ursala.
+For brief reminders about usage, invoke the compiler as
+
+.nf
+\fBfun\fP --help [topic]
+.fi
+
+with an optional topic of
+
+.BR options
+.br
+.BR directives
+.br
+.BR types
+.br
+.BR pointers
+.br
+.BR suffixes
+.br
+.BR prefix
+.br
+.BR postfix
+.br
+.BR infix
+.br
+.BR solo
+.br
+.BR libraries
+.br
+.BR outfix
+.SH SEE ALSO
+.BR avram (1),
+.SH AUTHOR
+Dennis Furey <ursala-support@basis.uklinux.net>.

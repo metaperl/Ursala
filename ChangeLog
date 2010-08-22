@@ -1,0 +1,134 @@
+2010-08-08 Dennis Furey <ursala-users@freelists.org>
+
+	* ursala 0.7.1:
+	- many corrections and improvements to the user manual thanks to
+	Terrence Brannon
+	- makefile for typesetting the manual contributed by Terrence
+	Brannon
+	- predeclared identifier __maintainer_email changed to
+	ursala-users@freelists.org
+
+2010-03-31 Dennis Furey <ursala-support@basis.uklinux.net>
+
+	* ursala 0.7.0:
+	- new binary converted decimal integer primitive type (%v)
+	- new bcd library
+	- lin library upgraded to interface with new mixed integer
+	programming library functions in Avram version 0.12.0
+	- corrected documentation about existing linear programming
+	functions
+	- std-words combinatorial function in the standard library
+	- other minor corrections to the manual
+
+2010-03-07 Dennis Furey <ursala-support@basis.uklinux.net>
+
+	* ursala 0.6.0:
+	- updated copyright years
+	- ten new pseudo-pointers for tree tagging
+	- improved std-rep
+	- improved int-abs
+	- corrected manual and online help regarding ^| operator on solo
+	semantics and previously undocumented *, =, and ~ suffixes
+	- changed the meaning of the ~ suffix on the ^| operator from
+	filter to fan
+	- tweaked tag-parenthetic and tco table entries for T and D to
+	avoid parenthesizing record nodes unnecessarily when pretty
+	printing trees
+	- --help pointers listing order changed
+	- removed manual references to the __watermark predeclared
+	identifier
+	- fixed some typos in the manual
+
+2009-12-01 Dennis Furey <ursala-support@basis.uklinux.net>
+
+	* ursala 0.5.0:
+	- new signed integer primitive type %z
+	- rational number type %q representation changed from %bnWX to %zW
+	- rat-simplified function removed
+	- new signed integer library int
+	- new functions nat-nrange, flo-floatz, and std-pad
+	- fixed %A type printing bug, correcting a: b: c to (a: b): c
+	- fixed similar printing bugs for T, D, and G types
+	- extended date calculations to years after 2099 and timezones with
+	negative offsets in stt
+	- rewrite of reification functions in ogl benefiting -:, -$, ~&K25
+	and ~&K26
+	- new suffixes for -: and -$, allowing a choice of code
+	optimized for size or speed
+	- address map and finite map operators (=:, -:, -$) semantics
+	changed to generate an exception thrower given an empty list
+	instead of a function that returns 0
+	- address map operator (=:) semantics restricted to addresses
+	of equal weight
+	- rewrite of std-lsm to generate faster code but sometimes larger
+	- minor refactoring in ext.fun and lag.fun
+	- removal of __watermark predeclared identifier
+	- corrected a bug in apt-ub, which had hitherto performed source
+	level transformation of solo dyadic to equivalent binary operators
+	without a necessary check for prior disambiguation
+	- corrected online suffix help for ^?
+	- refactored opt-abstract_disassembly and related functions
+	- generalized the K22 pseudo-pointer to work with empty input lists
+	- new trace option for the bootstrap script
+	- improved distributing bipartition *| operator implementation
+	- improved implementations of cuts and choices in the standard library
+
+2009-07-09 Dennis Furey <ursala-support@basis.uklinux.net>
+
+	* ursala 0.4.0:
+	- pair type printing bug fixed
+	- complex number parsing bug fixed
+	- smaller faster nat-difference, predecessor, sum, division,
+	power, and nleq functions
+	- new optimization (p?(q,0!))?(f,p?(p,q)) -> p?(q?(f,p),q)
+	- predeclared identifier __fun_version changed to __ursala_version
+	- new pseudo-pointer escapes for odd items, even items, merge lists,
+	first half, second half, apply alternately, and triangle squared
+	- sol-function_fixer rewritten, correcting a bug that may have
+	affected mutually recursive record initializing functions
+	- corrected documentation regarding the postfix -: operator
+
+2009-03-09 Dennis Furey <ursala-support@basis.uklinux.net>
+
+	* ursala 0.3.0:
+	- corrected and updated the manual
+	- new @ operator, f@s = @s f = f+ ~&s
+	- new conditional operator ?$, whose predicate tests for a prefix
+	- new $ suffix ^?$ for the ^? operator, recursive version of ?$
+
+2009-02-13 Dennis Furey <ursala-support@basis.uklinux.net>
+
+	* ursala 0.2.1:
+	- fixed a typo in the manual
+	- "h":"t" allowed in lambda abstractions
+	- new plin function in fit library module
+	- new eudist function in the flo library
+	- new swin function in the standard library
+	- nth_deriv and oprod functions corrected in flo library
+
+2008-01-24 Dennis Furey <ursala-support@basis.uklinux.net>
+
+	* ursala 0.2.0:
+	- fixed a typo in the manual
+	- fixed a bug in tbl-sectioned_table
+	- fixed a non-terminating code optimization
+	- new suffixes for $^, $-, *=, and ~~ operators
+	- documentation regarding ~* suffix corrected
+	- fixed a bug concerning smart comments and declarations
+	- new subset and proper subset predicate pseudo-pointers
+	- new bipartition, reduction, and reification pseudo-pointers
+	- new sudoku solver in contrib/
+
+2007-10-10 Dennis Furey <ursala-support@basis.uklinux.net>
+
+	* ursala 0.1.2:
+	- fixed a typo in the manual
+	- fixed a bug in std-block
+	- new code optimization (f*)?(g,h) -> ~&?(g,h)
+	- fixed a bug in sol-function_fixer affecting recursively defined
+	records with field initializing functions
+	- check for duplicate library directives
+
+2007-09-23 Dennis Furey <ursala-support@basis.uklinux.net>
+
+	* ursala 0.1.0: initial version.
