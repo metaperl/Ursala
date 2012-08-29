@@ -1,17 +1,21 @@
-August 26, 2012
+August 29, 2012
 
-This project is essentially an investigation of some off-beat ideas about functional 
-programming through the design and implementation of a novel language called Ursala
-(a pseudo-acronym for universal applicative language). Its main preoccupations are
-brevity and flexibility for rapid prototyping, with a bias toward applications involving
-text processing/compilation, trees, graphs, and number crunching (via built-in API's
-for some good numerical libraries such as lapack, gsl, mpfr, and others). It's probably
-best suited to individual projects because it enforces no particular coding standards or
-practices and makes unreadable code easier to write than most non-esoteric languages.
+This project is essentially an investigation of some off-beat ideas
+about functional programming through the design and implementation of
+a novel language called Ursala (a pseudo-acronym for universal
+applicative language). Its main preoccupations are brevity and
+flexibility for rapid prototyping, with a bias toward applications
+involving text processing/compilation, trees, graphs, and number
+crunching (via built-in API's for some good numerical libraries such
+as lapack, gsl, mpfr, and others). It's probably best suited to
+individual projects because it enforces no particular coding standards
+or practices and makes unreadable code easier to write than most
+non-esoteric languages.
 
-Ursala is mainly an individual effort that has been around for some years but
-neglected lately due my day job. I'm now looking to revive it and address some issues,
-such as improving the web presence and on-line documentation. Comments and feedback
-are welcome on the mailing list, ursala-users@freelists.org.
+Ursala is mainly an individual effort that has been around for some
+years but neglected lately due to my day job. I'm now looking to
+revive it and address some issues, such as improving the web presence
+and on-line documentation. Comments and feedback are welcome on the
+mailing list, ursala-users@freelists.org.
 
 Dennis Furey
