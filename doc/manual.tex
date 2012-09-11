@@ -2231,16 +2231,17 @@ less space needs to be devoted to motivation.
 \subsection{Installation}
 \label{ins}
 
-The compiler is distributed in a \texttt{.tar} archive or in an
-unofficial Debian\index{Debian} \texttt{.deb} package\index{package},
-available from\index{web page}\index{download}\index{Ursala!download}
+The compiler is distributed in a \texttt{.tar} archive or a git
+repository available from\index{web page}\index{download}\index{Ursala!download}
 \begin{verbatim}
-http://www.basis.uklinux.net/ursala\end{verbatim}
+http://www.gueststar.github.com/Ursala
+\end{verbatim}
 In order for it to work,
 it depends on the \texttt{avram}\index{avram@\texttt{avram}!download} virtual
 machine emulator, available from
 \begin{verbatim}
-http://www.basis.uklinux.net/avram\end{verbatim}
+http://www.gueststar.github.com/Avram
+\end{verbatim}
 Please refer to the \verb|avram| documentation for installation
 instructions.
 
@@ -2274,15 +2275,17 @@ refer to the compiler.
 The compiler may be installed either system-wide or for an individual
 user. For the former case, the system administrator (i.e., the
 \texttt{root} user) needs to place the executable and library files
-under apporpriate standard directories. On a Debian\index{Debian} or
-Ubuntu\index{Ubuntu} system, this action can be performed automatically
-by executing
-\begin{verbatim}
-$ dpkg -i ursala-base_0.1.0-1_all.deb
-$ dpkg -i ursala-source_0.1.0-1_all.deb
-\end{verbatim}
-as \texttt{root}. For a Unix or GNU/Linux system that is not Debian
-compatible, the system administrator should unpack the \verb|.tar|
+under apporpriate standard directories.
+% On a Debian\index{Debian} or
+%Ubuntu\index{Ubuntu} system, this action can be performed automatically
+%by executing
+%\begin{verbatim}
+%$ dpkg -i ursala-base_0.1.0-1_all.deb
+%$ dpkg -i ursala-source_0.1.0-1_all.deb
+%\end{verbatim}
+%as \texttt{root}. For a Unix or GNU/Linux system that is not Debian
+%compatible, 
+The system administrator should unpack the \verb|.tar|
 archive and copy the files as shown.
 \begin{verbatim}
 $ tar -zxf ursala-0.1.0.tar.gz
