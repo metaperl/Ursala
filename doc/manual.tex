@@ -8645,7 +8645,8 @@ nevertheless gives an indication of the sizes of the fields. The next
 example demonstrates a record instance recognizer.
 \begin{verbatim}
 $ fun rlib --main="_myrec%I an_instance" --cast %b
-true\end{verbatim}%$
+true
+\end{verbatim}%$
 When a type expression given by a symbolic name is used in
 conjunction with other type constructors or functionals such as
 \verb|I| and \verb|P|, the symbolic name appears on the left side of
@@ -8677,7 +8678,8 @@ goody_bag[
    cost:            125.00,
    celebrity_rank:  `B,
    occasion:        'Academy Awards',
-   hypoallergenic:  true]\end{verbatim}
+   hypoallergenic:  true]
+\end{verbatim}
 \caption{Typed records annotate some or all of the fields with a type expression.}
 \label{tcr}
 \end{Listing}
@@ -8720,7 +8722,8 @@ goody_bag[
    cost: 1.250000e+02,
    celebrity_rank: `B,
    occasion: 'Academy Awards',
-   hypoallergenic: true]\end{verbatim}
+   hypoallergenic: true]
+\end{verbatim}
 
 \subsubsection{Type checking}
 \index{type checking!in records}
@@ -8734,7 +8737,8 @@ false
 $ fun bags --m="_goody_bag%I goody_bag[cost: 'free']" -c %b
 false
 $ fun bags --m="_goody_bag%I goody_bag[cost: 0.0]" --c %b
-true\end{verbatim}%$
+true
+\end{verbatim}%$
 This convention applies also to the type validator operator, \verb|V|,
 when used in conjunction with typed records (page~\pageref{vlad}), and
 to the \verb|--cast| command line option, which will decline to
@@ -8742,7 +8746,8 @@ display a badly typed record instance as such.
 \begin{verbatim}
 $ fun bags --m="goody_bag[cost: 'free']" --c _goody_bag
 fun: writing `core'
-warning: can't display as indicated type; core dumped\end{verbatim}%$
+warning: can't display as indicated type; core dumped
+\end{verbatim}%$
 
 \subsubsection{Default values}
 \index{records!default values}
@@ -8959,7 +8964,8 @@ add    = point$[x: plus+ ~x~~,y: plus+ ~y~~]
 rotate = point$[r: ~&r.r,t: plus+ ~/&l &r.t]
 scale  = point$[r: times+ ~/&l &r.r,t: ~&r.t]
 invert = scale/-1.
-orbit  = scale/2.1+ add^/invert rotate/0.5\end{verbatim}%$
+orbit  = scale/2.1+ add^/invert rotate/0.5
+\end{verbatim}%$
 \caption{polar and retangular coordinates automatically maintained}
 \label{plib}
 \end{Listing}
@@ -9652,7 +9658,8 @@ $ fun --m="500%cnDmi&" --c %cnDm
    '{V}gamO$`': 244%cOi&^: <218%cOi&^: <24^: <>>,2^: <>>,
    '?xtyv9kN#/AJ': 2^: <>,
    'P9tPxo[_': 220%cOi&^: <~&V(),0^: <>,4^: <>>,
-   '-/.X-D+g`Y': `P^: <0^: <>>>\end{verbatim}
+   '-/.X-D+g`Y': `P^: <0^: <>>>
+\end{verbatim}
 See page~\pageref{osem} for more examples.
 
 \paragraph{Limitations}
@@ -10727,11 +10734,13 @@ optimized where possible. For example, the three functions in the
 above sequence can be reduced to two.
 \begin{verbatim}
 $ fun --main="-+~&x,~&h,~&t+-" --decompile
-main = compose(reverse,field(0,(0,&)))\end{verbatim}%$
+main = compose(reverse,field(0,(0,&)))
+\end{verbatim}%$
 Optimizations may also affect the ``eagerness'' of a composition.
 \begin{verbatim}
 $ fun --m="-+constant'abc',~&t,~&h,~&x+-" --d 
-main = constant 'abc'\end{verbatim}%$
+main = constant 'abc'
+\end{verbatim}%$
 The constant function returns a fixed value regardless of its
 argument, so there is no need for the remaining functions in the
 composition to be retained.
@@ -10902,7 +10911,8 @@ $ fun --m="<math..sin,math..cos,math..tan>" --c %fL
 <
    library('math','sin'),
    library('math','cos'),
-   library('math','tan')>\end{verbatim}%$
+   library('math','tan')>
+\end{verbatim}%$
 The function returning the list of the results of these
 three functions is expressed with a suffix on the opening list
 delimiter.
@@ -10912,7 +10922,8 @@ couple(
    library('math','sin'),
    couple(
       library('math','cos'),
-      couple(library('math','tan'),constant 0)))\end{verbatim}%$
+      couple(library('math','tan'),constant 0)))
+\end{verbatim}%$
 This function constructs a structure following the representation
 shown in Figure~\ref{rol}. To evaluate the function, we can apply it
 to the argument of 1 radian.
@@ -10992,7 +11003,8 @@ wrapper = # allows high precision for intermediate calculations
 
 rad_to_deg = # converts radians to degrees with high precision
 
-wrapper mp..mul/1.8E2+ mp..div^/~& mp..pi+ mp..prec\end{verbatim}
+wrapper mp..mul/1.8E2+ mp..div^/~& mp..pi+ mp..prec
+\end{verbatim}
 \caption{when to use a higher order composition}
 \label{promo}
 \end{Listing}
@@ -11033,7 +11045,8 @@ The code in Listing~\ref{promo}, stored in a file named
 $ fun promo.fun --archive
 fun: writing `promo.avm'
 $ fun promo --m="rad_to_deg 2." --c %e
-1.145916e+02\end{verbatim}
+1.145916e+02
+\end{verbatim}
 
 A further point of interest in this example is the use of \verb|-??-|
 \index{cumulative conditionals}
@@ -11045,12 +11058,14 @@ instance recognizers and the functions are meant to be type conversion
 functions.
 \begin{verbatim}
 $ fun promo --m="retype<%nI: mpfr..nat2mp> 153" --c %E
-1.530E+02\end{verbatim}%$
+1.530E+02
+\end{verbatim}%$
 A default function that raises an exception is supplied automatically
 because it is never meant to be reached.
 \begin{verbatim}
 $ fun promo --m="retype<%nI: mpfr..nat2mp> 'foo'" --c %E
-fun:command-line: unrecognized type conversion\end{verbatim}%$
+fun:command-line: unrecognized type conversion
+\end{verbatim}%$
 The content of the diagnostic message is the only feature specific to
 the definition of \verb|retype| as a type converter.
 
@@ -11069,7 +11084,8 @@ outfix operators
  [..]   record delimiters
  <..>   list delimiters
  {..}   specifies sets as sorted lists with duplicates purged
- (..)   tuple delimiters\end{verbatim}
+ (..)   tuple delimiters
+\end{verbatim}
 \caption{output from the command \texttt{\$ fun --help outfix}}
 \label{helpout}
 \end{Listing}
@@ -11277,7 +11293,8 @@ section to concatenate each item in a list of strings with an
 \verb|'x'|.
 \begin{verbatim}
 $ fun --m="--\*'x' <'a','b','c'>" --c
-<'ax','bx','cx'>\end{verbatim}%$
+<'ax','bx','cx'>
+\end{verbatim}%$
 
 \subsection{Suffixes}
 
@@ -11334,13 +11351,15 @@ $ fun flo --m="fleq/;0. <-2.,-1.,0.,1.,2.>" --c %eL
 applying to both sides of a pair. Note the order of the suffixes.
 \begin{verbatim}
 $ fun --m="--\*=$'x' (<'a','b'>,<'c','d'>)" --c
-('axbx','cxdx')\end{verbatim}
+('axbx','cxdx')
+\end{verbatim}
 \item This example shows a naive algorithm for constructing a series of
 powers of two.
 \index{product@\texttt{product}!natural}
 \begin{verbatim}
 $ fun --m="product/|2 <1,1,1,1,1>" --c %nL
-<1,2,4,8,16>\end{verbatim}%$
+<1,2,4,8,16>
+\end{verbatim}%$
 \end{itemize}
 \label{tsuf}
 The last  example works because \verb.f/|n <a,b,c,d>. is equivalent to
@@ -11359,7 +11378,8 @@ is always recourse to decompilation.
 $ fun --m="--\*=$'x'" --decompile
 main = fan compose(
    reduce(cat,0),
-   map compose(cat,couple(field &,constant 'x')))\end{verbatim}%$
+   map compose(cat,couple(field &,constant 'x')))
+\end{verbatim}%$
 
 \section{Pointer operations}
 
@@ -22964,7 +22984,8 @@ line option.
 \begin{verbatim}
 $ fun flo cli ytest.fun --show --trace
 opening yorick
-waiting for 62 32\end{verbatim}$\vdots$\begin{verbatim}
+waiting for 62 32
+\end{verbatim}$\vdots$\begin{verbatim}
 <- q 113
 <- u 117
 <- i 105
@@ -23297,8 +23318,10 @@ interactive help,
 $ fun --pointers ./kde --help pointers,2
 
 pointer stack operators of arity 2  (*pseudo-pointer)
------------------------------------------------------\end{verbatim}$\vdots$
-\begin{verbatim} * K18  binary subset combinator\end{verbatim}$\vdots$%$
+-----------------------------------------------------
+\end{verbatim}$\vdots$
+\begin{verbatim} * K18  binary subset combinator
+\end{verbatim}$\vdots$%$
 
 \noindent
 and it has the specified semantics.
@@ -24820,7 +24843,8 @@ and the second subtree is empty.
       ~&V(),
       ^:<> token[
          lexeme: 's',
-         location: (2,9)]>)\end{verbatim}
+         location: (2,9)]>)
+\end{verbatim}
 \caption{parse tree for a prefix operator \texttt{\%=s}, showing an empty first
 subexpression}
 \label{rfix}
@@ -24838,7 +24862,8 @@ subexpression}
       ^:<> token[
          lexeme: 's',
          location: (2,7)],
-      ~&V()>)\end{verbatim}
+      ~&V()>)
+\end{verbatim}
 \caption{parse tree for a postfix operator \texttt{s\%=}, showing an empty second
 subexpression}
 \label{ofix}
@@ -24859,7 +24884,8 @@ subexpression}
          location: (2,7)],
       ^:<> token[
          lexeme: 't',
-         location: (2,10)]>)\end{verbatim}
+         location: (2,10)]>)
+\end{verbatim}
 \caption{parse tree for an infix operator \texttt{s\%=t}, with two
 non-empty subexpressions}
 \label{ifix}
@@ -24919,7 +24945,8 @@ in Listing~\ref{agca}.
                         ^:<> token[
                            lexeme: 'c',
                            location: (2,12)]>)>),
-            ~&V()>)>)\end{verbatim}
+            ~&V()>)>)
+\end{verbatim}
 \caption{the parse tree for \texttt{\{a,b,c\}}, showing commas and aggregate operators}
 \label{agca}
 \end{Listing}
@@ -24991,7 +25018,8 @@ log =
             ^T/~&yyNNCT ((* :/` ) "d")--+ ~&yzPzNCC,
             --<''>+ --((* :/` ) "d")+ ~&iNNCT),
          'dependences: '--+ mat` + ~&s+ *^0 :^\~&vL ~&d.filename+-+-,
-   help: 'list source file dependences in executables and libraries']\end{verbatim}
+   help: 'list source file dependences in executables and libraries']
+\end{verbatim}
 \caption{command line option to add source dependence information to output files}
 \label{log}
 \end{Listing}
