@@ -2,7 +2,7 @@ This package includes the compiler for the Ursala programming language
 (bin/fun) and related libraries (lib/*.avm). In order for it to work,
 it depends on the virtual machine emulator available from
 
-http://www.basis.uklinux.net/avram
+https://github.com/gueststar/Avram
 
 Please refer to the avram documentation for installation instructions.
 Some optional external libraries usable by avram are recommended but
